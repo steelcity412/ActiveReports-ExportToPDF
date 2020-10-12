@@ -1,4 +1,4 @@
-# AR-ExportToPDF
+# ActiveReports-ExportToPDF
 This shows how to export an RDL or Page report (.rdlx) to PDF in ActiveReports. 
   - This is a Console application (.NET 4.7.2)
   - AR v14.2.20540.0 
