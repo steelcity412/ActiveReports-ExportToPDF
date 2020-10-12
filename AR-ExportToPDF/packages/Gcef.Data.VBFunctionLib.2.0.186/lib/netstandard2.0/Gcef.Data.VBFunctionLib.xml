@@ -1,0 +1,2019 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Gcef.Data.VBFunctionLib</name>
+    </assembly>
+    <members>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants">
+            <summary> The Constants module contains miscellaneous constants. These constants can be used anywhere in your code. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbObjectError">
+            <summary> Represents the object error number. User-defined error numbers should be greater than this value. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbCrLf">
+            <summary> Represents a carriage-return character combined with a linefeed character for print and display functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbNewLine">
+            <summary> Represents a newline character for print and display functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbCr">
+            <summary> Represents a carriage-return character for print and display functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbLf">
+            <summary> Represents a linefeed character for print and display functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbBack">
+            <summary> Represents a backspace character for print and display functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbFormFeed">
+            <summary> Represents a form-feed character for print functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbTab">
+            <summary> Represents a tab character for print and display functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbVerticalTab">
+            <summary> Represents a carriage-return character for print functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbNullChar">
+            <summary> Represents a null character for print and display functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbNullString">
+            <summary> Represents a zero-length string for print and display functions, and for calling external procedures. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbHide">
+            <summary> Indicates the window style to use for the invoked program when calling the Shell function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbNormalFocus">
+            <summary> Indicates the window style to use for the invoked program when calling the Shell function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbMinimizedFocus">
+            <summary> Indicates the window style to use for the invoked program when calling the Shell function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbMaximizedFocus">
+            <summary> Indicates the window style to use for the invoked program when calling the Shell function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbNormalNoFocus">
+            <summary> Indicates the window style to use for the invoked program when calling the Shell function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbMinimizedNoFocus">
+            <summary> Indicates the window style to use for the invoked program when calling the Shell function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbMethod">
+            <summary> Indicates the type of procedure being invoked when calling the CallByName function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbGet">
+            <summary> Indicates the type of procedure being invoked when calling the CallByName function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbLet">
+            <summary> Indicates the type of procedure being invoked when calling the CallByName function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbSet">
+            <summary> Indicates the type of procedure being invoked when calling the CallByName function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbBinaryCompare">
+            <summary> Indicates how to compare strings when calling comparison functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbTextCompare">
+            <summary> Indicates how to compare strings when calling comparison functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbGeneralDate">
+            <summary> Indicates how to display dates when calling the FormatDateTime function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbLongDate">
+            <summary> Indicates how to display dates when calling the FormatDateTime function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbShortDate">
+            <summary> Indicates how to display dates when calling the FormatDateTime function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbLongTime">
+            <summary> Indicates how to display dates when calling the FormatDateTime function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbShortTime">
+            <summary> Indicates how to display dates when calling the FormatDateTime function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbUseSystemDayOfWeek">
+            <summary> Indicates the first day of the week to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbSunday">
+            <summary> Indicates the first day of the week to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbMonday">
+            <summary> Indicates the first day of the week to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbTuesday">
+            <summary> Indicates the first day of the week to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbWednesday">
+            <summary> Indicates the first day of the week to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbThursday">
+            <summary> Indicates the first day of the week to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbFriday">
+            <summary> Indicates the first day of the week to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbSaturday">
+            <summary> Indicates the first day of the week to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbNormal">
+            <summary> Indicates the file attributes to use when calling file-access functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbReadOnly">
+            <summary> Indicates the file attributes to use when calling file-access functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbHidden">
+            <summary> Indicates the file attributes to use when calling file-access functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbSystem">
+            <summary> Indicates the file attributes to use when calling file-access functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbVolume">
+            <summary> Indicates the file attributes to use when calling file-access functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbDirectory">
+            <summary> Indicates the file attributes to use when calling file-access functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbArchive">
+            <summary> Indicates the file attributes to use when calling file-access functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbUseSystem">
+            <summary> Indicates the first week of the year to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbFirstJan1">
+            <summary> Indicates the first week of the year to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbFirstFourDays">
+            <summary> Indicates the first week of the year to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbFirstFullWeek">
+            <summary> Indicates the first week of the year to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbUpperCase">
+            <summary> Indicates which type of conversion to perform when calling the StrConv function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbLowerCase">
+            <summary> Indicates which type of conversion to perform when calling the StrConv function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbProperCase">
+            <summary> Indicates which type of conversion to perform when calling the StrConv function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbWide">
+            <summary> Indicates which type of conversion to perform when calling the StrConv function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbNarrow">
+            <summary> Indicates which type of conversion to perform when calling the StrConv function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbKatakana">
+            <summary> Indicates which type of conversion to perform when calling the StrConv function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbHiragana">
+            <summary> Indicates which type of conversion to perform when calling the StrConv function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbSimplifiedChinese">
+            <summary> Indicates which type of conversion to perform when calling the StrConv function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbTraditionalChinese">
+            <summary> Indicates which type of conversion to perform when calling the StrConv function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbLinguisticCasing">
+            <summary> Indicates which type of conversion to perform when calling the StrConv function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbUseDefault">
+            <summary> Indicates a Boolean value or whether the default should be used when calling number-formatting functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbTrue">
+            <summary> Indicates a Boolean value or whether the default should be used when calling number-formatting functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbFalse">
+            <summary> Indicates a Boolean value or whether the default should be used when calling number-formatting functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbEmpty">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbNull">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbInteger">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbLong">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbSingle">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbDouble">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbCurrency">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbDate">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbString">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbObject">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbBoolean">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbVariant">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbDecimal">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbByte">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbUserDefinedType">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbArray">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbOK">
+            <summary> Indicates which button was pressed on a message box, returned by the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbCancel">
+            <summary> Indicates which button was pressed on a message box, returned by the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbAbort">
+            <summary> Indicates which button was pressed on a message box, returned by the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbRetry">
+            <summary> Indicates which button was pressed on a message box, returned by the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbIgnore">
+            <summary> Indicates which button was pressed on a message box, returned by the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbYes">
+            <summary> Indicates which button was pressed on a message box, returned by the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbNo">
+            <summary> Indicates which button was pressed on a message box, returned by the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbOKOnly">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbOKCancel">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbAbortRetryIgnore">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbYesNoCancel">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbYesNo">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbRetryCancel">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbCritical">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbQuestion">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbExclamation">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbInformation">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbDefaultButton1">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbDefaultButton2">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbDefaultButton3">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbApplicationModal">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbSystemModal">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbMsgBoxHelp">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbMsgBoxRight">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbMsgBoxRtlReading">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.Constants.vbMsgBoxSetForeground">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.CallType">
+            <summary> Indicates the type of procedure being invoked when calling the CallByName function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.CallType.Method">
+            <summary> A method is being invoked.  This member is equivalent to the Visual Basic constant vbMethod. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.CallType.Get">
+            <summary> A property value is being retrieved.  This member is equivalent to the Visual Basic constant vbGet. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.CallType.Let">
+            <summary> An Object property value is being determined. This member is equivalent to the Visual Basic constant vbLet. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.CallType.Set">
+            <summary> A property value is being determined.  This member is equivalent to the Visual Basic constant vbSet. </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.AppWinStyle">
+            <summary> Indicates the window style to use for the invoked program when calling the Shell function. </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.AppWinStyle.Hide">
+            <summary> Window is hidden and focus is passed to the hidden window. This member is equivalent to the Visual Basic constant vbHide. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.AppWinStyle.NormalFocus">
+            <summary> Window has focus and is restored to its original size and position. This member is equivalent to the Visual Basic constant vbNormalFocus. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.AppWinStyle.MinimizedFocus">
+            <summary> Window is displayed as an icon with focus. This member is equivalent to the Visual Basic constant vbMinimizedFocus. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.AppWinStyle.MaximizedFocus">
+            <summary> Window is maximized with focus. This member is equivalent to the Visual Basic constant vbMaximizedFocus. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.AppWinStyle.NormalNoFocus">
+            <summary> Window is restored to its most recent size and position. The currently active window remains active. This member is equivalent to the Visual Basic constant vbNormalNoFocus. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.AppWinStyle.MinimizedNoFocus">
+            <summary> Window is displayed as an icon. The currently active window remains active. This member is equivalent to the Visual Basic constant vbMinimizedNoFocus. </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.FileAttribute">
+            <summary> Indicates the file attributes to use when calling file-access functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FileAttribute.Normal">
+            <summary> Normal (default for Dir and SetAttr). No special characteristics apply to this file. This member is equivalent to the Visual Basic constant vbNormal. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FileAttribute.ReadOnly">
+            <summary> Read only. This member is equivalent to the Visual Basic constant vbReadOnly. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FileAttribute.Hidden">
+            <summary> Hidden. This member is equivalent to the Visual Basic constant vbHidden. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FileAttribute.System">
+            <summary> System file. This member is equivalent to the Visual Basic constant vbSystem. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FileAttribute.Volume">
+            <summary> Volume label. This attribute is not valid when used with SetAttr. This member is equivalent to the Visual Basic constant vbVolume. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FileAttribute.Directory">
+            <summary> Directory or folder. This member is equivalent to the Visual Basic constant vbDirectory. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FileAttribute.Archive">
+            <summary> File has changed since last backup. This member is equivalent to the Visual Basic constant vbArchive. </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType">
+            <summary> Indicates the type of a variant object, returned by the VarType function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Empty">
+            <summary> Null reference. This member is equivalent to the Visual Basic constant vbEmpty. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Null">
+            <summary> Null object. This member is equivalent to the Visual Basic constant vbNull. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Short">
+            <summary>Short. (-32,768 through 32,767.) </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Integer">
+            <summary>Integer. (-2,147,483,648 through 2,147,483,647.) This member is equivalent to the Visual Basic constant vbInteger. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Single">
+            <summary>Single. (-3.402823E+38 through -1.401298E-45 for negative values; 1.401298E-45 through 3.402823E+38 for positive values.) This member is equivalent to the Visual Basic constant vbSingle. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Double">
+            <summary>Double. (-1.79769313486231E+308 through -4.94065645841247E-324 for negative values; 4.94065645841247E-324 through 1.79769313486231E+308 for positive values.) This member is equivalent to the Visual Basic constant vbDouble. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Currency">
+            <summary>  Currency. This member is equivalent to the Visual Basic constant vbCurrency. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Date">
+            <summary>Date. (0:00:00 on January 1, 0001 through 11:59:59 PM on December 31, 9999.) This member is equivalent to the Visual Basic constant vbDate. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.String">
+            <summary>String. (0 to approximately 2 billion Unicode characters.) This member is equivalent to the Visual Basic constant vbString. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Object">
+            <summary>
+                          Any type can be stored in a variable of type Object. This member is equivalent to the Visual Basic constant vbObject. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Error">
+            <summary>
+              <see cref="T:System.Exception" />
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Boolean">
+            <summary>Boolean. (True or False.) This member is equivalent to the Visual Basic constant vbBoolean. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Variant">
+            <summary>Variant. This member is equivalent to the Visual Basic constant vbVariant. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.DataObject">
+            <summary> DataObject. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Decimal">
+            <summary>Decimal. (0 through +/-79,228,162,514,264,337,593,543,950,335 with no decimal point; 0 through +/-7.9228162514264337593543950335 with 28 places to the right of the decimal; smallest non-zero number is +/-0.0000000000000000000000000001.) This member is equivalent to the Visual Basic constant vbDecimal. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Byte">
+            <summary>Byte. (0 through 255.) This member is equivalent to the Visual Basic constant vbByte. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Char">
+            <summary>Char. (0 through 65535.) This member is equivalent to the Visual Basic constant vbChar. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Long">
+            <summary>Long. (-9,223,372,036,854,775,808 through 9,223,372,036,854,775,807.) This member is equivalent to the Visual Basic constant vbLong. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.UserDefinedType">
+            <summary> User-defined type. Each member of the structure has a range determined by its data type and independent of the ranges of the other members. This member is equivalent to the Visual Basic constant vbUserDefinedType. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VariantType.Array">
+            <summary> Array. This member is equivalent to the Visual Basic constant vbArray. </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxResult">
+            <summary> Indicates which button was pressed on a message box, returned by the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxResult.Ok">
+            <summary>OK button was pressed. This member is equivalent to the Visual Basic constant vbOK. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxResult.Cancel">
+            <summary>Cancel button was pressed. This member is equivalent to the Visual Basic constant vbCancel. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxResult.Abort">
+            <summary>Abort button was pressed. This member is equivalent to the Visual Basic constant vbAbort. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxResult.Retry">
+            <summary>Retry button was pressed. This member is equivalent to the Visual Basic constant vbRetry. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxResult.Ignore">
+            <summary>Ignore button was pressed. This member is equivalent to the Visual Basic constant vbIgnore. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxResult.Yes">
+            <summary>Yes button was pressed. This member is equivalent to the Visual Basic constant vbYes. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxResult.No">
+            <summary>No button was pressed. This member is equivalent to the Visual Basic constant vbNo. </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle">
+            <summary> Indicates which buttons to display when calling the MsgBox function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.OkOnly">
+            <summary>OK button only (default). This member is equivalent to the Visual Basic constant vbOKOnly. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.OkCancel">
+            <summary>OK and Cancel buttons. This member is equivalent to the Visual Basic constant vbOKCancel. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.AbortRetryIgnore">
+            <summary>Abort, Retry, and Ignore buttons. This member is equivalent to the Visual Basic constant vbAbortRetryIgnore. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.YesNoCancel">
+            <summary>Yes, No, and Cancel buttons. This member is equivalent to the Visual Basic constant vbYesNoCancel. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.YesNo">
+            <summary>Yes and No buttons. This member is equivalent to the Visual Basic constant vbYesNo. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.RetryCancel">
+            <summary>Retry and Cancel buttons. This member is equivalent to the Visual Basic constant vbRetryCancel. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.Critical">
+            <summary> Critical message. This member is equivalent to the Visual Basic constant vbCritical. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.Question">
+            <summary> Warning query. This member is equivalent to the Visual Basic constant vbQuestion. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.Exclamation">
+            <summary> Warning message. This member is equivalent to the Visual Basic constant vbExclamation. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.Information">
+            <summary> Information message. This member is equivalent to the Visual Basic constant vbInformation. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.DefaultButton1">
+            <summary> First button is default. This member is equivalent to the Visual Basic constant vbDefaultButton1. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.DefaultButton2">
+            <summary> Second button is default. This member is equivalent to the Visual Basic constant vbDefaultButton2. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.DefaultButton3">
+            <summary> Third button is default. This member is equivalent to the Visual Basic constant vbDefaultButton3. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.ApplicationModal">
+            <summary> Application modal message box. This member is equivalent to the Visual Basic constant vbApplicationModal. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.SystemModal">
+            <summary> System modal message box. This member is equivalent to the Visual Basic constant vbSystemModal. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.MsgBoxHelp">
+            <summary> Help text. This member is equivalent to the Visual Basic constant vbMsgBoxHelp. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.MsgBoxRight">
+            <summary> Right-aligned text. This member is equivalent to the Visual Basic constant vbMsgBoxRight. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.MsgBoxRtlReading">
+            <summary> Right-to-left reading text (Hebrew and Arabic systems). This member is equivalent to the Visual Basic constant vbMsgBoxRtlReading. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.MsgBoxStyle.MsgBoxSetForeground">
+            <summary> Foreground message box window. This member is equivalent to the Visual Basic constant vbMsgBoxSetForeground. </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Fix(System.Int16)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Fix(System.Int32)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Fix(System.Int64)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Fix(System.Double)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Fix(System.Single)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Fix(System.Decimal)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Fix(System.Object)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Hex(System.SByte)">
+            <summary> Returns a string representing the hexadecimal value of a number. </summary>
+            <returns> Returns a string representing the hexadecimal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority> 
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Hex(System.Byte)">
+            <summary> Returns a string representing the hexadecimal value of a number. </summary>
+            <returns> Returns a string representing the hexadecimal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Hex(System.Int16)">
+            <summary> Returns a string representing the hexadecimal value of a number. </summary>
+            <returns> Returns a string representing the hexadecimal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Hex(System.UInt16)">
+            <summary> Returns a string representing the hexadecimal value of a number. </summary>
+            <returns> Returns a string representing the hexadecimal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Hex(System.Int32)">
+            <summary> Returns a string representing the hexadecimal value of a number. </summary>
+            <returns> Returns a string representing the hexadecimal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>=
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Hex(System.UInt32)">
+            <summary> Returns a string representing the hexadecimal value of a number. </summary>
+            <returns> Returns a string representing the hexadecimal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Hex(System.Int64)">
+            <summary> Returns a string representing the hexadecimal value of a number. </summary>
+            <returns> Returns a string representing the hexadecimal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Hex(System.UInt64)">
+            <summary> Returns a string representing the hexadecimal value of a number. </summary>
+            <returns> Returns a string representing the hexadecimal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Hex(System.Object)">
+            <summary> Returns a string representing the hexadecimal value of a number. </summary>
+            <returns> Returns a string representing the hexadecimal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Int(System.Int16)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Int(System.Int32)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Int(System.Int64)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Int(System.Double)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Int(System.Single)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Int(System.Decimal)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Int(System.Object)">
+            <summary> Return the integer portion of a number. </summary>
+            <returns> Return the integer portion of a number. </returns>
+            <param name="number"> Required. A number of type Double or any valid numeric expression. If <paramref name="number" /> contains Nothing, Nothing is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Oct(System.SByte)">
+            <summary> Returns a string representing the octal value of a number. </summary>
+            <returns> Returns a string representing the octal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Oct(System.Byte)">
+            <summary> Returns a string representing the octal value of a number. </summary>
+            <returns> Returns a string representing the octal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Oct(System.Int16)">
+            <summary> Returns a string representing the octal value of a number. </summary>
+            <returns> Returns a string representing the octal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority> 
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Oct(System.UInt16)">
+            <summary> Returns a string representing the octal value of a number. </summary>
+            <returns> Returns a string representing the octal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Oct(System.Int32)">
+            <summary> Returns a string representing the octal value of a number. </summary>
+            <returns> Returns a string representing the octal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Oct(System.UInt32)">
+            <summary> Returns a string representing the octal value of a number. </summary>
+            <returns> Returns a string representing the octal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Oct(System.Int64)">
+            <summary> Returns a string representing the octal value of a number. </summary>
+            <returns> Returns a string representing the octal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Oct(System.UInt64)">
+            <summary> Returns a string representing the octal value of a number. </summary>
+            <returns> Returns a string representing the octal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Oct(System.Object)">
+            <summary> Returns a string representing the octal value of a number. </summary>
+            <returns> Returns a string representing the octal value of a number. </returns>
+            <param name="number"> Required. Any valid numeric expression or String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Str(System.Object)">
+            <summary> Returns a String representation of a number. </summary>
+            <returns> Returns a String representation of a number. </returns>
+            <param name="number"> Required. An Object containing any valid numeric expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Val(System.String)">
+            <summary> Returns the numbers contained in a string as a numeric value of appropriate type. </summary>
+            <returns> Returns the numbers contained in a string as a numeric value of appropriate type. </returns>
+            <param name="inputStr"> Required. Any valid String expression, Object variable, or Char value. If <paramref name="Expression" /> is of type Object, its value must be convertible to String or an <see cref="T:System.ArgumentException" /> error occurs. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Val(System.Char)">
+            <summary> Returns the numbers contained in a string as a numeric value of appropriate type. </summary>
+            <returns> Returns the numbers contained in a string as a numeric value of appropriate type. </returns>
+            <param name="expression"> Required. Any valid String expression, Object variable, or Char value. If <paramref name="expression" /> is of type Object, its value must be convertible to String or an <see cref="T:System.ArgumentException" /> error occurs. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversion.Val(System.Object)">
+            <summary> Returns the numbers contained in a string as a numeric value of appropriate type. </summary>
+            <returns> Returns the numbers contained in a string as a numeric value of appropriate type. </returns>
+            <param name="expression"> Required. Any valid String expression, Object variable, or Char value. If <paramref name="expression" /> is of type Object, its value must be convertible to String or an <see cref="T:System.ArgumentException" /> error occurs. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToBoolean(System.String)">
+            <summary> Converts a string to a <see cref="T:System.Boolean" /> value. </summary>
+            <returns> A Boolean value. Returns False if the string is null; otherwise, True. </returns>
+            <param name="value">T he string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToBoolean(System.Object)">
+            <summary> Converts an object to a <see cref="T:System.Boolean" /> value. </summary>
+            <returns> A Boolean value. Returns False if the object is null; otherwise, True. </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToByte(System.String)">
+            <summary> Converts a string to a <see cref="T:System.Byte" /> value. </summary>
+            <returns> The Byte value of the string. </returns>
+            <param name="value"> The string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToByte(System.Object)">
+            <summary> Converts an object to a <see cref="T:System.Byte" /> value. </summary>
+            <returns> The Byte value of the object. </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToChar(System.String)">
+            <summary> Converts a string to a <see cref="T:System.Char" /> value. </summary>
+            <returns> The Char value of the string. </returns>
+            <param name="value"> The string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToChar(System.Object)">
+            <summary> Converts an object to a <see cref="T:System.Char" /> value. </summary>
+            <returns> The Char value of the object. </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToDate(System.String)">
+            <summary> Converts a string to a <see cref="T:System.DateTime" /> value. </summary>
+            <returns> The DateTime value of the string. </returns>
+            <param name="value"> The string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToDate(System.Object)">
+            <summary> Converts an object to a <see cref="T:System.DateTime" /> value. </summary>
+            <returns> The DateTime value of the object. </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToDouble(System.String)">
+            <summary> Converts a string to a <see cref="T:System.Double" /> value. </summary>
+            <returns> The Double value of the string. </returns>
+            <param name="value"> The string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToDouble(System.Object)">
+            <summary> Converts an object to a <see cref="T:System.Double" /> value. </summary>
+            <returns> The Double value of the object. </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToDecimal(System.Boolean)">
+            <summary> Converts a <see cref="T:System.Boolean" /> value to a <see cref="T:System.Decimal" /> value. </summary>
+            <returns> The Decimal value of the Boolean value. </returns>
+            <param name="value"> A Boolean value to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToDecimal(System.String)">
+            <summary> Converts a string to a <see cref="T:System.Decimal" /> value. </summary>
+            <returns> The Decimal value of the string. </returns>
+            <param name="value"> The string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToDecimal(System.Object)">
+            <summary> Converts an object to a <see cref="T:System.Decimal" /> value. </summary>
+            <returns> The Decimal value of the object. </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToInteger(System.String)">
+            <summary> Converts a string to an integer value. </summary>
+            <returns> The int value of the string. </returns>
+            <param name="value"> he string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToInteger(System.Object)">
+            <summary> Converts an object to an integer value. </summary>
+            <returns> The int value of the object. </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToLong(System.String)">
+            <summary> Converts a string to a Long value. </summary>
+            <returns> The Long value of the string. </returns>
+            <param name="value"> The string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToLong(System.Object)">
+            <summary> Converts an object to a Long value. </summary>
+            <returns> The Long value of the object. </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToSByte(System.String)">
+            <summary> Converts a string to an <see cref="T:System.SByte" /> value. </summary>
+            <returns> The SByte value of the string. </returns>
+            <param name="value"> The string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToSByte(System.Object)">
+            <summary> Converts an object to an <see cref="T:System.SByte" /> value. </summary>
+            <returns> The SByte value of the object. </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToShort(System.String)">
+            <summary> Converts a string to a Short value. </summary>
+            <returns> The Short value of the string. </returns>
+            <param name="value"> The string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToShort(System.Object)">
+            <summary> Converts an object to a Short value. </summary>
+            <returns> The Short value of the object.  </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToSingle(System.String)">
+            <summary> Converts a <see cref="T:System.String" /> to a <see cref="T:System.Single" /> value. </summary>
+            <returns> The Single value of the string. </returns>
+            <param name="value"> The string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToSingle(System.Object)">
+            <summary> Converts an object to a <see cref="T:System.Single" /> value. </summary>
+            <returns> The Single value of the object. </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.Boolean)">
+            <summary> Converts a <see cref="T:System.Boolean" /> value to a <see cref="T:System.String" />. </summary>
+            <returns> The String representation of the Boolean value. </returns>
+            <param name="value"> The Boolean value to convert. </param> 
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.Byte)">
+            <summary> Converts a <see cref="T:System.Byte" /> value to a <see cref="T:System.String" />. </summary>
+            <returns> The String representation of the Byte value. </returns>
+            <param name="value"> The Byte value to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.Char)">
+            <summary> Converts a <see cref="T:System.Char" /> value to a <see cref="T:System.String" />. </summary>
+            <returns> The String representation of the Char value. </returns>
+            <param name="value"> The Char value to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.Int16)">
+            <summary> Converts a Short value to a <see cref="T:System.String" /> value. </summary>
+            <returns> The String representation of the Short value. </returns>
+            <param name="value"> The Short value to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.Int32)">
+            <summary> Converts an integer value to a <see cref="T:System.String" /> value. </summary>
+            <returns> The String representation of the int value. </returns>
+            <param name="value"> The int value to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.UInt32)">
+            <summary> Converts a uint value to a <see cref="T:System.String" /> value. </summary>
+            <returns> The String representation of the Uint value. </returns>
+            <param name="value"> The Uint value to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.Int64)">
+            <summary> Converts a Long value to a <see cref="T:System.String" /> value. </summary>
+            <returns> The String representation of the Long value. </returns>
+            <param name="value"> The Long value to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.UInt64)">
+            <summary> Converts a Ulong value to a <see cref="T:System.String" /> value. </summary>
+            <returns> The String representation of the Ulong value. </returns>
+            <param name="value"> The Ulong value to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.Single)">
+            <summary> Converts a <see cref="T:System.Single" /> value (a single-precision floating point number) to a <see cref="T:System.String" /> value. </summary>
+            <returns> The String representation of the Single value. </returns>
+            <param name="value"> The Single value to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.Double)">
+            <summary> Converts a <see cref="T:System.Double" /> value to a <see cref="T:System.String" /> value. </summary>
+            <returns> The String representation of the Double value. </returns>
+            <param name="value"> The Double value to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.Single,System.Globalization.NumberFormatInfo)">
+            <summary> Converts a <see cref="T:System.Single" /> value to a <see cref="T:System.String" /> value, using the specified number format. </summary>
+            <returns> The String representation of the Single value. </returns>
+            <param name="value"> The Single value to convert. </param>
+            <param name="numberFormat"> The number format to use, according to <see cref="T:System.Globalization.NumberFormatInfo" />. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.Double,System.Globalization.NumberFormatInfo)">
+            <summary> Converts a <see cref="T:System.Double" /> value to a <see cref="T:System.String" /> value, using the specified number format. </summary>
+            <returns> The String representation of the Double value. </returns>
+            <param name="value"> The Double value to convert. </param>
+            <param name="numberFormat"> The number format to use, according to <see cref="T:System.Globalization.NumberFormatInfo" />. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.DateTime)">
+            <summary> Converts a <see cref="T:System.DateTime" /> value to a <see cref="T:System.String" /> value. </summary>
+            <returns> The String representation of the DateTime value. </returns>
+            <param name="value"> The DateTime value to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.Decimal)">
+            <summary> Converts a <see cref="T:System.Decimal" /> value to a <see cref="T:System.String" /> value. </summary>
+            <returns> The String representation of the Decimal value. </returns>
+            <param name="value"> The Decimal value to convert. </param> 
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.Decimal,System.Globalization.NumberFormatInfo)">
+            <summary> Converts a <see cref="T:System.Decimal" /> value to a <see cref="T:System.String" /> value, using the specified number format. </summary>
+            <returns> The String representation of the Decimal value. </returns>
+            <param name="value"> The decimal value to convert. </param>
+            <param name="numberFormat"> The number format to use, according to <see cref="T:System.Globalization.NumberFormatInfo" />. </param> 
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToString(System.Object)">
+            <summary> Converts an object to a <see cref="T:System.String" /> value. </summary>
+            <returns> The String representation of the object. </returns>
+            <param name="value">  The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.FromCharArray(System.Char[])">
+            <summary> Converts a <see cref="T:System.Char" /> array to a string. </summary>
+            <returns> The string representation of the specified array. </returns>
+            <param name="value"> The Char array to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.FromCharAndCount(System.Char,System.Int32)">
+            <summary> Converts a <see cref="T:System.Char" /> value to a string, given a byte count. </summary>
+            <returns> The string representation of the specified value. </returns>
+            <param name="value"> The Char value to convert. </param>
+            <param name="count"> The byte count of the Char value. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.FromCharArraySubset(System.Char[],System.Int32,System.Int32)">
+            <summary> Converts a subset of a <see cref="T:System.Char" /> array to a string. </summary>
+            <returns> The string representation of the specified array from the start position to the specified length. </returns>
+            <param name="value"> The Char array to convert. </param>
+            <param name="startIndex"> Zero-based index of the start position. </param>
+            <param name="length"> Length of the subset in bytes. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToUInteger(System.String)">
+            <summary> Converts a string to a Uint value. </summary>
+            <returns> The Uint value of the string. </returns>
+            <param name="value"> The string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToUInteger(System.Object)">
+            <summary> Converts an object to a Uint value. </summary>
+            <returns> The Uint value of the object. </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToULong(System.String)">
+            <summary> Converts a string to a Ulong value. </summary>
+            <returns> The Ulong value of the string. </returns>
+            <param name="value"> The string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToULong(System.Object)">
+            <summary> Converts an object to a Ulong value. </summary>
+            <returns> The Ulong value of the object. </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToUShort(System.String)">
+            <summary> Converts a string to a Ushort value. </summary>
+            <returns> The Ushort value of the string. </returns>
+            <param name="value">  The string to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToUShort(System.Object)">
+            <summary> Converts an object to a Ushort value. </summary>
+            <returns> The Ushort value of the object. </returns>
+            <param name="value"> The object to convert. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ChangeType(System.Object,System.Type)">
+            <summary> Converts an object to the specified type. </summary>
+            <returns> An object of the specified target type. </returns>
+            <param name="expression"> The object to convert. </param>
+            <param name="targetType"> The type to which to convert the object. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToCharArrayRankOne(System.String)">
+            <summary> Converts a string to a one-dimensional <see cref="T:System.Char"/> array. </summary> 
+            <returns> A one-dimensional Char array. </returns>
+            <param name="value">The string to convert.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToCharArray(System.String)">
+            <summary> Returns a CharArray value that corresponds to the specified string.  </summary>
+            <returns> The CharArray value that corresponds to <paramref name="value" />. </returns>
+            <param name="value"> Required. String to convert to a CharArray value. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToCharArray(System.Object)">
+            <summary> Returns a CharArray value that corresponds to the specified object.  </summary>
+            <returns> The CharArray value that corresponds to <paramref name="value" />. </returns>
+            <param name="value"> Required. Object to convert to a CharArray value. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.CTypeDynamic(System.Object,System.Type)">
+            <summary> Converts an object to the specified type. </summary>
+            <returns> An object whose type at run time is the requested target type. </returns>
+            <param name="expression">The object to convert.</param><param name="targetType">The type to which to convert the object.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.CTypeDynamic``1(System.Object)">
+            <summary> Converts an object to the specified generic type. </summary>
+            <returns> An object statically typed as the requested generic type. </returns>
+            <param name="expression">The object to convert.</param><typeparam name="TArgetType">The type to which to convert the object.</typeparam>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Conversions.ToGenericParameter``1(System.Object)">
+            <summary> Converts an object to a generic type <paramref name="T" />. </summary>
+            <returns> A structure or object of generic type <paramref name="T" />. </returns>
+            <param name="value"> The object to convert. </param>
+            <typeparam name="T"> The type to convert <paramref name="value" /> to. </typeparam>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateInterval">
+            <summary> Indicates how to determine and format date intervals when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateInterval.Year">
+            <summary> Year </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateInterval.Quarter">
+            <summary> Quarter of year (1 through 4) </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateInterval.Month">
+            <summary> Month (1 through 12) </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateInterval.DayOfYear">
+            <summary> Day of year (1 through 366) </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateInterval.Day">
+            <summary> Day of month (1 through 31) </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateInterval.WeekOfYear">
+            <summary> Week of year (1 through 53) </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateInterval.Weekday">
+            <summary> Day of week (1 through 7) </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateInterval.Hour">
+            <summary> Hour (1 through 24) </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateInterval.Minute">
+            <summary> Minute (1 through 60) </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateInterval.Second">
+            <summary> Second (1 through 60) </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek">
+            <summary> Indicates the first day of the week to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek.System">
+            <summary> The first day of the week as specified in your system settings This member is equivalent to the Visual Basic constant vbUseSystemDayOfWeek. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek.Sunday">
+            <summary> Sunday (default) This member is equivalent to the Visual Basic constant vbSunday. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek.Monday">
+            <summary> Monday This member is equivalent to the Visual Basic constant vbMonday. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek.Tuesday">
+            <summary> Tuesday This member is equivalent to the Visual Basic constant vbTuesday. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek.Wednesday">
+            <summary> Wednesday This member is equivalent to the Visual Basic constant vbWednesday. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek.Thursday">
+            <summary> Thursday This member is equivalent to the Visual Basic constant vbThursday. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek.Friday">
+            <summary> Friday This member is equivalent to the Visual Basic constant vbFriday. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek.Saturday">
+            <summary> Saturday This member is equivalent to the Visual Basic constant vbSaturday. </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstWeekOfYear">
+            <summary> Indicates the first week of the year to use when calling date-related functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstWeekOfYear.System">
+            <summary> The day of the week specified in your system settings as the first day of the week This member is equivalent to the Visual Basic constant vbUseSystem. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstWeekOfYear.Jan1">
+            <summary> The week in which January 1 occurs (default) This member is equivalent to the Visual Basic constant vbFirstJan1. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstWeekOfYear.FirstFourDays">
+            <summary> The first week that has at least four days in the new year This member is equivalent to the Visual Basic constant vbFirstFourDays. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstWeekOfYear.FirstFullWeek">
+            <summary> The first full week of the year This member is equivalent to the Visual Basic constant vbFirstFullWeek. </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.GetDayOfWeek(System.DateTime,GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek)">
+            <summary> Returns a Long value specifying the number of time intervals between two Date values. </summary>
+            <returns> Returns a Long value specifying the number of time intervals between two Date values. </returns>
+            <param name="interval"> Required. DateInterval enumeration value or String expression representing the time interval you want to use as the unit of difference between <paramref name="date1" /> and <paramref name="date2" />. </param>
+            <param name="date1"> Required. Date. The first date/time value you want to use in the calculation.  </param>
+            <param name="date2"> Required. Date. The second date/time value you want to use in the calculation. </param>
+            <param name="dayOfWeek"> Optional. A value chosen from the FirstDayOfWeek enumeration that specifies the first day of the week. If not specified, FirstDayOfWeek.Sunday is used. </param>
+            <param name="weekOfYear"> Optional. A value chosen from the FirstWeekOfYear enumeration that specifies the first week of the year. If not specified, FirstWeekOfYear.Jan1 is used. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.DateAdd(GrapeCity.Enterprise.Data.VisualBasicReplacement.DateInterval,System.Double,System.DateTime)">
+            <summary> Returns a Date value containing a date and time value to which a specified time interval has been added. </summary>
+            <returns> Returns a Date value containing a date and time value to which a specified time interval has been added. </returns>
+            <param name="interval"> Required. DateInterval enumeration value or String expression representing the time interval you want to add. </param>
+            <param name="number"> Required. Double. Floating-point expression representing the number of intervals you want to add. <paramref name="number" /> can be positive (to get date/time values in the future) or negative (to get date/time values in the past). It can contain a fractional part when <paramref name="interval" /> specifies hours, minutes, or seconds. For other values of <paramref name="interval" />, any fractional part of <paramref name="number" /> is ignored. </param>
+            <param name="dateValue"> Required. Date. An expression representing the date and time to which the interval is to be added. <paramref name="dateValue" /> itself is not changed in the calling program. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.DateAdd(System.String,System.Double,System.Object)">
+            <summary> Returns a Date value containing a date and time value to which a specified time interval has been added. </summary>
+            <returns> Returns a Date value containing a date and time value to which a specified time interval has been added. </returns>
+            <param name="interval"> Required. DateInterval enumeration value or String expression representing the time interval you want to add. </param>
+            <param name="number"> Required. Double. Floating-point expression representing the number of intervals you want to add. <paramref name="number" /> can be positive (to get date/time values in the future) or negative (to get date/time values in the past). It can contain a fractional part when <paramref name="interval" /> specifies hours, minutes, or seconds. For other values of <paramref name="interval" />, any fractional part of <paramref name="number" /> is ignored. </param>
+            <param name="dateValue"> Required. Date. An expression representing the date and time to which the interval is to be added. <paramref name="dateValue" /> itself is not changed in the calling program. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.DateDiff(System.String,System.Object,System.Object,GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek,GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstWeekOfYear)">
+            <summary> Returns a Long value specifying the number of time intervals between two Date values. </summary>
+            <returns> Returns a Long value specifying the number of time intervals between two Date values. </returns>
+            <param name="interval"> Required. DateInterval enumeration value or String expression representing the time interval you want to use as the unit of difference between <paramref name="date1" /> and <paramref name="date2" />. </param>
+            <param name="date1"> Required. Date. The first date/time value you want to use in the calculation.  </param>
+            <param name="date2"> Required. Date. The second date/time value you want to use in the calculation. </param>
+            <param name="dayOfWeek"> Optional. A value chosen from the FirstDayOfWeek enumeration that specifies the first day of the week. If not specified, FirstDayOfWeek.Sunday is used. </param>
+            <param name="weekOfYear"> Optional. A value chosen from the FirstWeekOfYear enumeration that specifies the first week of the year. If not specified, FirstWeekOfYear.Jan1 is used. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.DatePart(GrapeCity.Enterprise.Data.VisualBasicReplacement.DateInterval,System.DateTime,GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek,GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstWeekOfYear)">
+            <summary> Returns an Integer value containing the specified component of a given Date value. </summary>
+            <returns> Returns an Integer value containing the specified component of a given Date value. </returns>
+            <param name="interval"> Required. DateInterval enumeration value or String expression representing the part of the date/time value you want to return. </param>
+            <param name="dateValue"> Required. Date value that you want to evaluate. </param>
+            <param name="firstDayOfWeekValue"> Optional. A value chosen from the FirstDayOfWeek enumeration that specifies the first day of the week. If not specified, FirstDayOfWeek.Sunday is used. </param>
+            <param name="firstWeekOfYearValue"> Optional. A value chosen from the FirstWeekOfYear enumeration that specifies the first week of the year. If not specified, FirstWeekOfYear.Jan1 is used. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.DatePart(System.String,System.Object,GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek,GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstWeekOfYear)">
+            <summary> Returns an Integer value containing the specified component of a given Date value. </summary>
+            <returns> Returns an Integer value containing the specified component of a given Date value. </returns>
+            <param name="interval"> Required. DateInterval enumeration value or String expression representing the part of the date/time value you want to return. </param>
+            <param name="dateValue"> Required. Date value that you want to evaluate. </param>
+            <param name="dayOfWeek"> Optional. A value chosen from the FirstDayOfWeek enumeration that specifies the first day of the week. If not specified, FirstDayOfWeek.Sunday is used. </param>
+            <param name="weekOfYear"> Optional. A value chosen from the FirstWeekOfYear enumeration that specifies the first week of the year. If not specified, FirstWeekOfYear.Jan1 is used. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.DateSerial(System.Int32,System.Int32,System.Int32)">
+            <summary> Returns a Date value representing a specified year, month, and day, with the time information set to midnight (00:00:00). </summary>
+            <returns> Returns a Date value representing a specified year, month, and day, with the time information set to midnight (00:00:00). </returns>
+            <param name="year"> Required. Integer expression from 1 through 9999. However, values below this range are also accepted. If <paramref name="year" /> is 0 through 99, it is interpreted as being between 1930 and 2029, as explained in the "Remarks" section below. If <paramref name="year" /> is less than 1, it is subtracted from the current year. </param>
+            <param name="month">
+                          Required. Integer expression from 1 through 12. However, values outside this range are also accepted. The value of <paramref name="month" /> is offset by 1 and applied to January of the calculated year. In other words, (<paramref name="month" /> - 1) is added to January. The year is recalculated if necessary. The following results illustrate this effect:
+                          If <paramref name="month" /> is 1, the result is January of the calculated year.
+                          If <paramref name="month" /> is 0, the result is December of the previous year.
+                          If <paramref name="month" /> is -1, the result is November of the previous year.
+                          If <paramref name="month" /> is 13, the result is January of the following year.
+                       </param>
+            <param name="day">
+                          Required. Integer expression from 1 through 31. However, values outside this range are also accepted. The value of <paramref name="day" /> is offset by 1 and applied to the first day of the calculated month. In other words, (<paramref name="day" /> - 1) is added to the first of the month. The month and year are recalculated if necessary. The following results illustrate this effect:
+                          If <paramref name="day" /> is 1, the result is the first day of the calculated month.
+                          If <paramref name="day" /> is 0, the result is the last day of the previous month.
+                          If <paramref name="day" /> is -1, the result is the penultimate day of the previous month.
+                          If <paramref name="day" /> is past the end of the current month, the result is the appropriate day of the following month. For example, if <paramref name="month" /> is 4 and <paramref name="day" /> is 31, the result is May 1.
+                      </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.DateString">
+            <summary> Returns a String value representing the current date according to your system. </summary>
+            <returns> Returns a String value representing the current date according to your system. </returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.DateValue(System.String)">
+            <summary> Returns a Date value containing the date information represented by a string, with the time information set to midnight (00:00:00). </summary>
+            <returns> Returns a Date value containing the date information represented by a string, with the time information set to midnight (00:00:00). </returns>
+            <param name="stringDate"> Required. String expression representing a date/time value from 00:00:00 on January 1 of the year 1 through 23:59:59 on December 31, 9999. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.Day(System.DateTime)">
+            <summary> Returns an Integer value from 1 through 31 representing the day of the month. </summary>
+            <returns> Returns an Integer value from 1 through 31 representing the day of the month. </returns>
+            <param name="dateValue"> Required. Date value from which you want to extract the day. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.Hour(System.DateTime)">
+            <summary> Returns an Integer value from 0 through 23 representing the hour of the day. </summary>
+            <returns> Returns an Integer value from 0 through 23 representing the hour of the day. </returns>
+            <param name="timeValue"> Required. Date value from which you want to extract the hour. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.Minute(System.DateTime)">
+            <summary> Returns an Integer value from 0 through 59 representing the minute of the hour. </summary>
+            <returns> Returns an Integer value from 0 through 59 representing the minute of the hour. </returns>
+            <param name="timeValue"> Required. Date value from which you want to extract the minute. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.Month(System.DateTime)">
+            <summary> Returns an Integer value from 1 through 12 representing the month of the year. </summary>
+            <returns> Returns an Integer value from 1 through 12 representing the month of the year. </returns>
+            <param name="dateValue"> Required. Date value from which you want to extract the month. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.MonthName(System.Int32,System.Boolean)">
+            <summary> Returns a String value containing the name of the specified month. </summary>
+            <returns> Returns a String value containing the name of the specified month. </returns>
+            <param name="month"> Required. Integer. The numeric designation of the month, from 1 through 13; 1 indicates January and 12 indicates December. You can use the value 13 with a 13-month calendar. If your system is using a 12-month calendar and <paramref name="month" /> is 13, MonthName returns an empty string. </param>
+            <param name="abbreviate"> Optional. Boolean value that indicates if the month name is to be abbreviated. If omitted, the default is False, which means the month name is not abbreviated.</param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.Now">
+            <summary> Returns a Date value containing the current date and time according to your system. </summary>
+            <returns> Returns a Date value containing the current date and time according to your system. </returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.Second(System.DateTime)">
+            <summary> Returns an Integer value from 0 through 59 representing the second of the minute. </summary>
+            <returns> Returns an Integer value from 0 through 59 representing the second of the minute. </returns>
+            <param name="timeValue"> Required. Date value from which you want to extract the second. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.TimeOfDay">
+            <summary> Returns a Date value containing the current time of day according to your system. </summary>
+            <returns> Returns a Date value containing the current time of day according to your system. </returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.Timer">
+            <summary> Returns a Double value representing the number of seconds elapsed since midnight. </summary>
+            <returns> Returns a Double value representing the number of seconds elapsed since midnight. </returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.TimeSerial(System.Int32,System.Int32,System.Int32)">
+            <summary> Returns a Date value representing a specified hour, minute, and second, with the date information set relative to January 1 of the year 1. </summary>
+            <returns> Returns a Date value representing a specified hour, minute, and second, with the date information set relative to January 1 of the year 1. </returns>
+            <param name="hour"> Required. Integer expression from 0 through 23. However, values outside this range are also accepted. </param>
+            <param name="minute"> Required. Integer expression from 0 through 59. However, values outside this range are also accepted. The value of <paramref name="minute" /> is added to the calculated hour, so a negative value specifies minutes before that hour. </param>
+            <param name="second"> Required. Integer expression from 0 through 59. However, values outside this range are also accepted. The value of <paramref name="second" /> is added to the calculated minute, so a negative value specifies seconds before that minute. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.TimeString">
+            <summary> Returns a String value representing the current time of day according to your system. </summary>
+            <returns> Returns a String value representing the current time of day according to your system. </returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.TimeValue(System.String)">
+            <summary> Returns a Date value containing the time information represented by a string, with the date information set to January 1 of the year 1. </summary>
+            <returns> Returns a Date value containing the time information represented by a string, with the date information set to January 1 of the year 1. </returns>
+            <param name="stringTime"> Required. String expression representing a date/time value from 00:00:00 on January 1 of the year 1 through 23:59:59 on December 31, 9999. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.Today">
+            <summary> Returns a Date value containing the current date according to your system. </summary>
+            <returns> Returns a Date value containing the current date according to your system. </returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.Weekday(System.DateTime,GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek)">
+            <summary> Returns an Integer value containing a number representing the day of the week. </summary>
+            <returns> Returns an Integer value containing a number representing the day of the week. </returns>
+            <param name="dateValue"> Required. Date value for which you want to determine the day of the week. </param>
+            <param name="dayOfWeek"> Optional. A value chosen from the FirstDayOfWeek enumeration that specifies the first day of the week. If not specified, FirstDayOfWeek.Sunday is used. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.WeekdayName(System.Int32,System.Boolean,GrapeCity.Enterprise.Data.VisualBasicReplacement.FirstDayOfWeek)">
+            <summary> Returns a String value containing the name of the specified weekday. </summary>
+            <returns> Returns a String value containing the name of the specified weekday. </returns>
+            <param name="weekday"> Required. Integer. The numeric designation for the weekday, from 1 through 7; 1 indicates the first day of the week and 7 indicates the last day of the week. The identities of the first and last days depend on the setting of <paramref name="firstDayOfWeekValue" />. </param>
+            <param name="abbreviate"> Optional. Boolean value that indicates if the weekday name is to be abbreviated. If omitted, the default is False, which means the weekday name is not abbreviated. </param>
+            <param name="firstDayOfWeekValue"> Optional. A value chosen from the FirstDayOfWeek enumeration that specifies the first day of the week. If not specified, FirstDayOfWeek.System is used. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateAndTime.Year(System.DateTime)">
+            <summary> Returns an Integer value from 1 through 9999 representing the year. </summary>
+            <returns> Returns an Integer value from 1 through 9999 representing the year. </returns>
+            <param name="dateValue"> Required. Date value from which you want to extract the year. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.AddObj(System.Object,System.Object)">
+            <summary> Performs an addition (+) operation. </summary>
+            <returns> The sum of <paramref name="o1" /> and <paramref name="o2" />. </returns>
+            <param name="o1"> Required. Any numeric expression. </param>
+            <param name="o2"> Required. Any numeric expression. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.SubObj(System.Object,System.Object)">
+            <summary> Performs a subtraction (–) operation. </summary>
+            <returns> The difference between <paramref name="o1" /> and <paramref name="o2" />. </returns>
+            <param name="o1"> Required. Any numeric expression.  </param>
+            <param name="o2"> Required. Any numeric expression. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.NegObj(System.Object)">
+            <summary> Performs a unary minus (–) operation. </summary>
+            <returns> The negative value of <paramref name="obj" />. </returns>
+            <param name="obj"> Required. Any numeric expression. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.MulObj(System.Object,System.Object)">
+            <summary> Performs a multiplication (*) operation. </summary>
+            <returns> The product of <paramref name="o1" /> and <paramref name="o2" />. </returns>
+            <param name="o1"> Required. Any numeric expression. </param>
+            <param name="o2"> Required. Any numeric expression. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.IDivObj(System.Object,System.Object)">
+            <summary> Performs an integer division (\) operation. </summary>
+            <returns> The integer quotient of <paramref name="o1" /> divided by <paramref name="o2" />, which discards any remainder and retains only the integer portion. </returns>
+            <param name="o1"> Required. Any numeric expression. </param>
+            <param name="o2"> Required. Any numeric expression. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.DivObj(System.Object,System.Object)">
+            <summary> Performs a division (/) operation. </summary>
+            <returns> The full quotient of <paramref name="o1" /> divided by <paramref name="o2" />, including any remainder. </returns>
+            <param name="o1"> Required. Any numeric expression. </param>
+            <param name="o2"> Required. Any numeric expression. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.ModObj(System.Object,System.Object)">
+            <summary> Performs a modulus (Mod) operation. </summary>
+            <returns> The remainder after <paramref name="o1" /> is divided by <paramref name="o2" />.  </returns>
+            <param name="o1"> Required. Any numeric expression. </param>
+            <param name="o2"> Required. Any numeric expression. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.PowObj(System.Object,System.Object)">
+            <summary> Performs an exponent (^) operation. </summary>
+            <returns> The result of <paramref name="obj1" /> raised to the power of <paramref name="obj2" />. </returns>
+            <param name="obj1"> Required. Any numeric expression. </param>
+            <param name="obj2"> Required. Any numeric expression. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.ShiftLeftObj(System.Object,System.Int32)">
+            <summary> Performs an arithmetic left shift (&lt;&lt;) operation. </summary>
+            <returns> An integral numeric value. The result of shifting the bit pattern. The data type is the same as that of <paramref name="o1" />. </returns>
+            <param name="o1"> Required. Integral numeric expression. The bit pattern to be shifted. The data type must be an integral type (SByte, Byte, Short, UShort, Integer, UInteger, Long, or ULong). </param>
+            <param name="amount"> Required. Numeric expression. The number of bits to shift the bit pattern. The data type must be Integer or widen to Integer. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.ShiftRightObj(System.Object,System.Int32)">
+            <summary> Performs an arithmetic right shift (&gt;&gt;) operation. </summary>
+            <returns> An integral numeric value. The result of shifting the bit pattern. The data type is the same as that of <paramref name="o1" />. </returns>
+            <param name="o1"> Required. Integral numeric expression. The bit pattern to be shifted. The data type must be an integral type (SByte, Byte, Short, UShort, Integer, UInteger, Long, or ULong). </param>
+            <param name="amount"> Required. Numeric expression. The number of bits to shift the bit pattern. The data type must be Integer or widen to Integer. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.BitAndObj(System.Object,System.Object)">
+            <summary> Performs a bitwise And operation. </summary>
+            <returns> 1 if both <paramref name="obj1" /> and <paramref name="obj2" /> evaluate to 1; otherwise, 0. </returns>
+            <param name="obj1"> Required. Any Boolean or numeric expression. </param>
+            <param name="obj2"> Required. Any Boolean or numeric expression. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.BitOrObj(System.Object,System.Object)">
+            <summary> Performs a bitwise Or operation. </summary>
+            <returns> 0 if both <paramref name="obj1" /> and <paramref name="obj2" /> evaluate to 0; otherwise, 1. </returns>
+            <param name="obj1"> Required. Any Boolean or numeric expression. </param>
+            <param name="obj2"> Required. Any Boolean or numeric expression. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.BitXorObj(System.Object,System.Object)">
+            <summary> Performs an Xor operation. </summary>
+            <returns> A numeric value that represents the bitwise exclusion (exclusive bitwise disjunction) of two numeric bit patterns. For more information, see Xor Operator (Visual Basic). </returns>
+            <param name="obj1"> Required. Any Boolean or numeric expression. </param>
+            <param name="obj2"> Required. Any Boolean or numeric expression. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.ObjTst(System.Object,System.Object,System.Boolean)">
+            <summary> Performs binary or text string comparison when given two objects. </summary>
+            <returns> Value Condition 
+                          -1 
+                      <paramref name="o1" /> is less than <paramref name="o2" />. 
+                          0
+                      <paramref name="o1" /> is equal to <paramref name="o2" />. 
+                          1 
+                      <paramref name="o1" /> is greater than <paramref name="o2" />. 
+                      </returns>
+            <param name="o1"> Required. Any expression. </param>
+            <param name="o2"> Required. Any expression. </param>
+            <param name="TextCompare"> Required. True to perform a case-insensitive string comparison; otherwise, False. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.ObjectType.NotObj(System.Object)">
+            <summary> Performs a Not operation. </summary>
+            <returns> For Boolean operations, False if <paramref name="obj" /> is True; otherwise, True. For bitwise operations, 1 if <paramref name="obj" /> is 0; otherwise, 0. </returns>
+            <param name="obj"> Required. Any Boolean or numeric expression. </param>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.CompareMethod">
+            <summary> Indicates how to compare strings when calling comparison functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.CompareMethod.Binary">
+            <summary> Performs a binary comparison. This member is equivalent to the Visual Basic constant vbBinaryCompare. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.CompareMethod.Text">
+            <summary> Performs a textual comparison. This member is equivalent to the Visual Basic constant vbTextCompare. </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.TriState">
+            <summary> Indicates a Boolean value or whether the default should be used when calling number-formatting functions. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.TriState.False">
+            <summary> False. The numeric value of this member is 0. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.TriState.True">
+            <summary> True. The numeric value of this member is -1. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.TriState.UseDefault">
+            <summary> Default setting. The numeric value of this member is -2. </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateFormat">
+            <summary> Indicates how to display dates when calling the FormatDateTime function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateFormat.GeneralDate">
+            <summary> For real numbers, displays a date and time. If the number has no fractional part, displays only a date. If the number has no integer part, displays time only. Date and time display is determined by your computer's regional settings. This member is equivalent to the Visual Basic constant vbGeneralDate. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateFormat.LongDate">
+            <summary> Displays a date using the long-date format specified in your computer's regional settings. This member is equivalent to the Visual Basic constant vbLongDate. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateFormat.ShortDate">
+            <summary> Displays a date using the short-date format specified in your computer's regional settings. This member is equivalent to the Visual Basic constant vbShortDate. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateFormat.LongTime">
+            <summary> Displays a time using the long-time format specified in your computer's regional settings. This member is equivalent to the Visual Basic constant vbLongTime. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.DateFormat.ShortTime">
+            <summary> Displays a time using the short-time format specified in your computer's regional settings. This member is equivalent to the Visual Basic constant vbShortTime. </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.VisualBasicReplacement.VbStrConv">
+            <summary> Indicates which type of conversion to perform when calling the StrConv function. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VbStrConv.None">
+            <summary> Performs no conversion. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VbStrConv.Uppercase">
+            <summary> Converts the string to uppercase characters. This member is equivalent to the Visual Basic constant vbUpperCase. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VbStrConv.Lowercase">
+            <summary> Converts the string to lowercase characters. This member is equivalent to the Visual Basic constant vbLowerCase. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VbStrConv.ProperCase">
+            <summary> Converts the first letter of every word in the string to uppercase. This member is equivalent to the Visual Basic constant vbProperCase. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VbStrConv.Wide">
+            <summary> Converts narrow (single-byte) characters in the string to wide (double-byte) characters. Applies to Asian locales. This member is equivalent to the Visual Basic constant vbWide. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VbStrConv.Narrow">
+            <summary> Converts wide (double-byte) characters in the string to narrow (single-byte) characters. Applies to Asian locales. This member is equivalent to the Visual Basic constant vbNarrow. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VbStrConv.Katakana">
+            <summary> Converts Hiragana characters in the string to Katakana characters. Applies to Japanese locale only. This member is equivalent to the Visual Basic constant vbKatakana. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VbStrConv.Hiragana">
+            <summary> Converts Katakana characters in the string to Hiragana characters. Applies to Japanese locale only. This member is equivalent to the Visual Basic constant vbHiragana. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VbStrConv.SimplifiedChinese">
+            <summary> Converts the string to Simplified Chinese characters. This member is equivalent to the Visual Basic constant vbSimplifiedChinese. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VbStrConv.TraditionalChinese">
+            <summary> Converts the string to Traditional Chinese characters. This member is equivalent to the Visual Basic constant vbTraditionalChinese. </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.VisualBasicReplacement.VbStrConv.LinguisticCasing">
+            <summary> Converts the string from file system rules for casing to linguistic rules. This member is equivalent to the Visual Basic constant vbLinguisticCasing. </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.CompareString(System.String,System.String,System.Boolean)">
+            <summary> Performs binary or text string comparison when given two strings. </summary>
+            <returns> Value Condition 
+                          -1 
+                      <paramref name="left" /> is less than <paramref name="right" />. 
+                          0
+                      <paramref name="left" /> is equal to <paramref name="right" />. 
+                          1 
+                      <paramref name="left" /> is greater than <paramref name="right" />. 
+                      </returns>
+            <param name="left"> Required. Any String expression. </param>
+            <param name="right"> Required. Any String expression. </param>
+            <param name="textCompare"> Required. True to perform a case-insensitive string comparison; otherwise, False. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Asc(System.Char)">
+            <summary> Returns an Integer value representing the character code corresponding to a character. </summary>
+            <returns> Returns an Integer value representing the character code corresponding to a character. </returns>
+            <param name="String"> Required. Any valid Char or String expression. If <paramref name="String" /> is a String expression, only the first character of the string is used for input. If <paramref name="String" /> is Nothing or contains no characters, an <see cref="T:System.ArgumentException" /> error occurs. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Asc(System.String)">
+            <summary> Returns an Integer value representing the character code corresponding to a character. </summary>
+            <returns> Returns an Integer value representing the character code corresponding to a character. </returns>
+            <param name="String"> Required. Any valid Char or String expression. If <paramref name="String" /> is a String expression, only the first character of the string is used for input. If <paramref name="String" /> is Nothing or contains no characters, an <see cref="T:System.ArgumentException" /> error occurs. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.AscW(System.String)">
+            <summary> Returns an Integer value representing the character code corresponding to a character. </summary>
+            <returns> Returns an Integer value representing the character code corresponding to a character. </returns>
+            <param name="String"> Required. Any valid Char or String expression. If <paramref name="String" /> is a String expression, only the first character of the string is used for input. If <paramref name="String" /> is Nothing or contains no characters, an <see cref="T:System.ArgumentException" /> error occurs. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.AscW(System.Char)">
+            <summary> Returns an Integer value representing the character code corresponding to a character. </summary>
+            <returns> Returns an Integer value representing the character code corresponding to a character. </returns>
+            <param name="String"> Required. Any valid Char or String expression. If <paramref name="String" /> is a String expression, only the first character of the string is used for input. If <paramref name="String" /> is Nothing or contains no characters, an <see cref="T:System.ArgumentException" /> error occurs. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Chr(System.Int32)">
+            <summary> Returns the character associated with the specified character code. </summary>
+            <returns> Returns the character associated with the specified character code. </returns>
+            <param name="charCode"> Required. An Integer expression representing the code point, or character code, for the character. If <paramref name="charCode" /> is outside the valid range, an <see cref="T:System.ArgumentException" /> error occurs. The valid range for Chr is 0 through 255, and the valid range for ChrW is -32768 through 65535. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.ChrW(System.Int32)">
+            <summary> Returns the character associated with the specified character code. </summary>
+            <returns> Returns the character associated with the specified character code. </returns>
+            <param name="charCode"> Required. An Integer expression representing the code point, or character code, for the character. If <paramref name="charCode" /> is outside the valid range, an <see cref="T:System.ArgumentException" /> error occurs. The valid range for Chr is 0 through 255, and the valid range for ChrW is -32768 through 65535. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Filter(System.Object[],System.String,System.Boolean,GrapeCity.Enterprise.Data.VisualBasicReplacement.CompareMethod)">
+            <summary> Returns a zero-based array containing a subset of a String array based on specified filter criteria. </summary>
+            <returns> Returns a zero-based array containing a subset of a String array based on specified filter criteria. </returns>
+            <param name="source"> Required. One-dimensional array of strings to be searched. </param>
+            <param name="match"> Required. String to search for. </param>
+            <param name="include"> Optional. Boolean value indicating whether to return substrings that include or exclude <paramref name="match" />. If <paramref name="include" /> is True, the Filter function returns the subset of the array that contains <paramref name="match" /> as a substring. If <paramref name="include" /> is False, the Filter function returns the subset of the array that does not contain <paramref name="match" /> as a substring. </param>
+            <param name="compare"> Optional. Numeric value indicating the kind of string comparison to use. See "Settings" for values. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Filter(System.String[],System.String,System.Boolean,GrapeCity.Enterprise.Data.VisualBasicReplacement.CompareMethod)">
+            <summary> Returns a zero-based array containing a subset of a String array based on specified filter criteria. </summary>
+            <returns> Returns a zero-based array containing a subset of a String array based on specified filter criteria. </returns>
+            <param name="source"> Required. One-dimensional array of strings to be searched. </param>
+            <param name="match"> Required. String to search for. </param>
+            <param name="include"> Optional. Boolean value indicating whether to return substrings that include or exclude <paramref name="match" />. If <paramref name="include" /> is True, the Filter function returns the subset of the array that contains <paramref name="match" /> as a substring. If <paramref name="include" /> is False, the Filter function returns the subset of the array that does not contain <paramref name="match" /> as a substring. </param>
+            <param name="compare"> Optional. Numeric value indicating the kind of string comparison to use. See "Settings" for values. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Format(System.Object,System.String)">
+            <summary> Returns a string formatted according to instructions contained in a format String expression. </summary>
+            <returns> Returns a string formatted according to instructions contained in a format String expression. </returns>
+            <param name="expression"> Required. Any valid expression. </param>
+            <param name="style"> Optional. A valid named or user-defined format String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.FormatCurrency(System.Object,System.Int32,GrapeCity.Enterprise.Data.VisualBasicReplacement.TriState,GrapeCity.Enterprise.Data.VisualBasicReplacement.TriState,GrapeCity.Enterprise.Data.VisualBasicReplacement.TriState)">
+            <summary> Returns an expression formatted as a currency value using the currency symbol defined in the system control panel. </summary>
+            <returns> Returns an expression formatted as a currency value using the currency symbol defined in the system control panel. </returns>
+            <param name="expression"> Required. Expression to be formatted. </param>
+            <param name="numDigitsAfterDecimal"> Optional. Numeric value indicating how many places are displayed to the right of the decimal. Default value is –1, which indicates that the computer's regional settings are used. </param>
+            <param name="includeLeadingDigit"> Optional. TriState enumeration that indicates whether or not a leading zero is displayed for fractional values. See "Settings" for values. </param>
+            <param name="useParensForNegativeNumbers"> Optional. TriState enumeration that indicates whether or not to place negative values within parentheses. See "Settings" for values. </param>
+            <param name="groupDigits">  Optional. TriState enumeration that indicates whether or not numbers are grouped using the group delimiter specified in the computer's regional settings. See "Settings" for values. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.FormatDateTime(System.DateTime,GrapeCity.Enterprise.Data.VisualBasicReplacement.DateFormat)">
+            <summary> Returns a string expression representing a date/time value. </summary>
+            <returns> Returns a string expression representing a date/time value. </returns>
+            <param name="expression"> Required. Date expression to be formatted. </param>
+            <param name="namedFormat"> Optional. Numeric value that indicates the date/time format used. If omitted, DateFormat.GeneralDate is used. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.FormatNumber(System.Object,System.Int32,GrapeCity.Enterprise.Data.VisualBasicReplacement.TriState,GrapeCity.Enterprise.Data.VisualBasicReplacement.TriState,GrapeCity.Enterprise.Data.VisualBasicReplacement.TriState)">
+            <summary> Returns an expression formatted as a number. </summary>
+            <returns> Returns an expression formatted as a number. </returns>
+            <param name="expression"> Required. Expression to be formatted. </param>
+            <param name="numDigitsAfterDecimal"> Optional. Numeric value indicating how many places are displayed to the right of the decimal. The default value is –1, which indicates that the computer's regional settings are used. </param>
+            <param name="includeLeadingDigit"> Optional. TriState constant that indicates whether a leading 0 is displayed for fractional values. See "Settings" for values. </param>
+            <param name="useParensForNegativeNumbers"> Optional. TriState constant that indicates whether to place negative values within parentheses. See "Settings" for values. </param>
+            <param name="groupDigits"> Optional. TriState constant that indicates whether or not numbers are grouped using the group delimiter specified in the locale settings. See "Settings" for values. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.FormatPercent(System.Object,System.Int32,GrapeCity.Enterprise.Data.VisualBasicReplacement.TriState,GrapeCity.Enterprise.Data.VisualBasicReplacement.TriState,GrapeCity.Enterprise.Data.VisualBasicReplacement.TriState)">
+            <summary> Returns an expression formatted as a percentage (that is, multiplied by 100) with a trailing % character. </summary>
+            <returns> Returns an expression formatted as a percentage (that is, multiplied by 100) with a trailing % character. </returns>
+            <param name="expression"> Required. Expression to be formatted. </param>
+            <param name="numDigitsAfterDecimal"> Optional. Numeric value indicating how many places to the right of the decimal are displayed. Default value is –1, which indicates that the locale settings are used. </param>
+            <param name="includeLeadingDigit"> Optional. TriState constant that indicates whether or not a leading zero displays for fractional values. See "Settings" for values. </param>
+            <param name="useParensForNegativeNumbers"> Optional. TriState constant that indicates whether or not to place negative values within parentheses. See "Settings" for values. </param>
+            <param name="groupDigits"> Optional. TriState constant that indicates whether or not numbers are grouped using the group delimiter specified in the locale settings. See "Settings" for values. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.InStr(System.String,System.String,GrapeCity.Enterprise.Data.VisualBasicReplacement.CompareMethod)">
+            <summary> Returns an integer specifying the start position of the first occurrence of one string within another. </summary>
+            <returns> If <paramref name="string1" /> is zero length or Nothing, InStr returns 0. If <paramref name="string2" /> is zero length or Nothing, InStr returns <paramref name="start" />. If <paramref name="string2" /> is not found, InStr returns 0. If <paramref name="string2" /> is found within <paramref name="string1" />, InStr returns position where match begins. If <paramref name="Start" /> &gt; <paramref name="string2" />, InStr returns 0. </returns>
+            <param name="string1"> Required. String expression being searched. </param>
+            <param name="string2"> Required. String expression sought. </param>
+            <param name="compare"> Optional. Specifies the type of string comparison. If <paramref name="compare" /> is omitted, the Option Compare setting determines the type of comparison. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.InStr(System.Int32,System.String,System.String,GrapeCity.Enterprise.Data.VisualBasicReplacement.CompareMethod)">
+            <summary> Returns an integer specifying the start position of the first occurrence of one string within another. </summary>
+            <returns> If <paramref name="string1" /> is zero length or Nothing, InStr returns 0. If <paramref name="string2" /> is zero length or Nothing, InStr returns <paramref name="start" />. If <paramref name="string2" /> is not found, InStr returns 0. If <paramref name="string2" /> is found within <paramref name="string1" />, InStr returns position where match begins. If <paramref name="start" /> &gt; <paramref name="string2" />, InStr returns 0. </returns>
+            <param name="start"> Optional. Numeric expression that sets the starting position for each search. If omitted, search begins at the first character position. The start index is 1-based. </param>
+            <param name="string1"> Required. String expression being searched. </param>
+            <param name="string2"> Required. String expression sought. </param>
+            <param name="compare"> Optional. Specifies the type of string comparison. If <paramref name="compare" /> is omitted, the Option Compare setting determines the type of comparison. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.InStrRev(System.String,System.String,System.Int32,GrapeCity.Enterprise.Data.VisualBasicReplacement.CompareMethod)">
+            <summary> Returns the position of the first occurrence of one string within another, starting from the right side of the string. </summary>
+            <returns> If <paramref name="stringCheck" /> is zero-length, InStrRev returns 0. If <paramref name="stringMatch" /> is zero-length, InStrRev returns <paramref name="start" />. If <paramref name="stringMatch" /> is not found, InStrRev returns 0. If <paramref name="stringMatch" /> is found within <paramref name="stringCheck" />, InStrRev returns position at which the first match is found, starting with the right side of the string. If <paramref name="start" /> is greater than length of <paramref name="stringMatch" />, InStrRev returns 0. </returns>
+            <param name="stringCheck"> Required. String expression being searched. </param>
+            <param name="stringMatch"> Required. String expression being searched for. </param>
+            <param name="start"> Optional. Numeric expression setting the one-based starting position for each search, starting from the left side of the string. If <paramref name="start" /> is omitted then –1 is used, meaning the search begins at the last character position. Search then proceeds from right to left. </param>
+            <param name="compare"> Optional. Numeric value indicating the kind of comparison to use when evaluating substrings. If omitted, a binary comparison is performed. See Settings for values.</param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Join(System.Object[],System.String)">
+            <summary> Returns a string created by joining a number of substrings contained in an array. </summary>
+            <returns> Returns a string created by joining a number of substrings contained in an array. </returns>
+            <param name="sourceArray"> Required. One-dimensional array containing substrings to be joined. </param>
+            <param name="delimiter"> Optional. Any string, used to separate the substrings in the returned string. If omitted, the space character (" ") is used. If <paramref name="delimiter" /> is a zero-length string ("") or Nothing, all items in the list are concatenated with no delimiters. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Join(System.String[],System.String)">
+            <summary> Returns a string created by joining a number of substrings contained in an array. </summary>
+            <returns> Returns a string created by joining a number of substrings contained in an array. </returns>
+            <param name="sourceArray"> Required. One-dimensional array containing substrings to be joined. </param>
+            <param name="delimiter"> Optional. Any string, used to separate the substrings in the returned string. If omitted, the space character (" ") is used. If <paramref name="delimiter" /> is a zero-length string ("") or Nothing, all items in the list are concatenated with no delimiters. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.LCase(System.String)">
+            <summary> Returns a string or character converted to lowercase. </summary>
+            <returns> Returns a string or character converted to lowercase. </returns>
+            <param name="value"> Required. Any valid String or Char expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.LCase(System.Char)">
+            <summary> Returns a string or character converted to lowercase. </summary>
+            <returns> Returns a string or character converted to lowercase. </returns>
+            <param name="value"> Required. Any valid String or Char expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Left(System.String,System.Int32)">
+            <summary> Returns a string containing a specified number of characters from the left side of a string. </summary>
+            <returns> Returns a string containing a specified number of characters from the left side of a string. </returns>
+            <param name="str"> Required. String expression from which the leftmost characters are returned. </param>
+            <param name="length"> Required. Integer expression. Numeric expression indicating how many characters to return. If 0, a zero-length string ("") is returned. If greater than or equal to the number of characters in <paramref name="str" />, the entire string is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.Boolean)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.SByte)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.Byte)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.Int16)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.UInt16)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.Int32)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.UInt32)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.Int64)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.UInt64)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.Decimal)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.Single)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.Double)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.DateTime)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.Char)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.String)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Len(System.Object)">
+            <summary> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </summary>
+            <returns> Returns an integer containing either the number of characters in a string or the nominal number of bytes required to store a variable. </returns>
+            <param name="expression"> Any valid String expression or variable name. If <paramref name="expression" /> is of type Object, the Len function returns the size as it will be written to the file by the FilePut function.</param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.LSet(System.String,System.Int32)">
+            <summary> Returns a left-aligned string containing the specified string adjusted to the specified length. </summary>
+            <returns> Returns a left-aligned string containing the specified string adjusted to the specified length. </returns>
+            <param name="source"> Required. String expression. Name of string variable. </param>
+            <param name="length"> Required. Integer expression. Length of returned string. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.LTrim(System.String)">
+            <summary> Returns a string containing a copy of a specified string with no leading spaces (LTrim), no trailing spaces (RTrim), or no leading or trailing spaces (Trim). </summary>
+            <returns> Returns a string containing a copy of a specified string with no leading spaces (LTrim), no trailing spaces (RTrim), or no leading or trailing spaces (Trim). </returns>
+            <param name="str"> Required. Any valid String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Mid(System.String,System.Int32)">
+            <summary> Returns a string containing a specified number of characters from a string. </summary>
+            <returns> Returns a string containing a specified number of characters from a string. </returns>
+            <param name="str"> Required. String expression from which characters are returned. </param>
+            <param name="start">  Required. Integer expression. Starting position of the characters to return. If <paramref name="start" /> is greater than the number of characters in <paramref name="str" />, the Mid function returns a zero-length string (""). <paramref name="start" /> is one based. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Mid(System.String,System.Int32,System.Int32)">
+            <summary> Returns a string containing a specified number of characters from a string. </summary>
+            <returns> Returns a string containing a specified number of characters from a string. </returns>
+            <param name="str"> Required. String expression from which characters are returned. </param>
+            <param name="start">  Required. Integer expression. Starting position of the characters to return. If <paramref name="start" /> is greater than the number of characters in <paramref name="str" />, the Mid function returns a zero-length string (""). <paramref name="start" /> is one based. </param>
+            <param name="Length"> Optional. Integer expression. Number of characters to return. If omitted or if there are fewer than <paramref name="Length" /> characters in the text (including the character at position <paramref name="start" />), all characters from the start position to the end of the string are returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Replace(System.String,System.String,System.String,System.Int32,System.Int32,GrapeCity.Enterprise.Data.VisualBasicReplacement.CompareMethod)">
+            <summary> Returns a string in which a specified substring has been replaced with another substring a specified number of times. </summary>
+            <returns> If <paramref name="find" /> is zero-length or Nothing, Replace returns copy of <paramref name="expression" />. If <paramref name="Replace" /> is zero-length, Replace returns copy of <paramref name="expression" /> with no occurrences of <paramref name="find" />. If <paramref name="expression" /> is zero-length or Nothing, or <paramref name="start" /> is greater than length of <paramref name="expression" />, Replace returns Nothing. If <paramref name="count" /> is 0, Replace returns copy of <paramref name="expression" />.  </returns>
+            <param name="expression"> Required. String expression containing substring to replace. </param>
+            <param name="find"> Required. Substring being searched for. </param>
+            <param name="replacement"> Required. Replacement substring. </param>
+            <param name="start"> Optional. Position within <paramref name="expression" /> where substring search is to begin. If omitted, 1 is assumed. </param>
+            <param name="count"> Optional. Number of substring substitutions to perform. If omitted, the default value is –1, which means "make all possible substitutions." </param>
+            <param name="compare"> Optional. Numeric value indicating the kind of comparison to use when evaluating substrings. See Settings for values. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Right(System.String,System.Int32)">
+            <summary> Returns a string containing a specified number of characters from the right side of a string. </summary>
+            <returns> Returns a string containing a specified number of characters from the right side of a string. </returns>
+            <param name="str"> Required. String expression from which the rightmost characters are returned. </param>
+            <param name="length"> Required. Integer. Numeric expression indicating how many characters to return. If 0, a zero-length string ("") is returned. If greater than or equal to the number of characters in <paramref name="str" />, the entire string is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.RSet(System.String,System.Int32)">
+            <summary> Returns a right-aligned string containing the specified string adjusted to the specified length. </summary>
+            <returns> Returns a right-aligned string containing the specified string adjusted to the specified length. </returns>
+            <param name="source"> Required. String expression. Name of string variable. </param>
+            <param name="length"> Required. Integer expression. Length of returned string. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.RTrim(System.String)">
+            <summary> Returns a string containing a copy of a specified string with no leading spaces (LTrim), no trailing spaces (RTrim), or no leading or trailing spaces (Trim). </summary>
+            <returns> Returns a string containing a copy of a specified string with no leading spaces (LTrim), no trailing spaces (RTrim), or no leading or trailing spaces (Trim). </returns>
+            <param name="str">               Required. Any valid String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Space(System.Int32)">
+            <summary> Returns a string consisting of the specified number of spaces. </summary>
+            <returns> Returns a string consisting of the specified number of spaces. </returns>
+            <param name="number"> Required. Integer expression. The number of spaces you want in the string. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Split(System.String,System.String,System.Int32,GrapeCity.Enterprise.Data.VisualBasicReplacement.CompareMethod)">
+            <summary> Returns a zero-based, one-dimensional array containing a specified number of substrings. </summary>
+            <returns> String array. If <paramref name="expression" /> is a zero-length string (""), Split returns a single-element array containing a zero-length string. If <paramref name="delimiter" /> is a zero-length string, or if it does not appear anywhere in <paramref name="expression" />, Split returns a single-element array containing the entire <paramref name="expression" /> string. </returns>
+            <param name="expression"> Required. String expression containing substrings and delimiters. </param>
+            <param name="delimiter"> Optional. Any single character used to identify substring limits. If <paramref name="delimiter" /> is omitted, the space character (" ") is assumed to be the delimiter. </param>
+            <param name="limit"> Optional. Maximum number of substrings into which the input string should be split. The default, –1, indicates that the input string should be split at every occurrence of the <paramref name="delimiter" /> string. </param>
+            <param name="compare"> Optional. Numeric value indicating the comparison to use when evaluating substrings. See "Settings" for values. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.StrComp(System.String,System.String,GrapeCity.Enterprise.Data.VisualBasicReplacement.CompareMethod)">
+            <summary> Returns -1, 0, or 1, based on the result of a string comparison. </summary>
+            <returns> If <paramref name="string1" /> sorts ahead of <paramref name="string2" />, StrComp returns -1. If <paramref name="string1" /> is equal to <paramref name="string2" />, StrComp returns  0. If <paramref name="string1" /> sorts after <paramref name="string2" />, StrComp returns  1. </returns>
+            <param name="string1"> Required. Any valid String expression. </param>
+            <param name="string2"> Required. Any valid String expression. </param>
+            <param name="compare"> Optional. Specifies the type of string comparison. If <paramref name="compare" /> is omitted, the Option Compare setting determines the type of comparison. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.StrConv(System.String,GrapeCity.Enterprise.Data.VisualBasicReplacement.VbStrConv,System.Int32)">
+            <summary> 
+            [NotImplemented] Returns a string converted as specified. 
+            This method called kernel32.dll.
+            </summary>
+            <returns> Returns a string converted as specified. </returns>
+            <param name="str"> Required. String expression to be converted. </param>
+            <param name="conversion"> Required. VbStrConv Enumeration member. The enumeration value specifying the type of conversion to perform. </param>
+            <param name="localeID"> Optional. The LocaleID value, if different from the system LocaleID value. (The system LocaleID value is the default.) </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.StrDup(System.Int32,System.Object)">
+            <summary> Returns a string or object consisting of the specified character repeated the specified number of times. </summary>
+            <returns> Returns a string or object consisting of the specified character repeated the specified number of times. </returns>
+            <param name="number"> Required. Integer expression. The length to the string to be returned. </param>
+            <param name="character"> Required. Any valid Char, String, or Object expression. Only the first character of the expression will be used. If Character is of type Object, it must contain either a Char or a String value. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.StrDup(System.Int32,System.Char)">
+            <summary>  Returns a string or object consisting of the specified character repeated the specified number of times. </summary>
+            <returns> Returns a string or object consisting of the specified character repeated the specified number of times. </returns>
+            <param name="number"> Required. Integer expression. The length to the string to be returned. </param>
+            <param name="character"> Required. Any valid Char, String, or Object expression. Only the first character of the expression will be used. If Character is of type Object, it must contain either a Char or a String value. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.StrDup(System.Int32,System.String)">
+            <summary> Returns a string or object consisting of the specified character repeated the specified number of times. </summary>
+            <returns> Returns a string or object consisting of the specified character repeated the specified number of times. </returns>
+            <param name="number"> Required. Integer expression. The length to the string to be returned. </param>
+            <param name="character"> Required. Any valid Char, String, or Object expression. Only the first character of the expression will be used. If Character is of type Object, it must contain either a Char or a String value. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.StrReverse(System.String)">
+            <summary> Returns a string in which the character order of a specified string is reversed. </summary>
+            <returns> Returns a string in which the character order of a specified string is reversed. </returns>
+            <param name="expression"> Required. String expression whose characters are to be reversed. If <paramref name="expression" /> is a zero-length string (""), a zero-length string is returned. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.Trim(System.String)">
+            <summary> Returns a string containing a copy of a specified string with no leading spaces (LTrim), no trailing spaces (RTrim), or no leading or trailing spaces (Trim). </summary>
+            <returns> Returns a string containing a copy of a specified string with no leading spaces (LTrim), no trailing spaces (RTrim), or no leading or trailing spaces (Trim). </returns>
+            <param name="str"> Required. Any valid String expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.UCase(System.String)">
+            <summary> Returns a string or character containing the specified string converted to uppercase. </summary> 
+            <returns> Returns a string or character containing the specified string converted to uppercase. </returns>
+            <param name="value">Required. Any valid String or Char expression.</param><filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.UCase(System.Char)">
+            <summary> Returns a string or character containing the specified string converted to uppercase. </summary>
+            <returns> Returns a string or character containing the specified string converted to uppercase. </returns>
+            <param name="value"> Required. Any valid String or Char expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.StrLike(System.String,System.String,GrapeCity.Enterprise.Data.VisualBasicReplacement.CompareMethod)">
+            <summary> Compares the parameters <paramref name="source" /> and <paramref name="pattern" /> and returns the same results as the Like operator. </summary>
+            <returns> A Boolean value indicating whether or not the string satisfies the pattern. If the value in string satisfies the pattern contained in pattern, result is True. If the string does not satisfy the pattern, result is False. If both string and pattern are empty strings, the result is True. </returns>
+            <param name="source"> Required. Any String expression. </param>
+            <param name="pattern"> Any String expression conforming to the pattern-matching conventions described in Like Operator (Visual Basic). </param>
+            <param name="compareOption"> Specifies how to compare strings to patterns, according to the CompareMethod Enumeration. Can be vbBinaryCompare for binary comparison or vbTextCompare for comparison based on a case-insensitive text sort order determined by your system's LocaleID value. </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.StrLikeBinary(System.String,System.String)">
+            <summary> Compares the parameters <paramref name="source" /> and <paramref name="pattern" /> and returns the same results as the Like operator, using binary comparison. </summary>
+            <returns> A Boolean value indicating whether or not the string satisfies the pattern. If the value in string satisfies the pattern contained in pattern, result is True. If the string does not satisfy the pattern, result is False. If both string and pattern are empty strings, the result is True. </returns>
+            <param name="source"> Required. Any String expression. </param>
+            <param name="pattern"> Required. Any String expression conforming to the pattern-matching conventions described in Like Operator (Visual Basic). </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.Strings.StrLikeText(System.String,System.String)">
+            <summary> Compares the parameters <paramref name="source" /> and <paramref name="pattern" /> and returns the same results as the Like operator, using text comparison. </summary>
+            <returns> A Boolean value indicating whether or not the string satisfies the pattern. If the value in string satisfies the pattern contained in pattern, result is True. If the string does not satisfy the pattern, result is False. If both string and pattern are empty strings, the result is True. </returns>
+            <param name="source"> Required. Any String expression. </param>
+            <param name="pattern"> Required. Any String expression conforming to the pattern-matching conventions described in Like Operator (Visual Basic). </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.VBMath.Randomize">
+            <summary> Initializes the random-number generator. </summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.VBMath.Randomize(System.Double)">
+            <summary> Initializes the random-number generator. </summary>
+            <param name="number"> Optional. An Object or any valid numeric expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.VBMath.Rnd">
+            <summary> Returns a random number of type Single. </summary>
+            <returns> If number is less than zero, Rnd generates the same number every time, using <paramref name="number" /> as the seed. If number is greater than zero, Rnd generates the next random number in the sequence. If number is equal to zero, Rnd generates the most recently generated number. If number is not supplied, Rnd generates the next random number in the sequence. </returns>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.VBMath.Rnd(System.Single)">
+            <summary> Returns a random number of type Single. </summary>
+            <returns> If number is less than zero, Rnd generates the same number every time, using <paramref name="number" /> as the seed. If number is greater than zero, Rnd generates the next random number in the sequence. If number is equal to zero, Rnd generates the most recently generated number. If number is not supplied, Rnd generates the next random number in the sequence. </returns>
+            <param name="number"> Optional. A Single value or any valid Single expression. </param>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.VisualBasicReplacement.VbUtils.CopyArray(System.Array,System.Array)">
+            <summary> Used by the Visual Basic compiler as a helper for Redim. </summary>
+            <returns> The copied array. </returns>
+            <param name="arySrc"> The array to be copied. </param>`
+            <param name="aryDest"> The destination array. </param>
+        </member>
+    </members>
+</doc>

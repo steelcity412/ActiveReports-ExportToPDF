@@ -1,0 +1,155 @@
+This document applies to the third party software included with this package,
+or used to build some parts of it.
+
+---------------------------------------------------------------------------------
+For GrapeCity Documents Licensing, please see
+https://www.grapecity.com/licensing/documents-api
+
+---------------------------------------------------------------------------------
+Portable.Bouncy Castle
+http://www.bouncycastle.org/csharp/licence.html
+
+---------------------------------------------------------------------------------
+Chromium
+
+Chromium is an entirely free and open-source software project.
+The Google-authored portion is released under the BSD license.
+Other parts are subject to a variety of licenses, including MIT,
+LGPL, Ms-PL, and an MPL/GPL/LGPL tri-license.
+
+---------------------------------------------------------------------------------
+SharpDX
+http://sharpdx.org/
+MIT License https://en.wikipedia.org/wiki/MIT_License
+
+---------------------------------------------------------------------------------
+Open-XML-SDK
+https://github.com/OfficeDev/Open-XML-SDK
+MIT License https://en.wikipedia.org/wiki/MIT_License
+
+---------------------------------------------------------------------------------
+CryptoFunctions.java
+https://apache.googlesource.com/poi/+/trunk/src/java/org/apache/poi/poifs/crypt/CryptoFunctions.java
+Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
+
+---------------------------------------------------------------------------------
+MSDN blog
+Microsoft Developer Agreement https://docs.microsoft.com/en-us/legal/mdsa?redirectedfrom=MSDN
+
+---------------------------------------------------------------------------------
+ImageSharp
+https://github.com/SixLabors/ImageSharp
+Apache License 2.0 http://www.apache.org/licenses/LICENSE-2.0
+
+---------------------------------------------------------------------------------
+Newtonsoft.Json
+https://www.newtonsoft.com/json
+MIT License https://en.wikipedia.org/wiki/MIT_License
+
+---------------------------------------------------------------------------------
+Microsoft.CSharp
+https://www.nuget.org/packages/Microsoft.CSharp/
+MIT License https://en.wikipedia.org/wiki/MIT_License
+
+---------------------------------------------------------------------------------
+PDFBox-2.0.12
+Apache License 2.0 https://docs.oracle.com/cloud/latest/big-data-discovery-cloud/BDDLG/rl_apache_license_for_pdfbox.htm#BDDLG-reference_6DDE4598BD5D4987A1684E7C2FF7B423
+
+---------------------------------------------------------------------------------
+javax.json-1.0.4
+Dual license consisting of the CDDL v1.1 and GPL v2: https://glassfish.java.net/public/CDDL+GPL_1_1.html
+
+---------------------------------------------------------------------------------
+PDF.js
+Apache License 2.0 https://github.com/mozilla/pdf.js/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+PREACT
+MIT License https://github.com/preactjs/preact/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+nodejs
+MIT License https://raw.githubusercontent.com/nodejs/node/master/LICENSE
+
+---------------------------------------------------------------------------------
+jss
+MIT License https://github.com/cssinjs/jss/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+i18next
+MIT License https://github.com/i18next/i18next/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+node-sass
+MIT License https://github.com/sass/node-sass/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+babel
+MIT License https://github.com/babel/babel/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+yarn
+BSD 2-Clause License https://github.com/yarnpkg/yarn/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+webpack
+MIT License https://github.com/webpack/webpack/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+ts-loader
+MIT License https://github.com/TypeStrong/ts-loader/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+css-loader
+MIT License https://github.com/webpack-contrib/css-loader/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+style-loader
+MIT License https://en.wikipedia.org/wiki/MIT_License
+
+---------------------------------------------------------------------------------
+string-replace-loader
+MIT License https://en.wikipedia.org/wiki/MIT_License
+
+---------------------------------------------------------------------------------
+clean-webpack-plugin
+MIT License  https://github.com/johnagan/clean-webpack-plugin/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+event-hooks-webpack-plugin
+MIT License https://opensource.org/licenses/MIT
+
+---------------------------------------------------------------------------------
+fs-extra
+MIT License https://en.wikipedia.org/wiki/MIT_License
+
+---------------------------------------------------------------------------------
+rimraf
+ISC License https://en.wikipedia.org/wiki/ISC_license
+
+---------------------------------------------------------------------------------
+Jest
+MIT licensed. https://github.com/facebook/jest/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+Puppeteer
+Apache License 2.0 https://github.com/GoogleChrome/puppeteer/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+jest-image-snapshot
+Apache License 2.0  https://github.com/americanexpress/jest-image-snapshot/blob/master/LICENSE.txt
+
+---------------------------------------------------------------------------------
+webpack-dev-server
+MIT License  https://github.com/webpack/webpack-dev-server/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+.NET Core Lab
+MIT License  https://github.com/dotnet/corefxlab/blob/master/LICENSE
+
+---------------------------------------------------------------------------------
+TypeDoc
+https://typedoc.org/api/
+Apache License 2.0  https://github.com/americanexpress/jest-image-snapshot/blob/master/LICENSE.txt
+
+---------------------------------------------------------------------------------

@@ -1,0 +1,242 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Report1</dd:Name>
+	<Body>
+		<Height>0.75in</Height>
+		<ReportItems>
+			<Table Name="Table1">
+				<DataSetName>Categories</DataSetName>
+				<Header>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox1">
+											<CanGrow>true</CanGrow>
+											<Value>category ID</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>10pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+												<TextDecoration>Underline</TextDecoration>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox2">
+											<CanGrow>true</CanGrow>
+											<Value>description</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>10pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+												<TextDecoration>Underline</TextDecoration>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox3">
+											<CanGrow>true</CanGrow>
+											<Value>name</Value>
+											<Style>
+												<FontFamily>Arial</FontFamily>
+												<FontSize>10pt</FontSize>
+												<FontStyle>Normal</FontStyle>
+												<FontWeight>700</FontWeight>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+												<TextDecoration>Underline</TextDecoration>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Header>
+				<Details>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox4">
+											<CanGrow>true</CanGrow>
+											<DataElementName>category ID</DataElementName>
+											<Value>=Fields!categoryID.Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox5">
+											<CanGrow>true</CanGrow>
+											<DataElementName>description</DataElementName>
+											<Value>=Fields!description.Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="TextBox6">
+											<CanGrow>true</CanGrow>
+											<DataElementName>name</DataElementName>
+											<Value>=Fields!name.Value</Value>
+											<Style>
+												<PaddingBottom>2pt</PaddingBottom>
+												<PaddingLeft>2pt</PaddingLeft>
+												<PaddingRight>2pt</PaddingRight>
+												<PaddingTop>2pt</PaddingTop>
+												<TextAlign>Center</TextAlign>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Details>
+				<Height>0.5in</Height>
+				<Left>0.125in</Left>
+				<TableColumns>
+					<TableColumn>
+						<Width>1.125in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>3.125in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.875in</Width>
+					</TableColumn>
+				</TableColumns>
+				<TableGroups>
+					<TableGroup>
+						<Grouping Name="Table1_Group1">
+							<GroupExpressions>
+								<GroupExpression>=Fields!categoryID.Value</GroupExpression>
+							</GroupExpressions>
+						</Grouping>
+						<Sorting>
+							<SortBy>
+								<Direction>Ascending</Direction>
+								<SortExpression>=Fields!categoryID.Value</SortExpression>
+							</SortBy>
+						</Sorting>
+					</TableGroup>
+				</TableGroups>
+				<Top>0.125in</Top>
+				<Width>6.125in</Width>
+			</Table>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<PageHeight>11in</PageHeight>
+	<PageWidth>8.5in</PageWidth>
+	<RightMargin>1in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<Width>6.5in</Width>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>jsondata=[
+	{
+		"categoryID" : 2,
+		"description" : "Sweet and savory sauces relishes spreads and seasonings",
+		"name" : "Condiments"
+	},
+	{
+		"categoryID" : 1,
+		"description" : "Soft drinks coffees teas beers and ales",
+		"name" : "Beverages"
+	},
+	{
+		"categoryID" : 3,
+		"description" : "Desserts candies and sweet breads",
+		"name" : "Confections"
+	},
+	{
+		"categoryID" : 4,
+		"description" : "Cheeses",
+		"name" : "Dairy Products"
+	},
+	{
+		"categoryID" : 5,
+		"description" : "Breads crackers pasta and cereal",
+		"name" : "Grains/Cereals"
+	},
+	{
+		"categoryID" : 6,
+		"description" : "Prepared meats",
+		"name" : "Meat/Poultry"
+	},
+	{
+		"categoryID" : 7,
+		"description" : "Dried fruit and bean curd",
+		"name" : "Produce"
+	},
+	{
+		"categoryID" : 8,
+		"description" : "Seaweed and fish",
+		"name" : "Seafood"
+	}
+]</ConnectString>
+				<DataProvider>JSON</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="Categories">
+			<Fields>
+				<Field Name="categoryID">
+					<DataField>categoryID</DataField>
+				</Field>
+				<Field Name="description">
+					<DataField>description</DataField>
+				</Field>
+				<Field Name="name">
+					<DataField>name</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>$.[*]</CommandText>
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

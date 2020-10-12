@@ -1,0 +1,3229 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GrapeCity.ActiveReports.Export.Pdf</name>
+    </assembly>
+    <members>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataNamespace.PurlOrg">
+            <summary>
+            Dublin Core Properties(namespace "http://purl.org/dc/elements/1.1/")
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataNamespace.NsAdobeComXap">
+            <summary>
+            XML Core Properties(namespace "http://ns.adobe.com/xap/1.0/")
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataNamespace.NsAdobeComPdf">
+            <summary>
+            PDF Properties(namespace http://ns.adobe.com/pdf/1.3/)
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataInfo">
+            <summary>
+            Single entry of the document additional metadata
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataInfo.Namespace">
+            <summary>
+            Namespace
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataInfo.Key">
+            <summary>
+            Key
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.AdditionalMetadataInfo.Value">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.FontFactorySectionHandler">
+            <summary>
+            A <see cref="T:System.Configuration.IConfigurationSectionHandler" /> for the FontFolders configuration section.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.FontFactorySectionHandler.ReadFolderPath(System.Xml.XmlNode)">
+            <summary>
+            Reads the folder path from XML node.
+            </summary>
+            <param name="node">The XML node.</param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions">
+            <summary>
+            Encapsulates viewer preferences and document information/metadata for an output PDF document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.HideToolbar">
+            <summary>
+            True to hide the viewer application’s toolbars when the document is active. Default value: false.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.HideMenubar">
+            <summary>
+            True to hide the viewer application’s menu bar when the document is active. Default value: false.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.HideWindowUI">
+            <summary>
+            True to hide user interface elements in the document’s window (such as scroll bars and navigation controls), leaving only the document’s contents displayed. Default value: false.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.FitWindow">
+            <summary>
+            True to resize the document’s window to fit the size of the first displayed page. Default value: false.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.CenterWindow">
+            <summary>
+            True to position the document’s window in the center of the screen. Default value: false.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.DisplayTitle">
+            <summary>
+            True if the window’s title bar should display the document title taken from the Title entry in the document information/metadata.  If this value is false, the title bar should instead display the name of the PDF file containing the document. Default value: false.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.DisplayMode">
+            <summary>
+            Specifies how the document should be displayed when opened. 
+            Default value: <see cref="F:GrapeCity.ActiveReports.Export.Pdf.Section.DisplayMode.None" />.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.Title">
+            <summary>
+            The document’s title.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.Author">
+            <summary>
+            The name of the person who created the document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.Subject">
+            <summary>
+            The subject of the document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.Keywords">
+            <summary>
+            Keywords associated with the document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.Application">
+            <summary>
+            The value that appears for “Application” inside the Document Properties dialog of the PDF viewer application.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.OnlyForPrint">
+            <summary>
+            Indicate whether the PDF is only for print.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.AdditionalMetadata">
+            <summary>
+            Additional metadata associated with this document
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.Attachments">
+            <summary>
+            Document level file attachments
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.DisplayMode">
+            <summary>
+            Used to specify <see cref="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfDocumentOptions.DisplayMode" />.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.DisplayMode.None">
+            Neither document outline nor thumbnail images are visible.
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.DisplayMode.Outlines">
+            The document outline is visible.
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.DisplayMode.Thumbs">
+            Thumbnail images are visible. If thumbnails and outline flags are set, thumbnails will be shown.
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.DisplayMode.FullScreen">
+            Full-screen mode with no menu bar, window controls, or any other window visible.
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport">
+            <summary>
+            Provides PDF document creation functionality for ActiveReports documents.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport._signature">
+            <summary>
+            Object for signing .pdf export
+            </summary>
+            <remarks>
+            Default value is null. If value is not null, then document will be signed during export
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.#ctor">
+            <summary>
+            Initializes a new instance of the PdfExport class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.CreateAndInitializeFontFactory(System.Boolean)">
+            <summary>
+            Reads configuration and returns initialized FontFactory instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.InitDefaults">
+            <summary>
+            Initializes members to their default values.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.PdfEngine">
+            <summary>
+            Table render needs this for fonts.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Finalize">
+            <summary>
+            Finalizer to make sure we dispose any unmanaged resources. Part of disposable pattern.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Dispose(System.Boolean)">
+            <summary>
+            Disposes the engine.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Pagination">
+            <summary>
+            Gets or sets the value indicates should pagination be used for resulted PDF document or not
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ImageQuality">
+            <summary>
+            Specifies the quality used for any images that are converted by ActiveReports.  Note that if a JPG image is used in the report, it is written directly to PDF without any conversion.  Other image formats may incur a conversion, which this value will effect.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ImageInterpolation">
+            <summary>
+            Specifies the images interpolation value
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ConvertMetaToPng">
+            <summary>
+            Sets or returns a value indicating whether Windows metafiles are converted to PNG files in the exported PDF document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Security">
+            <summary>
+            Returns a <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity" /> object for initializing document encryption and security.
+            </summary>
+            <remarks>
+            You must set the <see cref="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.Encrypt" /> property to true in order for the document to be encrypted and the permissions enforced.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ExportBookmarks">
+            <summary>
+            Sets or returns a value indicating whether bookmarks are exported to the PDF document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ShowBookmarks">
+            <summary>
+            Gets or sets a value indicating whether the navigation pane is displayed in the Acrobat viewer.
+            </summary>
+            <remarks>This property has been made obsolete by the <see cref="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Options" /> property.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Options">
+            <summary>
+            Returns an object allowing you to specify viewer preferences and document information options for the exported PDF document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.PrintPresets">
+            <summary>
+            Gets the print presets.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Signature">
+            <summary>
+            Specifies the signature settings for pdf export
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Version">
+            <summary>
+            Sets or returns the version of the PDF format the exported document is saved in.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ImageResolution">
+            <summary>
+            Sets or returns the resolution of images converted from metafiles.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.NeverEmbedFonts">
+            <summary>
+            Sets or returns a semicolon-delimited string of values indicating fonts that should not be embedded in a PDF document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.FontFallback">
+            <summary>
+            Gets or sets a comma-delimited string of font families that will be used to lookup glyphs missing in original font
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.OptimizeMemory">
+            <summary>
+            Gets; Sets teh optimization for pdf export.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Document.PageDocument,System.String)">
+            <summary>
+            Exports the specified page document to a PDF file.
+            </summary>
+            <param name="document">The ActiveReports PageDocument object to export.</param>
+            <param name="filePath">The file name and path to save the main PDF file to.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Document.PageDocument,System.String,System.String)">
+            <summary>
+            Exports the specified page document to a PDF file.
+            </summary>
+            <param name="document">The ActiveReports PageDocument object to export.</param>
+            <param name="filePath">The file name and path to save the main PDF file to.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Document.PageDocument,System.IO.Stream)">
+            <summary>
+            Exports the specified page document to a PDF stream.
+            </summary>
+            <param name="document">The ActiveReports PageDocument object to export.</param>
+            <param name="stream">The stream to save the PDF document to.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Document.PageDocument,System.IO.Stream,System.String)">
+            <summary>
+            Exports the specified document.
+            </summary>
+            <param name="document">The document.</param>
+            <param name="stream">The stream.</param>
+            <param name="pageRange">The page range.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.String,System.String)">
+            <summary>
+            Exports the specified IReport to file
+            </summary>
+            <param name="report">IReport instance to Export</param>
+            <param name="filePath">Path to export</param>
+            <param name="pageRange">A range of page numbers to export seperated by a comma.  Between each comma can have a single page number, or range of pages with a hyphen between the starting and ending page numbers in the range.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.String)">
+            <summary>
+            Exports the specified IReport to file
+            </summary>
+            <param name="report">IReport instance to Export</param>
+            <param name="filePath">Path to export</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.IO.Stream)">
+            <summary>
+            Exports the specified IReport to stream
+            </summary>
+            <param name="report">IReport instance to Export</param>
+            <param name="outputStream">The output stream.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.IO.Stream,System.String)">
+            <summary>
+            Exports the specified IReport to stream
+            </summary>
+            <param name="report">IReport instance to Export</param>
+            <param name="outputStream">The output stream.</param>
+            <param name="pageRange">A range of page numbers to export seperated by a comma.  Between each comma can have a single page number, or range of pages with a hyphen between the starting and ending page numbers in the range.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String)">
+            <summary>
+            Exports the specified document to a PDF file.
+            </summary>
+            <param name="document">The ActiveReports <see cref="T:GrapeCity.ActiveReports.Document.SectionDocument" />Document object to export.</param>
+            <param name="filePath">The file name and path to save the main PDF file to.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.String,System.String)">
+            <summary>
+            Exports the specified document to a PDF file.
+            </summary>
+            <param name="document">The ActiveReports <see cref="T:GrapeCity.ActiveReports.Document.SectionDocument" />Document object to export.</param>
+            <param name="filePath">The file name and path to save the main PDF file to.</param>
+            <param name="pageRange"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream)">
+            <summary>
+            Exports the specified document to a PDF stream.
+            </summary>
+            <param name="document">The ActiveReports <c>GrapeCity.ActiveReports.Document.SectionDocument</c> object to export.</param>
+            <param name="stream">The stream to save the PDF document to.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Export(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream,System.String)">
+            <summary>
+            Exports the specified document.
+            </summary>
+            <param name="document">The document.</param>
+            <param name="stream">The stream.</param>
+            <param name="pageRange">The page range.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ExportImpl(GrapeCity.ActiveReports.Document.SectionDocument,System.IO.Stream,System.String,System.Boolean,DataDynamics.DDLib.PdfEngine.PdfDocumentOptions@)">
+            <summary>
+            Exports the specified document to a PDF stream.
+            </summary>
+            <param name="document">The ActiveReports <c>GrapeCity.ActiveReports.Document.SectionDocument</c> object to export.</param>
+            <param name="stream">The stream to save the PDF document to.</param>
+            <param name="pageRange"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.ExportPage(GrapeCity.ActiveReports.Document.Section.Document.Filters.IFilteredPage,System.Drawing.Graphics,DataDynamics.ActiveReports.Export.InternalC.ExportContext,System.Collections.Generic.IEnumerable{GrapeCity.ActiveReports.Document.Section.Bookmark},System.Collections.Generic.IDictionary{System.Int32,System.Int32})">
+            <summary>
+            Renders the specified page to a new page in the current PDF document.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.RenderCanvasItems(System.Collections.Generic.IEnumerator{GrapeCity.ActiveReports.Document.Section.CanvasItem},DataDynamics.DDLib.PdfEngine.PsPage,System.Drawing.PointF,System.Drawing.Graphics,DataDynamics.ActiveReports.Export.InternalC.ExportContext,System.Collections.Generic.IEnumerable{GrapeCity.ActiveReports.Document.Section.Bookmark},System.Collections.Generic.IDictionary{System.Int32,System.Int32})">
+            <summary>
+            Renders the specified canvas items to the specified <see cref="T:DataDynamics.DDLib.PdfEngine.PsPage" />.
+            </summary>
+            <param name="canvasItems">The canvas items that are to be rendered.</param>
+            <param name="pdfPage">The destination that the page is to be rendered to.</param>
+            <param name="offset">The amount to offset rendering of the contents of the page horizontally and vertically. This params is udes for rendering table because table/cell has its own page.</param>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport._fontOffset">
+            <summary>
+            For fonts inside the table. 
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.GetLicense(System.Type,System.Object)">
+            <summary>
+            Gets license.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.SetLicLevel(GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.LicLevel)">
+            <summary>
+            For tests only
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.SetEval">
+            <summary>
+            For tests only
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExport.Guts">
+            <summary>
+            Gets access to internals for tests
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion">
+            <summary>
+            Specifies the file format version of a PDF document.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf11">
+            <summary>
+            PDF version 1.1.  Suitable for legacy viewers.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf12">
+            <summary>
+            PDF version 1.2. This is the native file format of Acrobat 3.0.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf13">
+            <summary>
+            PDF version 1.3.  This is the native file format of Acrobat 4.0.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf14">
+            <summary>
+            PDF version 1.4.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf15">
+            <summary>
+            PDF version 1.5.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf16">
+            <summary>
+            PDF version 1.6.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.Pdf17">
+            <summary>
+            PDF version 1.7.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA1b">
+            <summary>
+            PDF/A-1b level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA1a">
+            <summary>
+            PDF/A-1a level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA2b">
+            <summary>
+            PDF/A-2b level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA2u">
+            <summary>
+            PDF/A-2u level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA2a">
+            <summary>
+            PDF/A-2a level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA3b">
+            <summary>
+            PDF/A-3b level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA3u">
+            <summary>
+            PDF/A-3u level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFA3a">
+            <summary>
+            PDF/A-3a level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion.PDFUA1">
+            <summary>
+            PDF/UA-1 level, see http://en.wikipedia.org/wiki/PDF/UA
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.ImageQuality">
+            <summary>
+            Specifies the quality used for any images that are converted by ActiveReports.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.ImageQuality.Lowest">
+            Absolute, smallest files size, lowest quality.
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.ImageQuality.Medium">
+            The file image size and quality.
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.ImageQuality.Highest">
+            Highest quality at the cost of increased file size.
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException">
+            <summary>
+            Summary description for PdfExportException.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException" /> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException" /> class.
+            </summary>
+            <param name="??"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException" /> class.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException" /> class.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+            <remarks>This constructor supports serialization.</remarks>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity">
+            <summary>
+            Encapsulates the information necessary to provide PDF document security and encryption.
+            </summary>
+            <remarks>
+            If a user password is supplied the viewer application should prompt for a password.
+            If a user password is not supplied no password will be requested to open the document.
+            By correctly supplying either the user password, or the owner password, the user will be able to open the document, decrypt it and display it on the screen.
+            Whether additional operations are allowed on a decrypted document depends on which password (if any) was supplied when the document was opened and on any access restrictions specified using this class's <see cref="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.Permissions" /> property.
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.#ctor(System.String,System.String,GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions)">
+            <summary>
+            Initializes an instance of the <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity" /> class with the specified passwords and permissions.
+            </summary>
+            <param name="ownerPassword">The password, that upon being entered will permit the viewer unrestricted access to the document.</param>
+            <param name="userPassword">The password, that upon being entered permits the viewer the permissions as specified in this class's <see cref="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.Permissions" /> property.</param>
+            <param name="permissions">The initial <see cref="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.Permissions" /> value for this object.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.#ctor(System.String,System.String)">
+            <summary>
+            Initializes an instance of the <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity" /> class with the specified passwords and default permissions.  By default all permissions are allowed.
+            </summary>
+            <param name="ownerPassword">The password, that upon being entered will permit the viewer unrestricted access to the document.</param>
+            <param name="userPassword">The password, that upon being entered permits the viewer the permissions as specified in this class's <see cref="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.Permissions" /> property.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.#ctor">
+            <summary>
+            Initializes an instance of the <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity" /> class with empty passwords, and the default permissions.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.Encrypt">
+            <summary>
+            Determines whether the document is encrypted or not.
+            </summary>
+            <remarks>You must set this property to true for the document to be encrypted and the permissions enforced.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.OwnerPassword">
+            <summary>
+            The owner password that can be entered in the reader that permits full access to the document regardless of the specified user permissions.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.UserPassword">
+            <summary>
+            The user password that can be entered in the reader.  If this value is left empty they user will not be prompted for a password, however the user will be restricted by the specified permissions.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.Permissions">
+            <summary>
+            Specifies the user permissions for the document.  The <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions" /> values can be combined using a bitwise OR combination.
+            </summary>
+            <remarks>By default all permissions are set/allowed.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSecurity.Use128Bit">
+            <summary>
+            True to use 128 bit encryption with full permissions capability.  
+            False to use 40 bit encryption with limited permissions.
+            The <see cref="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowFillIn" />, <see cref="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowAccessibleReaders" />, and <see cref="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowAssembly" /> permissions require this value to be true.
+            </summary>
+            <remarks>The default value is true.</remarks>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions">
+            <summary>
+            Specifies the permissions available for a PDF document.
+            These values can be combined using a bitwise OR combination.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.None">
+            You can use this setting alone to specify that none of the other permissions are set.  It has no effect if you bitwise or this flag together with the other flags.
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowPrint">
+            Set to permit printing the document when it is opened with user access permission.  This is a revision 2 permission.
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowModifyContents">
+            Set to permit modifying the document’s contents when it is opened with user access permission. Text annotations can still be added or modified.   This is a revision 2 permission.
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowCopy">
+            Set to permit copying text or graphics from the document when it is opened with user access permission.   This is a revision 2 permission.
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowModifyAnnotations">
+            Set to permit adding or modifying annotations in the document when it is opened with user access permission.  This permission is a revision 2 or revision 3 permission.  Under revision three, the ability to copy/paste document contents is restricted other than what is specified by bit 10 (AllowAccessibleReaders).
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowFillIn">
+            Set to permit filling in form fields in the document when it is opened with user access permission.  This is revision 3 only permission.
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowAccessibleReaders">
+            Set to permit extracting the text and graphics of the document for accessibility purposes or otherwise (it is most likely for accessibility reasons, but possibly for other “screen reading” purposes) when it is opened with user access permission.  This is revision 3 only permission.
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.PdfPermissions.AllowAssembly">
+            Set to permit the following operations when the document is opened with user access permission:Insert, rotate, or delete pages, and create bookmarks or thumbnail images even if AllowModifyContents is false. This is revision 3 only permission.
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSigningException">
+            <summary>
+            Thrown while signing .pdf
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSigningException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException" /> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSigningException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException" /> class.
+            </summary>
+            <param name="??"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSigningException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException" /> class.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.PdfSigningException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.PdfExportException" /> class.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+            <remarks>This constructor supports serialization.</remarks>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature">
+            <summary>
+            Contains signing settings
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature._signDate">
+            <summary>
+            Specifies date of signing
+            </summary>
+            <remarks>
+            case 123298
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature._reason">
+            <summary>
+            Specifies the reason of signing
+            </summary>
+            <remarks>
+            case 123298
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature._contact">
+            <summary>
+            Specifies contact information of signer
+            </summary>
+            <remarks>
+            case 123298
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature._location">
+            <summary>
+            Specifies location of signer
+            </summary>
+            <remarks>
+            case 123298
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature._certificationLevel">
+            <summary>
+            Specifies type of certification
+            </summary>
+            <remarks>
+            case 123225
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature._visibilityType">
+            <summary>
+            Specifies visibility type
+            </summary>
+            <remarks>
+            case 123227
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature._certificate">
+            <summary>
+            Certificate which is used to sign document
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature._timeStamp">
+            <summary>
+            Provides time stamp settings. If this is null, then no time stamp will be applied
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature._visibleStamp">
+            <summary>
+            Provides settings for visible signature
+            </summary>
+            <remarks>
+            cases 123287, 123298, 123302
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.#ctor">
+            <summary>
+            Default ctor for PageReport
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.SignDate">
+            <summary>
+            Gets/sets the signature date. Default value is DateTime.Now
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Contact">
+            <summary>
+            Gets/sets the signing contact. Default value is ""
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Reason">
+            <summary>
+            Gets/sets the signing reason. Default value is ""
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Location">
+            <summary>
+            Gets/sets the signing location. Default value is ""
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Name">
+            <summary>
+            Gets the name of the certificate
+            </summary>
+            <remarks>
+            This field is generated, based on data from certificate. 
+            So after certificate changed, Visible/ShowLabel fields should be set again
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.DistinguishedName">
+            <summary>
+            Gets the Distinguished Name of the certificate
+            </summary>
+            <remarks>
+            This field is generated, based on data from certificate. 
+            So after certificate changed, Visible/ShowLabel fields should be set again
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Certificate">
+            <summary>
+            Gets/sets the signing certificate. Default value is null
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.CertificationLevel">
+            <summary>
+            Gets/sets type of the certification
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.VisibilityType">
+            <summary>
+            Gets/sets visible type for the signature
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.TimeStamp">
+            <summary>
+            Gets the settings for TSA server
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Stamp">
+            <summary>
+            Gets settings for visible signature
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.SignDigitally(System.String,System.IO.Stream,DataDynamics.DDLib.PdfEngine.PdfDocumentOptions,GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion)">
+            <summary>
+            Signs .pdf document
+            </summary>
+            <param name="filename">The file name of the document</param>
+            <param name="output">Stream with signed document</param>
+            <param name="options"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.SignDigitally(System.IO.Stream,System.IO.Stream,DataDynamics.DDLib.PdfEngine.PdfDocumentOptions,GrapeCity.ActiveReports.Export.Pdf.Section.PdfVersion,GrapeCity.Documents.Pdf.Security.StandardSecurityHandlerRev5)">
+            <summary>
+            Signs .pdf document
+            </summary>
+            <param name="inputStream">
+            The <see cref="T:System.IO.Stream" /> containing the document. 
+            The stream is read to the end but is not closed
+            </param>
+            <param name="output">Stream with signed document</param>
+            <param name="options"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfSignature.Clone">
+            <summary>
+            Clones current signatures
+            </summary>
+            <returns>Copy of the current signature</returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp">
+            <summary>
+            Encapsulates settings for visible part of signature
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.#ctor">
+            <summary>
+            Default ctor
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.Bounds">
+            <summary>
+            Gets/sets the bounds of the signature
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.PageIndex">
+            <summary>
+            Gets/sets index of the page, where signature should be placed
+            </summary>
+            <remarks>
+            First page have index 1
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.CustomText">
+            <summary>
+            Gets/sets drawn on signature
+            </summary>
+            <remarks>
+            if no text specified, generated text will be used
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.Font">
+            <summary>
+            gets/sets text font
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.TextAlignment">
+            <summary>
+            Gets/sets text alignment
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.TextColor">
+            <summary>
+            Gets/sets text color
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.ImageAlignment">
+            <summary>
+            Gets/sets image alignment inside signature
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.Image">
+            <summary>
+            Gets/sets image shown on signature
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.ImageRectangle">
+            <summary>
+            Gets/sets area where image should be placed. 
+            By default entire signature rectangle will be used.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.TextRectangle">
+            <summary>
+            Gets/sets area where text should be placed.
+            By default entire signature area will be used.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.PdfStamp.ParentPageSize">
+            <summary>
+            Stores parent's size. In our case parent is page where signature should be placed.
+            </summary>
+            <remarks>
+            For internal use only
+            </remarks>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.CertificationLevel">
+            <summary>
+            Enumerates possible certification types
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.CertificationLevel.NotCertified">
+            <summary>
+            Document is not certified
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.CertificationLevel.NoChangesAllowed">
+            <summary>
+            Certified, but no changes permitted
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.CertificationLevel.FormFilling">
+            <summary>
+            Certified, permit changes to form field and signing
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.CertificationLevel.FormFillingAnnotations">
+            <summary>
+            Certified, permit changes to form field, annotation and signing
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.VisibilityType">
+            <summary>
+            Possible visibility types for pdf signature
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.VisibilityType.Invisible">
+            <summary>
+            Invisible signature, it means no data will be shown on page, but it will be accessible 
+            via "Signatures" tab in reader
+            </summary>
+            <remarks>
+            Default value
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.VisibilityType.Text">
+            <summary>
+            Show only text on signature
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.VisibilityType.Image">
+            <summary>
+            Show only image on signature
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.VisibilityType.ImageText">
+            <summary>
+            Show both, image and text
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.Alignment">
+            <summary>
+            Specifies item alignment
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.Alignment.Right">
+            <summary>
+            Right
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.Alignment.Left">
+            <summary>
+            Left
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.Alignment.Center">
+            <summary>
+            Center
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1">
+            <summary>
+            Class wrapper, provides additional fields to values which should be placed on signature
+            </summary>
+            <typeparam name="T">Type of the value, which should be shown</typeparam>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.#ctor(`0)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="value">Value to write on signature</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.#ctor(`0,System.Boolean)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="value">Value to write on signature</param>
+            <param name="visible">true, if value should be written</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.#ctor(`0,System.Boolean,System.Boolean)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="value">Value to write on signature</param>
+            <param name="visible">true, if value should be written</param>
+            <param name="showLabel">true, if label for value should be shown</param>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.Value">
+            <summary>
+            Gets the value, which will be written on signature
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.Visible">
+            <summary>
+            Gets/sets value visibility. If true, then the value will be written
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.ShowLabel">
+            <summary>
+            Gets/sets value, indicating that label for value should be shown
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.ToString">
+            <summary>
+            Overrides base <see cref="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.ToString" /> method. 
+            </summary>
+            <returns>Returns Value.ToString()</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.op_Implicit(`0)~GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField{`0}">
+            <summary>
+            Converts value to <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1" /> object
+            </summary>
+            <param name="value">Value to convert</param>
+            <returns>Converted value</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.SignatureField`1.CreateEmpty">
+            <summary>
+            Creates empty field with default(T) as value
+            </summary>
+            <returns>Created empty field</returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.TimeStamp">
+            <summary>
+            Specifies time stamp server settings
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.TimeStamp.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="server">TSA server address</param>
+            <param name="user">User ID for TSA server</param>
+            <param name="password">Password for TSA server</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.TimeStamp.#ctor(System.Uri,System.String,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="serverUrl">TSA server URL</param>
+            <param name="user">User ID for TSA server</param>
+            <param name="password">Password for TSA server</param>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.TimeStamp.ServerUrl">
+            <summary>
+            TSA server URL
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.TimeStamp.UserName">
+            <summary>
+            User ID for TSA server
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Section.Signing.TimeStamp.Password">
+            <summary>
+            Password for TSA server
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.AttachmentInfo">
+            <summary>
+            Document level file attachment
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.AttachmentInfo.Name">
+            <summary>
+            Name of the content
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.AttachmentInfo.Content">
+            <summary>
+            Content itself
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.AttachmentInfo.Description">
+            <summary>
+            Description(optional)
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.ILinkProvider">
+            <summary>
+            Defines drill through linking.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.ILinkProvider.BookmarkLink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Returns the bookmark link based on the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction" />.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.ILinkProvider.DrillthroughLink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Returns the drill through link based on the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction" />.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.ILinkProvider.Hyperlink(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Returns the hyperlink based on the <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IAction" />.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension">
+            <summary>
+                <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.IRenderingExtension" /> implementation used to create a PDF report.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+             Implements <see cref="M:GrapeCity.ActiveReports.Extensibility.Rendering.IRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection)" /></summary>
+            <param name="report">
+                <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> instance to render.</param>
+            <param name="streams">Stream to write PDF output to.</param>
+            <param name="settings">Settings used to render.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider)">
+            <summary>
+             Implements <see cref="M:GrapeCity.ActiveReports.Extensibility.Rendering.IRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider)" /></summary>
+            <param name="report">
+                <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport" /> instance to render.</param>
+            <param name="streams">Stream to write PDF output to.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension.GetSupportedSettings">
+            <summary>
+            Implements <see cref="M:GrapeCity.ActiveReports.Extensibility.Rendering.IConfigurable.GetSupportedSettings" /></summary>
+            <returns>
+                <see cref="T:System.Collections.Specialized.NameValueCollection" /> of <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension" /> settings</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension.GetSupportedSettings(System.Boolean)">
+            <summary>
+            Implements <see cref="M:GrapeCity.ActiveReports.Extensibility.Rendering.IConfigurable.GetSupportedSettings(System.Boolean)" /></summary>
+            <param name="fpl">Fixed page layout flag</param>
+            <returns>
+                <see cref="T:System.Collections.Specialized.NameValueCollection" /> of <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Page.PdfRenderingExtension" /> settings</returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.Settings">
+            <summary>
+            Settings for PDF Rendering Extension
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Page.Settings" /> class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Version">
+            <summary>
+            Sets output PDF version.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.HideToolbar">
+            <summary>
+            True to hide the viewer application’s toolbars when the document is active. Default value: false.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.HideMenubar">
+            <summary>
+            True to hide the viewer application’s menu bar when the document is active. Default value: false.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.HideWindowUI">
+            <summary>
+            True to hide user interface elements in the document’s window (such as scroll bars and navigation controls), leaving only the document’s contents displayed. Default value: false.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.FitWindow">
+            <summary>
+            True to resize the document’s window to fit the size of the first displayed page. Default value: false.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.CenterWindow">
+            <summary>
+            True to position the document’s window in the center of the screen. Default value: false.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.DisplayTitle">
+            <summary>
+            True if the window’s title bar should display the document title taken from the Title entry in the document information/metadata.  If this value is false, the title bar should instead display the name of the PDF file containing the document. Default value: false.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.DisplayMode">
+            <summary>
+            Specifies how the document should be displayed when opened.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.PrintOnOpen">
+            <summary>
+            Gets or sets the value indicating whether the document should be printed after open.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.DocumentToAddBeforeReport">
+            <summary>
+            Gets or sets the path to the PDF document that should be inserted to the beginning of the rendering output.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.DocumentToAddAfterReport">
+            <summary>
+            Gets or sets the path to the PDF document that should be inserted to the end of the rendering output.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Title">
+            <summary>
+            Gets or sets the document's title.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Author">
+            <summary>
+            Gets or sets the the name of the person who created the document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Subject">
+            <summary>
+            Gets or sets the subject of the document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Keywords">
+            <summary>
+            Gets or sets keywords associated with the document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Application">
+            <summary>
+            Gets or sets the value that appears for “Application” inside the Document Properties dialog of the PDF viewer application.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.ImageInterpolation">
+            <summary>
+            Interpolation value of images. Allows to enable/disable image interpolation, when exporting the file to PDF.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.DpiX">
+            <summary>
+            Gets or sets the resolution of the output device in x-direction. The default value is 300.
+            </summary>
+            <remarks>
+            PDF hasn't its own DPI options. 
+            So this setting can be obtained throght <see cref="F:GrapeCity.ActiveReports.Extensibility.Layout.Features.FeatureResoluton" />
+            and used for customers rendering (overriding of <see cref="T:GrapeCity.ActiveReports.Drawing.IGraphicsRenderer" />.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.DpiY">
+            <summary>
+            Gets or sets the resolution of the output device in y-direction. The default value is 300.
+            </summary>
+            <remarks>
+            PDF hasn't its own DPI options. 
+            So this setting can be obtained throght <see cref="F:GrapeCity.ActiveReports.Extensibility.Layout.Features.FeatureResoluton" />
+            and used for customers rendering (overriding of <see cref="T:GrapeCity.ActiveReports.Drawing.IGraphicsRenderer" />.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.EndPage">
+            <summary>
+            Gets or sets the last page of the report to render. The default value is the value for StartPage.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.StartPage">
+            <summary>
+            Gets or sets the first page of the report to render. A value of 0 indicates that all pages are rendered. The default value is 1.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.MarginBottom">
+            <summary>
+            Gets or sets the bottom margin value, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, 1in). This value overrides the report's original settings.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.MarginTop">
+            <summary>
+            Gets or sets the top margin value, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, 1in). This value overrides the report's original settings.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.MarginLeft">
+            <summary>
+            Gets or sets the left margin value, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, 1in). This value overrides the report's original settings.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.MarginRight">
+            <summary>
+            Gets or sets the right margin value, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, 1in). This value overrides the report's original settings.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.PageHeight">
+            <summary>
+            Gets or sets the page height value, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, 1in). This value overrides the report's original settings.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.PageWidth">
+            <summary>
+            Gets or sets the page width value, in inches, to set for the report. You must include an integer or decimal value followed by "in" (for example, 1in). This value overrides the report's original settings.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.LinkProvider">
+            <summary>
+            Gets or sets the fully qualified name for a link provider to load.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.EmbedFonts">
+            <summary>
+            Gets or sets the embed fonts.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Encrypt">
+            <summary>
+            Gets or sets a value indicating whether the document is encrypted or not.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.OwnerPassword">
+            <summary>
+            Gets or sets the owner password that can be entered in the reader that permits full access to the document regardless of the specified user permissions.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.UserPassword">
+            <summary>
+            Gets or sets the user password that can be entered in the reader.  If this value is left empty they user will not be prompted for a password, however the user will be restricted by the specified permissions.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Permissions">
+            <summary>
+            Gets or sets the the user permissions for the document. The <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions" /> values can be combined using a bitwise OR combination.
+            </summary>
+            <remarks>By default all permissions are set/allowed.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Use128Bit">
+            <summary>
+            True to use 128 bit encryption with full permissions capability.  
+            False to use 40 bit encryption with limited permissions.
+            The <see cref="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowFillIn" />, <see cref="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowAccessibleReaders" />, and <see cref="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowAssembly" /> permissions require this value to be true.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.GetWritablePermissions">
+            <summary>
+            Gets the permissions value for writing (there are some special bits that need set/cleared before writing them out).
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.PrintLayoutMode">
+            <summary>
+            Gets or sets the layout mode to be used for PDF document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.WatermarkTitle">
+            <summary>
+            Gets or sets the watermark title for PDF document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.WatermarkFont">
+            <summary>
+            Gets or sets the watermark font for PDF document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.WatermarkAngle">
+            <summary>
+            Gets or sets the watermark angle for PDF document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.WatermarkColor">
+            <summary>
+            Gets or sets the watermark color for PDF document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SizeToFit">
+            <summary>
+            Gets or sets a value indicating whether PDF pages are fit to the selected paper size or not.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.FallbackFonts">
+            <summary>
+            Gets or sets a comma-delimited string of font families to locate missing glyphs from the original font. 
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.NeverEmbedFonts">
+            <summary>
+            Gets or sets a semicolon-delimited string of font families which should not be embedded in the pdf document. 
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.PrintPresets">
+            <summary>
+            Gets or sets the PDF print dialog presets.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureCertificateFileName">
+            <summary>
+            Gets/sets the signing certificate file name location
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureCertificatePassword">
+            <summary>
+            Gets/sets the signing certificate password
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureCertificationLevel">
+            <summary>
+            Gets/sets type of the signature certification
+            </summary>
+            <remarks>This value parsed from string. 
+            Possible values: NotCertified, NoChangesAllowed, FormFilling or FormFillingAnnotations</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureVisibilityType">
+            <summary>
+            Gets/sets visible type for the signature
+            </summary>
+            <remarks>This value parsed from string. Default value: Invisible. 
+            Possible values: Invisible, Text, Image, ImageText</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureSignDate">
+            <summary>
+            Gets/sets the sign date. Default value is DateTime.Now
+            </summary>
+            <remarks>Value must be a serialized DateTime value</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureContact">
+            <summary>
+            Gets/sets the signing contact.
+            </summary>
+            <remarks>This value parsed from strings. 
+            Required 'contact' parameter passed via the 'SignatureContact' field.
+            Optional parameters (visible and showLabel) passed via the 'SignatureContactVisible' 
+            and the 'SignatureContactShowLabel' fields</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureReason">
+            <summary>
+            Gets/sets the signing reason.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureLocation">
+            <summary>
+            Gets/sets the signing location.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureTimeStamp">
+            <summary>
+            Gets the settings for TSA server
+            </summary>
+            <remarks>This value parsed from strings.  
+            Required 'serverUrl' parameter passed via the 'SignatureTimeStamp' field.
+            Optional parameters (user and password) passed via the 'SignatureTimeStampUser' 
+            and the 'SignatureTimeStampPassword' fields</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureNameShowLabel">
+            <summary>
+            Gets/sets value, indicating that label for the name of the certificate should be shown
+            </summary>
+            <remarks>This value parsed from strings.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureNameVisible">
+            <summary>
+            Gets/sets value visibility for the name of the certificate. 
+            If true, then the value will be written
+            </summary>
+            <remarks>This value parsed from strings.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureDistinguishedShowLabel">
+            <summary>
+            Gets/sets value, indicating that label for the Distinguished Name 
+            of the certificate should be shown
+            </summary>
+            <remarks>This value parsed from strings.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureDistinguishedNameVisible">
+            <summary>
+            Gets/sets value visibility for the Distinguished Name of the certificate. 
+            If true, then the value will be written
+            </summary>
+            <remarks>This value parsed from strings.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampImageFileName">
+            <summary>
+            Gets/sets the file location for image shown on signature
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampBounds">
+            <summary>
+            Gets/sets the bounds of the signature
+            </summary>
+            <remarks>This value parsed from strings.  
+            Should be passed as serialized RectangleF struct.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampTextRectangle">
+            <summary>
+            Gets/sets area where text should be placed.
+            By default entire signature area will be used.
+            </summary>
+            <remarks>This value parsed from strings.  
+            Should be passed as serialized RectangleF struct.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampImageRectangle">
+            <summary>
+            Gets/sets area where image should be placed. 
+            By default entire signature rectangle will be used.
+            </summary>
+            <remarks>This value parsed from strings.  
+            Should be passed as serialized RectangleF struct.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampTextAlignment">
+            <summary>
+            Gets/sets stamp text alignment
+            </summary>
+            <remarks>This value parsed from strings.  
+            Should be passed as serialized Alignment struct.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampImageAlignment">
+            <summary>
+            Gets/sets stamp image alignment inside signature
+            </summary>
+            <remarks>This value parsed from strings.  
+            Should be passed as serialized Alignment struct.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampFont">
+            <summary>
+            gets/sets stamp text font
+            </summary>
+            <remarks>This value parsed from strings.  
+            Required 'familyName' parameter passed via the 'SignatureStampFont' field.
+            Optional parameters passed via 'SignatureStampFontStyle', 'SignatureStampFontName',
+            'SignatureStampFontSize', 'SignatureStampFontCharset', 
+            'SignatureStampFontVerticalText' fields</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampTextColor">
+            <summary>
+            Gets/sets stamp text color
+            </summary>
+            <remarks>This value parsed from strings.  
+            Should be passed as serialized Color struct.</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampPageIndex">
+            <summary>
+            Gets/sets index of the page, where signature should be placed
+            </summary>
+            <remarks>This value parsed from strings. First page have index 1</remarks>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.SignatureStampCustomText">
+            <summary>
+            Gets/sets the custom text that drawn on signature
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.AdditionalMetadata">
+            <summary>
+            Additional metadata associated with this document
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.Attachments">
+            <summary>
+            Document level file attachments
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.ApplySettings(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Apply settings for the rendering extension.
+            </summary>
+            <param name="settings">Settings for the rendering extension.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.ApplySignatureTimeStampSettings(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Apply settings for SignatureTimeStamp property
+            </summary>
+            <remarks>TimeStamp constructor uses:
+            new TimeStamp(serverUrl, user, password)</remarks>
+            <param name="settings">settings</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.ApplySignatureContactSettings(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Apply settings for SignatureContact property
+            </summary>
+            <remarks>SignatureField constructor has three overrided methods:
+            new SignatureField(contact) or
+            new SignatureField(contact,visible) or
+            new SignatureField(contact, visible, showLabel)</remarks>
+            <param name="settings">settings</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.op_Implicit(GrapeCity.ActiveReports.Export.Pdf.Page.Settings)~System.Collections.Specialized.NameValueCollection">
+            <summary>
+            Performs an implicit conversion from <see cref="T:GrapeCity.ActiveReports.Export.Pdf.Page.Settings" /> to <see cref="T:System.Collections.Specialized.NameValueCollection" />.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.GetPdfRenderingSettings(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.FontEmbedding">
+            <summary>
+            Define fonts embedding strategy.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.FontEmbedding.All">
+            <summary>
+            Embed all fonts.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.FontEmbedding.Partial">
+            <summary>
+            Embed only unicode fonts - default value.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.FontEmbedding.None">
+            <summary>
+            Do not embed fonts - works only with professional edition.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion">
+            <summary>
+            Output pdf conformance level. Allows to export to PDF/A.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.Pdf12">
+            <summary>
+            PDF version 1.2. This is the native file format of Acrobat 3.0.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.Pdf13">
+            <summary>
+            PDF version 1.3.  This is the native file format of Acrobat 4.0.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.Pdf14">
+            <summary>
+            PDF version 1.4. This is the native file format of Acrobat 5.0.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.Pdf15">
+            <summary>
+            PDF version 1.5.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.Pdf16">
+            <summary>
+            PDF version 1.6.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.Pdf17">
+            <summary>
+            PDF version 1.7.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA1b">
+            <summary>
+            PDF/A-1b level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA1a">
+            <summary>
+            PDF/A-1a level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA2b">
+            <summary>
+            PDF/A-2b level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA2u">
+            <summary>
+            PDF/A-2u level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA2a">
+            <summary>
+            PDF/A-2a level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA3b">
+            <summary>
+            PDF/A-3b level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA3u">
+            <summary>
+            PDF/A-3u level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFA3a">
+            <summary>
+            PDF/A-3a level, see http://en.wikipedia.org/wiki/PDF/A
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfVersion.PDFUA1">
+            <summary>
+            PDF/UA-1 level, see http://en.wikipedia.org/wiki/PDF/UA
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.DisplayMode">
+            <summary>
+            Used to specify <see cref="P:GrapeCity.ActiveReports.Export.Pdf.Page.Settings.DisplayMode" />.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.DisplayMode.None">
+            <summary>
+            Neither document outline nor thumbnail images are visible.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.DisplayMode.Outlines">
+            <summary>
+            The document outline is visible.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.DisplayMode.Thumbs">
+            <summary>
+            Thumbnail images are visible. If thumbnails and outline flags are set, thumbnails will be shown.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.DisplayMode.FullScreen">
+            <summary>
+            Full-screen mode with no menu bar, window controls, or any other window visible.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions">
+            <summary>
+            Specifies the permissions available for a PDF document. These values can be combined using a bitwise OR combination.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.Default">
+            <summary>
+            The default permissions.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.None">
+            <summary>
+            You can use this setting alone to specify that none of the other permissions are set.  It has no effect if you bitwise or this flag together with the other flags.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowPrint">
+            <summary>
+            Set to permit printing the document when it is opened with user access permission.  This is a revision 2 permission.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowModifyContents">
+            <summary>
+            Set to permit modifying the document’s contents when it is opened with user access permission. Text annotations can still be added or modified.   This is a revision 2 permission.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowCopy">
+            <summary>
+            Set to permit copying text or graphics from the document when it is opened with user access permission.   This is a revision 2 permission.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowModifyAnnotations">
+            <summary>
+            Set to permit adding or modifying annotations in the document when it is opened with user access permission.  This permission is a revision 2 or revision 3 permission.  Under revision three, the ability to copy/paste document contents is restricted other than what is specified by bit 10 (AllowAccessibleReaders).
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowFillIn">
+            <summary>
+            Set to permit filling in form fields in the document when it is opened with user access permission.  This is revision 3 only permission.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowAccessibleReaders">
+            <summary>
+            Set to permit extracting the text and graphics of the document for accessibility purposes or otherwise (it is most likely for accessibility reasons, but possibly for other “screen reading” purposes) when it is opened with user access permission.  This is revision 3 only permission.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Page.PdfPermissions.AllowAssembly">
+            <summary>
+            Set to permit the following operations when the document is opened with user access permission:Insert, rotate, or delete pages, and create bookmarks or thumbnail images even if AllowModifyContents is false. This is revision 3 only permission.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Enums">
+            <summary>
+            Class Enums.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Enums.ImageInterpolation">
+            <summary>
+            Interpolation value of images. Allows to swtich on/off image interpolation during export to PDF.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.ImageInterpolation.None">
+            <summary>
+            Interpolation is off
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.ImageInterpolation.Auto">
+            <summary>
+            Interpolation is on
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Enums.PageScaling">
+            <summary>
+            Specifies the Page Scaling.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.PageScaling.Default">
+            <summary>
+            Uses the application default setting, which is Shrink To Printable Area.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.PageScaling.None">
+            <summary>
+            Prevents automatic scaling to fit the printable area. Use this setting to preserve the scale in engineering documents or the point size required for legal reasons.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Enums.NumberOfCopies">
+            <summary>
+            Specifies the Number of copies supported by PDF.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.NumberOfCopies.Default">
+            <summary>
+            Print 1 copy.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.NumberOfCopies.Two">
+            <summary>
+            Print 2 copies.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.NumberOfCopies.Three">
+            <summary>
+            Print 3 copies.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.NumberOfCopies.Four">
+            <summary>
+            Print 4 copies.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.NumberOfCopies.Five">
+            <summary>
+            Print 5 copies.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Enums.DuplexMode">
+            <summary>
+            Specifies Printer duplex option. For best results, the selected printer should support duplex printing if you select a duplex option.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.DuplexMode.Simplex">
+            <summary>
+            Prints on one side of the paper.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.DuplexMode.DuplexFlipLongEdge">
+            <summary>
+            Prints on both sides of the paper; the paper flips along the long edge.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Export.Pdf.Enums.DuplexMode.DuplexFlipShortEdge">
+            <summary>
+            Prints on both sides of the paper; the paper flips along the short edge.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.PrintPresets">
+            <summary>
+            Specifies the print presets.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.PageScaling">
+            <summary>
+            Gets or sets the page scaling.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.DuplexMode">
+            <summary>
+            Gets or sets the duplex mode.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.PaperSourceByPageSize">
+            <summary>
+            Gets or sets the paper source by page size flag.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.PrintPageRange">
+            <summary>
+            Gets or sets the print page range.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.NumberOfCopies">
+            <summary>
+            Gets or sets the number of copies.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Pdf.PrintPresets" /> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Pdf.PrintPresets.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents this instance.
+            </returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Pdf.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.AppendedDocumentName">
+            <summary>
+              Looks up a localized string similar to DocumentToAddAfterReport.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.ApplicationDefault">
+            <summary>
+              Looks up a localized string similar to ActiveReports 14.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.ApplicationName">
+            <summary>
+              Looks up a localized string similar to Application.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.AuthorName">
+            <summary>
+              Looks up a localized string similar to Author.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Cat_PdfExport_ExportBookmarks">
+            <summary>
+              Looks up a localized string similar to ActiveReports.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfProEvaluation">
+            <summary>
+              Looks up a localized string similar to PdfProEvaluation.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Cat_PdfExport_FontFallback">
+            <summary>
+              Looks up a localized string similar to ActiveReports.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Cat_PdfExport_ImageInterpolation">
+            <summary>
+              Looks up a localized string similar to ActiveReports.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Cat_PdfExport_ImageQuality">
+            <summary>
+              Looks up a localized string similar to ActiveReports.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Cat_PdfExport_ImageResolution">
+            <summary>
+              Looks up a localized string similar to ActiveReports.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Cat_PdfExport_NeverEmbedFonts">
+            <summary>
+              Looks up a localized string similar to ActiveReports.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Cat_PdfExport_Options">
+            <summary>
+              Looks up a localized string similar to ActiveReports.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Cat_PdfExport_Security">
+            <summary>
+              Looks up a localized string similar to ActiveReports.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Cat_PdfExport_Version">
+            <summary>
+              Looks up a localized string similar to ActiveReports.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.CenterWindowName">
+            <summary>
+              Looks up a localized string similar to CenterWindow.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_AppendedDocument">
+            <summary>
+              Looks up a localized string similar to The path to the document that will be inserted to the end of the output..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_Application">
+            <summary>
+              Looks up a localized string similar to The value that appears for “Application” inside the Document Properties dialog of the PDF viewer application..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_Author">
+            <summary>
+              Looks up a localized string similar to The name of the person who created the document..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_CenterWindow">
+            <summary>
+              Looks up a localized string similar to True to position the document’s window in the center of the screen. Default value: false..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_ConvertMetaToPng">
+            <summary>
+               Looks up a localized string similar to Sets or returns a value indicating whether Windows metafiles are converted to PNG files in the exported PDF document.
+            
+            .
+             </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_DisplayMode">
+            <summary>
+              Looks up a localized string similar to 	Specifies how the document should be displayed when opened..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_DisplayTitle">
+            <summary>
+              Looks up a localized string similar to True if the window’s title bar should display the document title taken from the Title entry in the document information/metadata.  If this value is false, the title bar should instead display the name of the PDF file containing the document. Default value: false..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_DpiX">
+            <summary>
+              Looks up a localized string similar to Adjust the horizontal resolution of the rendered PDF file. The default value is 300..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_DpiY">
+            <summary>
+              Looks up a localized string similar to Adjust the vertical resolution of the rendered PDF file. The default value is 300..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_DuplexMode">
+            <summary>
+              Looks up a localized string similar to Specifies Printer duplex option. For best results, the selected printer should support duplex printing if you select a duplex option..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_EmbedFonts">
+            <summary>
+              Looks up a localized string similar to Gets or sets the value indicating whether the fonts used in the report are embedded in the PDF document..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_Encrypt">
+            <summary>
+              Looks up a localized string similar to Determines whether the document is encrypted or not..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_EndPage">
+            <summary>
+              Looks up a localized string similar to The default value of zero in this and the StartPage properties render all of the report pages. Otherwise, set this value to the number of the last page to render..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_FallbackFonts">
+            <summary>
+              Looks up a localized string similar to Fallback fonts..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_FitWindow">
+            <summary>
+              Looks up a localized string similar to True to resize the document’s window to fit the size of the first displayed page. Default value: false..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_HideMenuBar">
+            <summary>
+              Looks up a localized string similar to True to hide the viewer application’s menu bar when the document is active. Default value: false..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_HideToolbar">
+            <summary>
+              Looks up a localized string similar to True to hide the viewer application’s toolbars when the document is active. Default value: false..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_HideWindowUI">
+            <summary>
+              Looks up a localized string similar to True to hide user interface elements in the document’s window (such as scroll bars and navigation controls), leaving only the document’s contents displayed. Default value: false..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_ImageInterpolation">
+            <summary>
+              Looks up a localized string similar to Determines whether the images in document are interpolated or not. Default value: None..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_Keywords">
+            <summary>
+              Looks up a localized string similar to Keywords associated with the document..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_LinkProvider">
+            <summary>
+              Looks up a localized string similar to Enter the fully qualified name for a link provider to load. (TO BE HIDDEN OR REMOVED.).
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_MarginBottom">
+            <summary>
+              Looks up a localized string similar to Enter a value in inches (i.e. 0.5in) for the space between the bottom of the report and the edge of the page. This overrides the report's original settings..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_MarginLeft">
+            <summary>
+              Looks up a localized string similar to Enter a value in inches (i.e. 0.5in) for the space between the left edge of the report and the edge of the page. This overrides the report's original settings..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_MarginRight">
+            <summary>
+              Looks up a localized string similar to Enter a value in inches (i.e. 0.5in) for the space between the right edge of the report and the edge of the page. This overrides the report's original settings..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_MarginTop">
+            <summary>
+              Looks up a localized string similar to Enter a value in inches (i.e. 0.5in) for the space between the top of the report and the edge of the page. This overrides the report's original settings..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_NeverEmbedFonts">
+            <summary>
+              Looks up a localized string similar to Gets or sets a semicolon-delimited string of font families which should not be embedded in the pdf document..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_NumberOfCopies">
+            <summary>
+              Looks up a localized string similar to Prepopulates the Copies box in the Print dialog box..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_OnlyForPrint">
+            <summary>
+              Looks up a localized string similar to Sets or returns a value indicating whether the PDF is only for print..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_OwnerPassowrd">
+            <summary>
+              Looks up a localized string similar to The owner password that can be entered in the reader that permits full access to the document regardless of the specified user permissions..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_OwnerPassword">
+            <summary>
+              Looks up a localized string similar to Enter text that can be entered in the reader to permit full access to the document regardless of the specified user permissions..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PageHeight">
+            <summary>
+              Looks up a localized string similar to Enter a value in inches (i.e. 11in) to set the height of the report's pages. This value overrides the report's original settings..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PageScaling">
+            <summary>
+              Looks up a localized string similar to Specifies the Page Scaling..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PageWidth">
+            <summary>
+              Looks up a localized string similar to Enter a value in inches (i.e. 8.5in) to set the width of the report's pages. This value overrides the report's original settings..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PaperSourceByPageSize">
+            <summary>
+              Looks up a localized string similar to Uses the PDF page size to determine the output tray rather than the page setup option..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfExport">
+            <summary>
+              Looks up a localized string similar to ActiveReports PDF (.pdf) Export Component.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfExport_ExportBookmarks">
+            <summary>
+              Looks up a localized string similar to Sets or returns a value indicating whether bookmarks are exported to the PDF document..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfExport_FontFallback">
+            <summary>
+              Looks up a localized string similar to Gets or sets a comma-delimited string of font families that will be used to lookup glyphs missing in original font.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfExport_ImageQuality">
+            <summary>
+              Looks up a localized string similar to Specifies the quality used for any images that are converted by ActiveReports..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfExport_ImageResolution">
+            <summary>
+              Looks up a localized string similar to Sets or returns the image resolution for the PDF export if a metafile is used as an image for the picture control or if the Page.DrawPicture api is used..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfExport_NeverEmbedFonts">
+            <summary>
+              Looks up a localized string similar to Sets or returns a semicolon-delimited string of values indicating fonts that should not be embedded in a PDF document..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfExport_Options">
+            <summary>
+              Looks up a localized string similar to Returns an object allowing you to specify viewer preferences and document information options for the exported PDF document..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfExport_Security">
+            <summary>
+              Looks up a localized string similar to Returns a PdfSecurity object for initializing document encryption and security..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfExport_Version">
+            <summary>
+              Looks up a localized string similar to Sets or returns the version of the PDF format the exported document is saved in..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfSign_Certificate">
+            <summary>
+              Looks up a localized string similar to Specifies the signing certificate. Default value is "".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfSign_Contact">
+            <summary>
+              Looks up a localized string similar to Specifies the signing contact. Default value is "".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfSign_Date">
+            <summary>
+              Looks up a localized string similar to Specifies the signature date. Default value is DateTime.Now.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfSign_Location">
+            <summary>
+              Looks up a localized string similar to Specifies the signing location. Default value is "".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfSign_Reason">
+            <summary>
+              Looks up a localized string similar to Specifies the signing reason. Default value is "".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PdfSigning">
+            <summary>
+              Looks up a localized string similar to GrapeCity ActiveReports PDF (.pdf) Signature Component.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_Permissions">
+            <summary>
+              Looks up a localized string similar to Specifies the user permissions for the document.  The PdfPermissions values can be combined using a bitwise OR combination..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PrependedDocument">
+            <summary>
+              Looks up a localized string similar to The path to the document that will be inserted to the beginning of the output..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PrintLayoutMode">
+            <summary>
+              Looks up a localized string similar to Select how to lay out the pages of the report in the PDF document. .
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PrintOnOpen">
+            <summary>
+              Looks up a localized string similar to Gets or sets the value indicating whether the document should be printed after open.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PrintPageRange">
+            <summary>
+              Looks up a localized string similar to Prepopulates the Pages box in the Print Range section of the Print dialog box with the page ranges you enter here..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_PrintPresets">
+            <summary>
+              Looks up a localized string similar to PDF print dialog presets.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_Signature">
+            <summary>
+              Looks up a localized string similar to Specifies the settings for signarute..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_SizeToFit">
+            <summary>
+              Looks up a localized string similar to Determines whether PDF pages are fit to the selected paper size..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_StartPage">
+            <summary>
+              Looks up a localized string similar to The default value of zero in this and the EndPage properties render all of the report pages. Otherwise, set this value to the number of the first page to render..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_Subject">
+            <summary>
+              Looks up a localized string similar to The subject of the document..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_Title">
+            <summary>
+              Looks up a localized string similar to The document’s title..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_Use128Bit">
+            <summary>
+              Looks up a localized string similar to True to use 128 bit encryption with full permissions capability. False to use 40 bit encryption with limited permissions..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_UserPassword">
+            <summary>
+               Looks up a localized string similar to The user password that can be entered in the reader.  If this value is left empty they user will not be prompted for a password, however the user will be restricted by the specified permissions.
+            
+            .
+             </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_Version">
+            <summary>
+              Looks up a localized string similar to Sets or returns the version of the PDF format the exported document is saved in..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_WatermarkAngle">
+            <summary>
+              Looks up a localized string similar to Specify the degree of angle for the watermark text on the PDF document. Valid values range from 0 to 359, where 0 is horizontal, left to right..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_WatermarkColor">
+            <summary>
+              Looks up a localized string similar to Select a color for the watermark text on the PDF document..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_WatermarkFont">
+            <summary>
+              Looks up a localized string similar to Click the + or the ellipsis to set the font properties for the watermark text on the PDF document, or enter any valid System.Drawing.Font..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Desc_WatermarkTitle">
+            <summary>
+              Looks up a localized string similar to Enter text (i.e. CONFIDENTIAL) to use as the watermark on the PDF document..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DisplayMode_FullScreen">
+            <summary>
+              Looks up a localized string similar to FullScreen.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DisplayMode_None">
+            <summary>
+              Looks up a localized string similar to None.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DisplayMode_Outlines">
+            <summary>
+              Looks up a localized string similar to Outlines.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DisplayMode_Thumbs">
+            <summary>
+              Looks up a localized string similar to Thumbs.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DisplayModeName">
+            <summary>
+              Looks up a localized string similar to DisplayMode.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DisplayTitleName">
+            <summary>
+              Looks up a localized string similar to DisplayTitle.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DocumentToAddAfterReportException">
+            <summary>
+              Looks up a localized string similar to Cannot use 'DocumentToAddAfterReport' setting together with PDF/A output version..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DocumentToAddBeforeReportException">
+            <summary>
+              Looks up a localized string similar to Cannot use 'DocumentToAddBeforeReport' setting together with PDF/A output version..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DpiXName">
+            <summary>
+              Looks up a localized string similar to DpiX.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DpiYName">
+            <summary>
+              Looks up a localized string similar to DpiY.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DuplexMode_DuplexFlipLongEdge">
+            <summary>
+              Looks up a localized string similar to Duplex (Flip on long edge).
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DuplexMode_DuplexFlipShortEdge">
+            <summary>
+              Looks up a localized string similar to Duplex (Flip on short edge).
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DuplexMode_Simplex">
+            <summary>
+              Looks up a localized string similar to Simplex.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.DuplexModeName">
+            <summary>
+              Looks up a localized string similar to DuplexMode.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.EmbedFontsName">
+            <summary>
+              Looks up a localized string similar to EmbedFonts.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.EncryptName">
+            <summary>
+              Looks up a localized string similar to Encrypt.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.EndPageName">
+            <summary>
+              Looks up a localized string similar to EndPage.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.EvalMessageFontFamily">
+            <summary>
+              Looks up a localized string similar to Arial.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Exception_InvalidPDFFonts">
+            <summary>
+              Looks up a localized string similar to Invalid PDF Font.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Export_Filter">
+            <summary>
+              Looks up a localized string similar to PDF files (*.pdf)|*.pdf|All files (*.*)|*.*.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.FallbackFontsName">
+            <summary>
+              Looks up a localized string similar to FallbackFonts.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.False">
+            <summary>
+              Looks up a localized string similar to False.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.FitWindowName">
+            <summary>
+              Looks up a localized string similar to FitWindow.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.FontEmbedding_All">
+            <summary>
+              Looks up a localized string similar to All.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.FontEmbedding_None">
+            <summary>
+              Looks up a localized string similar to None.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.FontEmbedding_Partial">
+            <summary>
+              Looks up a localized string similar to Partial.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.FontFallbackDefault">
+            <summary>
+              Looks up a localized string similar to .
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.HideMenubarName">
+            <summary>
+              Looks up a localized string similar to HideMenubar.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.HideToolbarName">
+            <summary>
+              Looks up a localized string similar to HideToolbar.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.HideWindowUIName">
+            <summary>
+              Looks up a localized string similar to HideWindowUI.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.ImageInterpolationName">
+            <summary>
+              Looks up a localized string similar to ImageInterpolation.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.INVALIDPDFFONTS">
+            <summary>
+              Looks up a localized string similar to Invalid PDF Fonts, index:.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.KeywordsName">
+            <summary>
+              Looks up a localized string similar to Keywords.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.LastPageLessStartPage">
+            <summary>
+              Looks up a localized string similar to EndPage should be greater than or equal to StartPage, or 0..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.LinkProviderName">
+            <summary>
+              Looks up a localized string similar to LinkProvider.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.MarginBottomName">
+            <summary>
+              Looks up a localized string similar to MarginBottom.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.MarginLeftName">
+            <summary>
+              Looks up a localized string similar to MarginLeft.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.MarginRightName">
+            <summary>
+              Looks up a localized string similar to MarginRight.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.MarginTopName">
+            <summary>
+              Looks up a localized string similar to MarginTop.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.NeverEmbedFontsDefault">
+            <summary>
+              Looks up a localized string similar to .
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.NeverEmbedFontsName">
+            <summary>
+              Looks up a localized string similar to NeverEmbedFonts.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.NumberOfCopies_Default">
+            <summary>
+              Looks up a localized string similar to Default.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.NumberOfCopies_Five">
+            <summary>
+              Looks up a localized string similar to 5.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.NumberOfCopies_Four">
+            <summary>
+              Looks up a localized string similar to 4.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.NumberOfCopies_Three">
+            <summary>
+              Looks up a localized string similar to 3.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.NumberOfCopies_Two">
+            <summary>
+              Looks up a localized string similar to 2.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.NumberOfCopiesName">
+            <summary>
+              Looks up a localized string similar to NumberOfCopies.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Obsolete_ShowBookamarks">
+            <summary>
+              Looks up a localized string similar to Please use the PdfOptions.PageMode property to determine whether the bookmarks/outlines sidebar is initially displayed in the viewer..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.OwnerPasswordName">
+            <summary>
+              Looks up a localized string similar to OwnerPassword.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PageHeightName">
+            <summary>
+              Looks up a localized string similar to PageHeight.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PageScaling_Default">
+            <summary>
+              Looks up a localized string similar to Default.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PageScaling_None">
+            <summary>
+              Looks up a localized string similar to None.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PageScalingName">
+            <summary>
+              Looks up a localized string similar to PageScaling.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PageWidthName">
+            <summary>
+              Looks up a localized string similar to PageWidth.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PaperSourceByPageSizeName">
+            <summary>
+              Looks up a localized string similar to PaperSourceByPageSize.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfFileNameEditorFilter">
+            <summary>
+              Looks up a localized string similar to PDF document (*.pdf)|*.pdf;|All Files (*.*)|*.*.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfFileNameEditorTitle">
+            <summary>
+              Looks up a localized string similar to Select PDF document.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfPermissions_AllowAccessibleReaders">
+            <summary>
+              Looks up a localized string similar to AllowAccessibleReaders.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfPermissions_AllowAssembly">
+            <summary>
+              Looks up a localized string similar to AllowAssembly.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfPermissions_AllowCopy">
+            <summary>
+              Looks up a localized string similar to AllowCopy.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfPermissions_AllowFillIn">
+            <summary>
+              Looks up a localized string similar to AllowFillIn.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfPermissions_AllowModifyAnnotations">
+            <summary>
+              Looks up a localized string similar to AllowModifyAnnotations.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfPermissions_AllowModifyContents">
+            <summary>
+              Looks up a localized string similar to AllowModifyContents.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfPermissions_AllowPrint">
+            <summary>
+              Looks up a localized string similar to AllowPrint.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfPermissions_Default">
+            <summary>
+              Looks up a localized string similar to Default.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfPermissions_None">
+            <summary>
+              Looks up a localized string similar to None.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_Pdf12">
+            <summary>
+              Looks up a localized string similar to PDF-1.2.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_Pdf13">
+            <summary>
+              Looks up a localized string similar to PDF-1.3.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_Pdf14">
+            <summary>
+              Looks up a localized string similar to PDF-1.4.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_Pdf15">
+            <summary>
+              Looks up a localized string similar to PDF-1.5.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_Pdf16">
+            <summary>
+              Looks up a localized string similar to PDF-1.6.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_Pdf17">
+            <summary>
+              Looks up a localized string similar to PDF-1.7.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_PDFA1a">
+            <summary>
+              Looks up a localized string similar to PDF/A-1a.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_PDFA1b">
+            <summary>
+              Looks up a localized string similar to PDF/A-1b.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_PDFA2a">
+            <summary>
+              Looks up a localized string similar to PDF/A-2a.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_PDFA2b">
+            <summary>
+              Looks up a localized string similar to PDF/A-2b.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_PDFA2u">
+            <summary>
+              Looks up a localized string similar to PDF/A-2u.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_PDFA3a">
+            <summary>
+              Looks up a localized string similar to PDF/A-3a.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_PDFA3b">
+            <summary>
+              Looks up a localized string similar to PDF/A-3b.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_PDFA3u">
+            <summary>
+              Looks up a localized string similar to PDF/A-3u.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PdfVersion_PDFUA1">
+            <summary>
+              Looks up a localized string similar to PDF/UA-1.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PermissionsName">
+            <summary>
+              Looks up a localized string similar to Permissions.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PrependedDocumentName">
+            <summary>
+              Looks up a localized string similar to DocumentToAddBeforeReport.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PrintLayoutModeName">
+            <summary>
+              Looks up a localized string similar to PrintLayoutMode.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PrintOnOpenName">
+            <summary>
+              Looks up a localized string similar to PrintOnOpen.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PrintPageRangeName">
+            <summary>
+              Looks up a localized string similar to PrintPageRange.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.PrintPresetsName">
+            <summary>
+              Looks up a localized string similar to PrintPresets.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.ProductName">
+            <summary>
+              Looks up a localized string similar to ActiveReports 14.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.SignatureLabel_Contact">
+            <summary>
+              Looks up a localized string similar to Contact:.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.SignatureLabel_Date">
+            <summary>
+              Looks up a localized string similar to Date:.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.SignatureLabel_DN">
+            <summary>
+              Looks up a localized string similar to DN:.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.SignatureLabel_Location">
+            <summary>
+              Looks up a localized string similar to Location:.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.SignatureLabel_Name">
+            <summary>
+              Looks up a localized string similar to Digitally signed by.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.SignatureLabel_Reason">
+            <summary>
+              Looks up a localized string similar to Reason:.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.SizeToFitName">
+            <summary>
+              Looks up a localized string similar to SizeToFit.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.sRGB_ICC">
+            <summary>
+              Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.StartPageName">
+            <summary>
+              Looks up a localized string similar to StartPage.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.StartPageOverEndPage">
+            <summary>
+              Looks up a localized string similar to StartPage should be less than or equal to EndPage, or 0..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.SubjectName">
+            <summary>
+              Looks up a localized string similar to Subject.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.TitleName">
+            <summary>
+              Looks up a localized string similar to Title.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.True">
+            <summary>
+              Looks up a localized string similar to True.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Use128BitName">
+            <summary>
+              Looks up a localized string similar to Use128Bit.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.UserPasswordName">
+            <summary>
+              Looks up a localized string similar to UserPassword.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.Version">
+            <summary>
+              Looks up a localized string similar to Version.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.WatermarkAngleName">
+            <summary>
+              Looks up a localized string similar to WatermarkAngle.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.WatermarkColorName">
+            <summary>
+              Looks up a localized string similar to WatermarkColor.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.WatermarkFontName">
+            <summary>
+              Looks up a localized string similar to WatermarkFont.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Pdf.Resources.WatermarkTitleName">
+            <summary>
+              Looks up a localized string similar to WatermarkTitle.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:GrapeCity.ActiveReports.Rendering.Text.BidiOrder.DetermineParagraphEmbeddingLevel" -->
+        <!-- Badly formed XML comment ignored for member "M:GrapeCity.ActiveReports.Rendering.Text.BidiOrder.DetermineExplicitEmbeddingLevels" -->
+        <!-- Badly formed XML comment ignored for member "M:GrapeCity.ActiveReports.Rendering.Text.BidiOrder.GetLevels(System.Int32[])" -->
+        <member name="T:DataDynamics.GDI.Win32PenStyles">
+            <summary>
+            Represents the Win32 PSDK PS_XXX pens style constants.
+            </summary>
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.TypeCosmetic">
+            The pen is cosmetic.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.TypeGeometric">
+            The pen is geometric.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.TypeMask">
+            The bitwise AND mask used to determine a pen's type.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.StyleSolid">
+            The pen is solid.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.StyleDash">
+            The pen is dashed.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.StyleDot">
+            The pen is dotted.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.StyleDashDot">
+            The pen has alternating dashes and dots.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.StyleDashDotDot">
+            The pen has alternating dashes and double dots.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.StyleNull">
+            The pen is invisible.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.StyleInsideFrame">
+            The pen is solid. When this pen is used in any GDI drawing function that takes a bounding rectangle, the dimensions of the figure are shrunk so that it fits entirely in the bounding rectangle, taking into account the width of the pen. 
+            This applies only to <see cref="!:Win32PenStyles.Geomtric" /> pens.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.StyleUserStyle">
+            The pen uses a styling array supplied by the user.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.StyleMask">
+            The bitwise AND mask used to determine pen's dash style.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.EndCapRound">
+            Line end caps are round.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.EndCapSquare">
+             Line end caps are square. 
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.EndCapFlat">
+            Line end caps are flat.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.EndCapMask">
+            The bitwise AND mask used to determine pen's end cap style.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.JoinRound">
+            Line joins are round.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.JoinBevel">
+            Line joins are beveled.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.JoinMiter">
+            Line joins are mitered when they are within the current limit set by the SetMiterLimit function. A join is beveled when it would exceed the limit.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32PenStyles.JoinMask">
+            The bitwise AND mask used to determine a pen's line join style.
+        </member>
+        <member name="T:DataDynamics.GDI.Win32BrushStyle">
+            <summary>
+            Represents the Win32 PSDK BS_XXX brush style constants.
+            </summary>
+        </member>
+        <member name="F:DataDynamics.GDI.Win32BrushStyle.Solid">
+            Solid brush.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32BrushStyle.Null">
+            Same as BS_HOLLOW.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32BrushStyle.Hollow">
+            Hollow brush.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32BrushStyle.Hatched">
+            Hatched brush.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32BrushStyle.Pattern">
+            Pattern brush defined by a memory bitmap.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32BrushStyle.DibPattern">
+            A pattern brush defined by a device-independent bitmap (DIB) specification. 
+        </member>
+        <member name="F:DataDynamics.GDI.Win32BrushStyle.DibPatternPt">
+            A pattern brush defined by a device-independent bitmap (DIB) specification. 
+        </member>
+        <member name="F:DataDynamics.GDI.Win32BrushStyle.Pattern8x8">
+            Same as BS_PATTERN.
+        </member>
+        <member name="F:DataDynamics.GDI.Win32BrushStyle.DibPattern8x8">
+            Same as BS_DIBPATTERN.
+        </member>
+        <member name="T:DataDynamics.GDI.Win32HatchStyle">
+            <summary>
+            Specifies the Win32 PSDK HS_xxxx hatch style constants.
+            </summary>
+        </member>
+        <member name="F:DataDynamics.GDI.Win32HatchStyle.Horizontal">
+            -----
+        </member>
+        <member name="F:DataDynamics.GDI.Win32HatchStyle.Vertical">
+            |||||
+        </member>
+        <member name="F:DataDynamics.GDI.Win32HatchStyle.FDiagonal">
+            \\\\\
+        </member>
+        <member name="F:DataDynamics.GDI.Win32HatchStyle.BDiagonal">
+            /////
+        </member>
+        <member name="F:DataDynamics.GDI.Win32HatchStyle.Cross">
+            +++++
+        </member>
+        <member name="F:DataDynamics.GDI.Win32HatchStyle.DiagCross">
+            xxxxx
+        </member>
+        <member name="T:DataDynamics.GDI.GdiStockObject">
+            <summary>
+            Specifies the stock GDI object contants.  These are pens, brushes, and fonts that are assumed "built-in" to be in the rendering implementation.
+            </summary>
+        </member>
+        <member name="T:DataDynamics.GDI.GdiObjectKind">
+            <summary>
+            Specifies the kind of <see cref="!:IGDIObject" />.
+            </summary>
+        </member>
+        <member name="T:DataDynamics.GDI.MapMode">
+            <summary>
+            Specifies the mapping mode for a GDI device.
+            </summary>
+        </member>
+        <member name="F:DataDynamics.GDI.MapMode.AnIsotropic">
+            Logical units are mapped to arbitrary units with arbitrarily scaled axes. Use the SetWindowExtEx and SetViewportExtEx functions to specify the units, orientation, and scaling. 
+        </member>
+        <member name="F:DataDynamics.GDI.MapMode.HiEnglish">
+            Each logical unit is mapped to 0.001 inch. Positive x is to the right; positive y is up. 
+        </member>
+        <member name="F:DataDynamics.GDI.MapMode.HiMetric">
+            Each logical unit is mapped to 0.01 millimeter. Positive x is to the right; positive y is up. 
+        </member>
+        <member name="F:DataDynamics.GDI.MapMode.Isotropic">
+            Logical units are mapped to arbitrary units with equally scaled axes; that is, one unit along the x-axis is equal to one unit along the y-axis. Use the SetWindowExtEx and SetViewportExtEx functions to specify the units and the orientation of the axes. Graphics device interface (GDI) makes adjustments as necessary to ensure the x and y units remain the same size (When the window extent is set, the viewport will be adjusted to keep the units isotropic). 
+        </member>
+        <member name="F:DataDynamics.GDI.MapMode.LoEnglish">
+            Each logical unit is mapped to 0.01 inch. Positive x is to the right; positive y is up. 
+        </member>
+        <member name="F:DataDynamics.GDI.MapMode.LoMetric">
+            Each logical unit is mapped to 0.1 millimeter. Positive x is to the right; positive y is up. 
+        </member>
+        <member name="F:DataDynamics.GDI.MapMode.Text">
+            Each logical unit is mapped to one device pixel. Positive x is to the right; positive y is down. 
+        </member>
+        <member name="F:DataDynamics.GDI.MapMode.Twips">
+            Each logical unit is mapped to one twentieth of a printer's point (1/1440 inch, also called a twip). Positive x is to the right; positive y is up. 
+        </member>
+        <member name="F:DataDynamics.GDI.DibColorTableType.RgbColors">
+            color table in RGBs
+        </member>
+        <member name="F:DataDynamics.GDI.DibColorTableType.PaletteColors">
+            color table in palette indices
+        </member>
+        <member name="T:DataDynamics.GDI.GdiRasterOperation">
+            <summary>
+            The Win32 "Ternary raster operations". Used with <see cref="!:BitBlt.dwRop" />, <see cref="!:StretchDIBits.dwRop" />.
+            </summary>
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.SrcCopy">
+            Copies the source rectangle directly to the destination rectangle.
+            dest = source
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.SrcPaint">
+            Combines the colors of the source and destination rectangles by using the Boolean OR operator.
+            dest = source OR dest
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.SrceAnd">
+            Combines the colors of the source and destination rectangles by using the Boolean AND operator.
+            dest = source AND dest
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.SrcInvert">
+            Combines the colors of the source and destination rectangles by using the Boolean XOR operator.
+            dest = source XOR dest
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.SrcErase">
+            Combines the inverted colors of the destination rectangle with the colors of the source rectangle by using the Boolean AND operator.
+            dest = source AND (NOT dest )
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.NotSrcCopy">
+            Copies the inverted source rectangle to the destination.
+            dest = (NOT source)
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.NotSrcErase">
+            Combines the colors of the source and destination rectangles by using the Boolean OR operator and then inverts the resultant color.
+            dest = (NOT src) AND (NOT dest)
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.MergeCopy">
+            Merges the colors of the source rectangle with the brush currently selected in hdcDest, by using the Boolean AND operator.
+            dest = (source AND pattern)
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.MergePaint">
+            Merges the colors of the inverted source rectangle with the colors of the destination rectangle by using the Boolean OR operator.
+            dest = (NOT source) OR dest
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.PatCopy">
+            Copies the brush currently selected in hdcDest, into the destination bitmap.
+            dest = pattern
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.PatPaint">
+            Combines the colors of the brush currently selected in hdcDest, with the colors of the inverted source rectangle by using the Boolean OR operator. The result of this operation is combined with the colors of the destination rectangle by using the Boolean OR operator.
+            dest = DPSnoo
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.PatInvert">
+            Combines the colors of the brush currently selected in hdcDest, with the colors of the destination rectangle by using the Boolean XOR operator.
+            dest = pattern XOR dest
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.DstInvert">
+            Inverts the destination rectangle.
+            dest = (NOT dest)
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.Blackness">
+            Fills the destination rectangle using the color associated with index 0 in the physical palette. (This color is black for the default physical palette.)
+            dest = BLACK
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.Whiteness">
+            Fills the destination rectangle using the color associated with index 1 in the physical palette. (This color is white for the default physical palette.)
+            dest = WHITE
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.NoMirrorBitmap">
+            Windows 98/Me, Windows 2000/XP: Prevents the bitmap from being mirrored.
+            Do not Mirror the bitmap in this call
+        </member>
+        <member name="F:DataDynamics.GDI.GdiRasterOperation.CaptureBlt">
+            Windows 98/Me, Windows 2000/XP: Includes any windows that are layered on top of your window in the resulting image. By default, the image only contains your window.
+            Include layered windows
+        </member>
+        <member name="T:DataDynamics.GDI.GdiTextAlign">
+            <summary>
+            Text alignment options used with SetTextAlign EMF record.
+            </summary>
+        </member>
+        <member name="F:DataDynamics.GDI.GdiTextAlign.TA_BASELINE">
+            The reference point will be on the base line of the text. 
+        </member>
+        <member name="F:DataDynamics.GDI.GdiTextAlign.TA_BOTTOM">
+            The reference point will be on the bottom edge of the bounding rectangle. 
+        </member>
+        <member name="F:DataDynamics.GDI.GdiTextAlign.TA_TOP">
+            The reference point will be on the top edge of the bounding rectangle. 
+        </member>
+        <member name="F:DataDynamics.GDI.GdiTextAlign.TA_CENTER">
+            The reference point will be aligned horizontally with the center of the bounding rectangle. 
+        </member>
+        <member name="F:DataDynamics.GDI.GdiTextAlign.TA_LEFT">
+            The reference point will be on the left edge of the bounding rectangle. 
+        </member>
+        <member name="F:DataDynamics.GDI.GdiTextAlign.TA_RIGHT">
+            The reference point will be on the right edge of the bounding rectangle. 
+        </member>
+        <member name="F:DataDynamics.GDI.GdiTextAlign.TA_NOUPDATECP">
+            The current position is not updated after each text output call. The reference point is passed to the text output function. 
+        </member>
+        <member name="F:DataDynamics.GDI.GdiTextAlign.TA_RTLREADING">
+            Middle East language edition of Windows: The text is laid out in right to left reading order, as opposed to the default left to right order. This applies only when the font selected into the device context is either Hebrew or Arabic. 	
+        </member>
+        <member name="F:DataDynamics.GDI.GdiTextAlign.TA_UPDATECP">
+            The current position is updated after each text output call. The current position is used as the reference point. 
+        </member>
+        <member name="T:DataDynamics.GDI.GdiBackgroundFillMode">
+            <summary>
+            Background mode Used with SetBkMode record.
+            </summary>
+        </member>
+        <member name="T:DataDynamics.GDI.GdiPolyFillMode">
+            <summary>
+            Poly Fill Mode used with SetPolyFillMode record.
+            </summary>
+        </member>
+        <member name="T:DataDynamics.GDI.ClippingMode">
+            <summary>
+            Specifies the way to use the path.
+            </summary>
+        </member>
+        <member name="F:DataDynamics.GDI.ClippingMode.And">
+            The new clipping region includes the intersection (overlapping areas) 
+            of the current clipping region and the current path. 
+        </member>
+        <member name="F:DataDynamics.GDI.ClippingMode.Or">
+            The new clipping region includes the union (combined areas) of the current 
+            clipping region and the current path. 
+        </member>
+        <member name="F:DataDynamics.GDI.ClippingMode.Xor">
+            The new clipping region includes the union of the current clipping region and 
+            the current path but without the overlapping areas. 
+        </member>
+        <member name="F:DataDynamics.GDI.ClippingMode.Diff">
+            The new clipping region includes the areas of the current clipping region with 
+            those of the current path excluded.
+        </member>
+        <member name="F:DataDynamics.GDI.ClippingMode.Copy">
+            The new clipping region is the current path. 
+        </member>
+        <member name="T:DataDynamics.GDI.Metafiles.Records.EmfRecordType">
+            <summary>
+            Specifies the records available in a metafile.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:DataDynamics.ActiveReports.TraceHelper" -->
+        <member name="T:DataDynamics.DDLib.PdfEngine.DisplayMode">
+            <summary>
+            Used to specify <see cref="P:DataDynamics.DDLib.PdfEngine.PdfDocumentOptions.DisplayMode" />.
+            </summary>
+        </member>
+        <member name="F:DataDynamics.DDLib.PdfEngine.DisplayMode.None">
+            Neither document outline nor thumbnail images are visible.
+        </member>
+        <member name="F:DataDynamics.DDLib.PdfEngine.DisplayMode.Outlines">
+            The document outline is visible.
+        </member>
+        <member name="F:DataDynamics.DDLib.PdfEngine.DisplayMode.Thumbs">
+            Thumbnail images are visible. If thumbnails and outline flags are set, thumbnails will be shown.
+        </member>
+        <member name="F:DataDynamics.DDLib.PdfEngine.DisplayMode.FullScreen">
+            Full-screen mode with no menu bar, window controls, or any other window visible.
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:DataDynamics.DDLib.PdfEngine.PdfFonts.TrueTypeFull.WriteBfcharMap(DataDynamics.DDLib.PdfEngine.PdfFonts.RawStringBinaryWriter)" -->
+        <member name="T:DataDynamics.DDLib.PdfEngine.Security.PdfPermissions">
+            <summary>
+            Specifies the permissions available for a PDF document.
+            These values can be combined using a bitwise OR combination.
+            </summary>
+        </member>
+        <member name="F:DataDynamics.DDLib.PdfEngine.Security.PdfPermissions.None">
+            You can use this setting alone to specify that none of the other permissions are set.  It has no effect if you bitwise or this flag together with the other flags.
+        </member>
+        <member name="F:DataDynamics.DDLib.PdfEngine.Security.PdfPermissions.AllowPrint">
+            Set to permit printing the document when it is opened with user access permission.  This is a revision 2 permission.
+        </member>
+        <member name="F:DataDynamics.DDLib.PdfEngine.Security.PdfPermissions.AllowModifyContents">
+            Set to permit modifying the document’s contents when it is opened with user access permission. Text annotations can still be added or modified.   This is a revision 2 permission.
+        </member>
+        <member name="F:DataDynamics.DDLib.PdfEngine.Security.PdfPermissions.AllowCopy">
+            Set to permit copying text or graphics from the document when it is opened with user access permission.   This is a revision 2 permission.
+        </member>
+        <member name="F:DataDynamics.DDLib.PdfEngine.Security.PdfPermissions.AllowModifyAnnotations">
+            Set to permit adding or modifying annotations in the document when it is opened with user access permission.  This permission is a revision 2 or revision 3 permission.  Under revision three, the ability to copy/paste document contents is restricted other than what is specified by bit 10 (AllowAccessibleReaders).
+        </member>
+        <member name="F:DataDynamics.DDLib.PdfEngine.Security.PdfPermissions.AllowFillIn">
+            Set to permit filling in form fields in the document when it is opened with user access permission.  This is revision 3 only permission.
+        </member>
+        <member name="F:DataDynamics.DDLib.PdfEngine.Security.PdfPermissions.AllowAccessibleReaders">
+            Set to permit extracting the text and graphics of the document for accessibility purposes or otherwise (it is most likely for accessibility reasons, but possibly for other “screen reading” purposes) when it is opened with user access permission.  This is revision 3 only permission.
+        </member>
+        <member name="F:DataDynamics.DDLib.PdfEngine.Security.PdfPermissions.AllowAssembly">
+            Set to permit the following operations when the document is opened with user access permission:Insert, rotate, or delete pages, and create bookmarks or thumbnail images even if AllowModifyContents is false. This is revision 3 only permission.
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:DataDynamics.DDLib.Ttf.EncodingHeader" -->
+    </members>
+</doc>

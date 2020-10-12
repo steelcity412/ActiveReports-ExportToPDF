@@ -1,0 +1,19 @@
+To use this package (including any packages on which it depends), you must agree to the license agreement for the software you are using. Please refer to the following page for the license agreement of the softwares (English products).
+
+https://www.grapecity.com/licensing/grapecity/
+
+If you have any questions about the license, please contact the software developer.
+
+==============================
+
+このパッケージ（依存関係にあるパッケージを含む）を使用するには、お客様が使用しようとしているソフトウェアの使用許諾契約書に同意いただく必要があります。ソフトウェア（日本語版製品）の使用許諾契約書については、以下のページをご覧ください。
+
+https://www.grapecity.co.jp/developer/download/docs#license
+
+ご不明な点がある場合には、ソフトウェアの開発元にお問い合わせください。
+
+==============================
+
+使用本软件（包括其相关的软件包）时，您必须同意并遵守本软件的许可协议。有关本软件（中文版）的许可协议，请参阅每个产品随附的文档。
+
+如果您对软件许可协议有任何疑问，请通过软件开发商进行询问。

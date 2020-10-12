@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GrapeCity.ActiveReports.Core.Drawing.Gc</name>
+    </assembly>
+    <members>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Core.Canvas.Converter">
+            <summary>
+            Converts twips to more usefull values with rounding.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Core.Canvas.Converter.FromValue(System.Single,System.Single)">
+            <summary>
+            Converts to Twips.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Core.Canvas.Converter.ToValue(System.Single,System.Single)">
+            <summary>
+            Converts from Twips.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Core.Canvas.Converter.ToPoint(System.Numerics.Vector2,System.Single)">
+            <summary>
+            Converts from Twips.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Core.Canvas.Converter.ToPoint(System.Drawing.PointF,System.Single)">
+            <summary>
+            Converts from Twips.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Core.Canvas.Converter.ToSize(System.Drawing.SizeF,System.Single)">
+            <summary>
+            Converts from Twips.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Core.Canvas.Converter.ToRect(System.Drawing.RectangleF,System.Single)">
+            <summary>
+            Converts from Twips.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Core.FontsFactory">
+            <summary>
+            External fonts factory.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Core.FontsFactory.Instance">
+            <summary>
+            Default instance.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Core.FontsFactory.#ctor(System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.Func{GrapeCity.Documents.Text.Font,System.Boolean},System.Boolean)">
+            <summary>
+            Creates new FontsFactory
+            </summary>
+            <param name="withEudc"></param>
+            <param name="fallbackFonts"></param>
+            <param name="allowFont"></param>
+            <param name="enableFontCaching">Enable caching font tables. It is necessary for optimize the rendering of text in design time.</param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Core.GraphicsCanvas">
+            <summary>
+            Simple implementation of base canvas things.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Core.ImageManager">
+            <summary>
+            Image manager to process/cache images.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Core.ImageManager.LoadGcImage(GrapeCity.ActiveReports.Extensibility.Rendering.ImageInfo,System.String)">
+            <summary>
+            Loader to load images.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Core.TextMetricsProvider">
+            <summary>
+            Encapsulates string measurements and related functionality using the system graphics.
+            </summary>
+        </member>
+    </members>
+</doc>

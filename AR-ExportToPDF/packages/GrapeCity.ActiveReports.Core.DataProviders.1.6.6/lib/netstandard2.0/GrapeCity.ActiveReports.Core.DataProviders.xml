@@ -1,0 +1,1403 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GrapeCity.ActiveReports.Core.DataProviders</name>
+    </assembly>
+    <members>
+        <member name="T:GrapeCity.ActiveReports.Core.DataProviders.CollectionExtensions">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Core.DataProviders.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.DataProviders.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.DataProviders.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.DataProviders.Resources.CommandTextIsEmpty">
+            <summary>
+              Looks up a localized string similar to Command text is empty..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.DataProviders.Resources.InvalidKeyInConnectionString">
+            <summary>
+              Looks up a localized string similar to Invalid key in connection string: {0}..
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Core.DataProviders.Resources.JsonDataSourceNotFound">
+            <summary>
+              Looks up a localized string similar to The json data source has not been found..
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.LoginPasswordCredentials">
+            <summary>
+            Defines login/password credentials
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.LoginPasswordCredentials.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the LoginPasswordCredentials struct.
+            </summary>
+            <param name="login">User login</param>
+            <param name="password">User password</param>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.LoginPasswordCredentials.Login">
+            <summary>
+            Gets the user login.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.LoginPasswordCredentials.Password">
+            <summary>
+            Gets the password.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn">
+            <summary>
+            Represents the information about the field of the data source.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn.#ctor(System.String,System.Type)">
+            <summary>
+            Creates new instance of <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn"/> class.
+            </summary>
+            <param name="fieldName">The <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn"/> name of the field represented by this instance.</param>
+            <param name="dataType">The<see cref="T:System.Type"/>of the field represented by this instance.</param>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn.FieldName">
+            <summary>
+            Gets the name of the field represented by this instance.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn.DataType">
+            <summary>
+            Gets the <see cref="T:System.Type"/> of the field represented by this instance.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn.ToString">
+            <summary>
+            Returns this instance of <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn"/> converted to a string.
+            </summary>
+             <returns>String that represents this instance of <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn"/>.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn.Equals(System.Object)">
+            <summary>
+            Determines whether two <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn"/> instances are equal.
+            </summary>
+             <param name="obj">The <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn"/> to compare with the current <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn"/>.</param>
+            <returns>True if the specified <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn"/> is equal to the current <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn"/>, otherwise, false.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn.GetHashCode">
+            <summary>
+            Serves as a hash function for a <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn"/>, suitable for use in hashing algorithms and data structures like a hash table.
+            </summary>
+            <returns>A hash code for the current <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvColumn"/> instance.</returns>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Csv.CsvCommand">
+            <summary>
+            Provides the implementation of <see cref="T:System.Data.Common.DbCommand"/> for the .NET Framework CSV Data Provider.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvCommand.#ctor">
+            <summary>
+            Creates new instance of <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvCommand"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvCommand.#ctor(System.String)">
+            <summary>
+            Creates new instance of <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvCommand"/> class with the text of the command.
+            </summary>
+            <param name="commandText">The text of the command.</param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvCommand.#ctor(System.String,GrapeCity.BI.Data.DataProviders.Csv.CsvConnection)">
+            <summary>
+            Creates a new instance of <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvCommand"/> class with the text of the command.
+            </summary>
+            <param name="commandText">The text of the command.</param>
+            <param name="connection">A <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvConnection"/> that represents the connection to a data source.</param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvCommand.ExecuteDbDataReader(System.Data.CommandBehavior)">
+            <summary>
+            Sends the <see cref="!:CsvCommand.CommandText"/> to the <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvConnection"/>, and builds an <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader"/> using one of the <see cref="T:System.Data.CommandBehavior"/> values.
+            </summary>
+            <param name="behavior">One of the <see cref="T:System.Data.CommandBehavior"/> values.</param>
+            <returns>A <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader"/> object.</returns>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.Csv.CsvCommand.LocateDataSource">
+            <summary>
+            Get or sets callback function which called to get csv data when Path is empty.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Csv.CsvConnection">
+            <summary>
+            Provides the implementation of <see cref="T:System.Data.Common.DbConnection"/> for the .NET Framework CSV Data Provider.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString">
+            <summary>
+            Parse and build CSV connection string.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.#ctor(System.String)">
+            <summary>
+            Creates new <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString"/> object with fields filled from specified connection string. 
+            </summary>
+            <param name="connectionString">The connection string to be parsed.</param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.#ctor">
+            <summary>
+            Creates new empty <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString"/>.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.Path">
+            <summary>
+            The path to the data file.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.Encoding">
+            <summary>
+            The data file encoding.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.DataStartLine">
+            <summary>
+            Specifies index of the first data row in file. Used to separate headings.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.Columns">
+            <summary>
+            Columns definiton in next format: FieldName1(FieldType1, width),FieldName2,FieldName3,...
+            </summary>
+        </member>
+        <member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.ColumnsSeparator">
+            <summary>
+            The chars sequence that delimits data fields in the row.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.RowsSeparator">
+            <summary>
+            The chars sequence that marks the end of the row.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.Locale">
+            <summary>
+            The culture that used to parse numeric values.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.JoinRowsSeparators">
+            <summary>
+            Whether to treat consecutive rows separators as one
+            </summary>
+        </member>
+        <member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.JoinColumnsSeparators">
+            <summary>
+            Whether to treat consecutive columns separators as one
+            </summary>
+        </member>
+        <member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.TextQualifier">
+            <summary>
+            The chars sequence that marks the start and the end of the text literal.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.BI.Data.DataProviders.Csv.CsvConnectionString.HasHeaders">
+            <summary>
+            Whether the header containing the column names exists.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader">
+            <summary>
+            Provides the implementation of <see cref="T:System.Data.Common.DbDataReader"/> for the .NET Framework CSV Data Provider.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.#ctor(System.String,System.Func{System.String,System.IO.Stream})">
+            <summary>
+            Creates new CsvDataReader.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.ParseDataRow">
+            <summary>
+            Parses a row of data using a regular expression and stores the information inside an object array that is the current row of data.
+            If the row does not have the correct number of fields, an exception is raised.
+            </summary>
+            <returns>True if it can parse the data string, else false.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.ConvertValue(System.Type,System.String)">
+            <summary>
+            Converts the string value coming from the command text to the appropriate data type, based on the field's type.
+            This also checks a few string value rules to decide if a String.Empty or System.Data.DBNull needs to be returned.
+            </summary>
+            <param name="type">Type of the current column the data belongs to.</param>
+            <param name="originalValue">String value coming from the command text.</param>
+            <returns>Resulting object from the converted string, based on the type.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.Read">
+            <summary>
+            Advances the <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader"/> to the next record.
+            </summary>
+            <returns>True if there are more rows, otherwise false.</returns>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.FieldCount">
+            <summary>
+            Gets the number of columns in the current row.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.GetFieldType(System.Int32)">
+            <summary>
+            Return the value of the specified field.
+            </summary>
+            <param name="i">The index of the field to find. </param>
+            <returns>The <see cref="T:System.Object"/> which will contain the field value upon return.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.GetName(System.Int32)">
+            <summary>
+            Return the value of the specified field.
+            </summary>
+            <param name="i">The index of the field to find. </param>       
+            <returns>The name of the field or the empty string (""), if there is no value to return.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvDataReader.GetValue(System.Int32)">
+            <summary>
+            Return the value of the specified field.
+            </summary>
+            <param name="i">The index of the field to find. </param>
+            <returns>The <see cref="T:System.Object"/> which will contain the field value upon return.</returns>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Csv.CsvReader">
+            <summary>
+            Read csv data from TextReader source
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.Csv.CsvReader.End">
+            <summary>
+            <c>True</c> if end of source stream reached.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvReader.UndoableTextReader.Dispose">
+            <summary>
+            Releases the resources used by the <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvReader.UndoableTextReader"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Csv.CsvReader.Dispose">
+            <summary>
+            Releases the resources used by the <see cref="T:GrapeCity.BI.Data.DataProviders.Csv.CsvReader"/>.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.DataProvidersFactory">
+            <summary>
+            Default data providers factory. Supports SQL, CSV, JSON, XML, TESTING, OBJECT data providers.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataProvidersFactory.GetFactory(System.String)">
+            <summary>
+            Returns <see cref="T:System.Data.Common.DbProviderFactory"/> by its name.
+            </summary>
+            <param name="name">The name of the data providers (SQL, CSV, etc...)</param>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.DataSet.DataSetCommand">
+            <summary>
+            Provides an <see cref="T:System.Data.Common.DbCommand">IDbCommand</see> object for use with a <see cref="T:System.Data.DataSet">DataSet</see> as a data source.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetCommand.#ctor(GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.DataSet.DataSetCommand"/> class.
+            </summary>
+            <param name="connection">A <see cref="T:GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection"/> used as the source of data.</param>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.DataSet.DataSetCommand.CommandText">
+            <summary>
+            Gets or sets a <see cref="T:System.String"/> that contains the CommandText used to connnect to the database.
+            </summary>
+            <remarks>
+            The CommandText specifies the main working table for the data source.
+            The CommandText must be a table in the dataset.
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetCommand.ParseConnectionString(System.String)">
+            <summary>
+            Parses the command text to get the table name, filter and sort strings.
+            </summary>
+            <param name="connectionString">the connection string set by the user</param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetCommand.ParseSort(System.String)">
+            <summary>
+            Gets the value of the sort parameter from the connection string;
+            </summary>
+            <param name="sort">full sort parameter and value</param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetCommand.ParseFilter(System.String)">
+            <summary>
+            Gets the value of the filter parameter from the connection string;
+            </summary>
+            <param name="filter">full sfilter parameter and value</param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetCommand.ParseParameters(System.String[])">
+            <summary>
+            Gets the values of the sort and filter parameters from the connection string;
+            </summary>
+            <param name="parameters">string array containing the filter and sort parameters and values</param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetCommand.GenerateDataView(System.Data.DataTable)">
+            <summary>
+            Sets the dataview based off of the table passed in (used in execute reader) and sets the filter and sort values if they have been set.
+            </summary>
+            <param name="table">The table to use as the default view.</param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetCommand.ExecuteDbDataReader(System.Data.CommandBehavior)">
+            <summary>
+            Executes this command's statement and returns the specified type of results accessible with an <see cref="T:System.Data.Common.DbDataReader"/> object.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetCommand.Dispose(System.Boolean)">
+            <summary>
+            Implements the Dispose logic of this class.
+            </summary>
+            <remarks>
+            When the <paramref name="disposing"/> parameter is true, this method releases all resources held by any managed objects that this component references (namely the underlying System.Data.IDbConnection).
+            </remarks>
+            <param name="disposing">True if this method is being called as a result of this object's Dispose method, or false if the finalizer invoked this method.</param>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection">
+            <summary>
+            Provides an <see cref="T:System.Data.Common.DbConnection"/> object for using a <see cref="T:System.Data.DataSet"/> as a data source.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection"/> class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection.DataSet">
+            <summary>
+            Gets or sets the specific data set to use as the source of data for the report
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection.DataView">
+            <summary>
+            Gets or sets the specific data view to use as the source of data for the report.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection.CreateDataSetFromFileName(System.String)">
+            <summary>
+            If a user specified an xml file in the connection string, attempt to load it into the local dataset object.
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection.Open">
+            <summary>
+            Opens the connection.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection.Close">
+            <summary>
+            Closes the connection.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection.CreateDbCommand">
+            <summary>
+            Returns an initialized command object associated with this connection.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection.ConnectionTimeout">
+            <summary>
+            Does nothing for <see cref="T:GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetConnection.Dispose(System.Boolean)">
+            <summary>
+            Implements the Dispose logic of this class.
+            </summary>
+            <remarks>
+            When the <paramref name="disposing"/> parameter is <c>true</c>, this method releases all resources held by any managed objects that this component references (namely the underlying System.Data.IDbConnection).
+            </remarks>
+            <param name="disposing">True if this method is called by this object's Dispose method; false if the finalizer invoked this method.</param>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader">
+            <summary>
+            Provides an <see cref="T:System.Data.IDataReader"/> object for using a <see cref="T:System.Data.DataSet"/> as a data source.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader.#ctor(System.Data.DataView)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader"/> class.
+            </summary>
+            <param name="dataView">A <see cref="T:System.Data.DataView"/> used as the source of data.</param>
+            <exception cref="T:System.Data.DataView"> An exception is thrown when, field <paramref name = "dataView" /> is <c>null</c> </exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader.Read">
+            <summary>
+            Returns <c>True</c>, when passing to the next record or <c>False</c> if there are no more records
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader.GetFieldType(System.Int32)">
+            <summary>
+            Gets the data type of the field at the specified index.
+            </summary>
+            <remarks>
+            If the field index is for a ChildDataSet the return type is <see cref="T:System.Data.IDataReader"/>
+            </remarks>
+            <param name="fieldIndex">The index of the field.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"> An exception is thrown when, field with the index <paramref name="fieldIndex"/> not found.</exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader.GetName(System.Int32)">
+            <summary>
+            Gets the name of the field at the specified field index.
+            </summary>
+            <remarks>
+            The name returned should always be the same name that was passed in when calling <c>GetOrdinal</c>/>.
+            </remarks>
+            <param name="fieldIndex">An <see cref="T:System.Int32"/> representing the ordinal value of the field being examined.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">An exception is thrown when, field with the index <paramref name="fieldIndex"/> not found. </exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader.GetOrdinal(System.String)">
+            <summary>
+            Gets the ordinal field index of the field with the specified name.
+            </summary>
+            <param name="fieldName">The name of the field.</param>
+            <exception cref="T:System.ArgumentNullException">An exception is thrown when, field <paramref name = "fieldIndex" /> is null</exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader.BuildOrdinalMap(System.String)">
+            <summary>
+            Begins the process of building the OrdinalMap which is stored in a hashtable with the ordinal value being the key. If the fieldName is a column in the main table,
+            or a direct child relationship it is handled in this method; else it is pased on to the ParseFieldName method.
+            </summary>
+            <param name="fieldName">The full string name to be parsed (either column name, or child relationship off of the main table, or a nested set of parent relations with a final column).</param>
+            <returns>The key of the OrdinalMap for the fieldName in the ordinal hashtable.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader.ParseFieldName(System.String[],System.Int32,System.Data.DataRelation[],System.Data.DataTable,System.String)">
+            <summary>
+            Recursive method that parses out the relationships from the column name and builds a map that can be traversed when calling GetValue
+            </summary>
+            <param name="values">String array created by splitting the fieldName on "."</param>
+            <param name="position">Current possition in the values array</param>
+            <param name="relations">current array of relations being collected by parsing the string</param>
+            <param name="table">current table being examined for containing the column or relationship that is currently being examined in the values array at the specified position.</param>
+            <param name="orginalFieldName">the orginal full field name passed into GetOrdinal. Used to return the full name when GetName is called</param>
+            <returns>The key of the OrdinalMap for the fieldName in the ordinal hashtable.</returns>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader.FieldCount">
+            <summary>
+            Do nothing for the <see cref="T:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader"/>
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader.GetDbDataReader(System.Int32)">
+            <summary>
+            Returns an <see cref="T:System.Data.IDataRecord"/> providing access to a related set of child records.
+            </summary>
+            <remarks>The <c>GetData</c> method only works if there is a direct child relationship with the working table.</remarks>
+            <param name="fieldIndex">An <see cref="T:System.Int32"/> representing the ordinal value of the field being examined.</param>
+            <exception cref="T:System.InvalidOperationException">An exception throws when <paramref name="fieldIndex"/> is -1</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">An exception is thrown when, field with the index <paramref name = "fieldIndex" /> not found</exception>
+            <exception cref="T:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException">An exception is thrown when, child relationship not found in table.</exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader.GetValue(System.Int32)">
+            <summary>
+            Gets the value of the field at the specified index.
+            </summary>
+            <param name="fieldIndex">An <see cref="T:System.Int32"/> representing the ordinal value of the field being examined.</param>
+            <exception cref="T:System.InvalidOperationException">An exception throws when <paramref name="fieldIndex"/> is -1</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">An exception is thrown when, field with the index <paramref name = "fieldIndex" /> not found</exception>
+            <exception cref="T:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException">An exception is thrown when, field does not exist in the table</exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader.RollRelations(System.Data.DataRow,System.Data.DataRelation[])">
+            <summary>
+            This method that loops through the relationships in a map to get the value for the current row in the nested parent relationships
+            </summary>
+            <param name="row">The row to use to get the parent relationships rows from.</param>
+            <param name="relations">The array of parent relatioships that was stored in the ordinal map.</param>
+            <returns>returns the final parent row after rolling through the relationships.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.DataSetDataReader.Dispose(System.Boolean)">
+            <summary>
+            Implements the Dispose logic of this class.
+            </summary>
+            <param name="disposing">True if this method is called by this object's Dispose method; false if the finalizer invoked this method.</param>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.DataSet.OrdinalMapKind">
+            <summary>
+            Help determin the kind of ordinal map is being examined. 
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.DataSet.OrdinalMap">
+            <summary>
+            The ordinal map is used to break down field names into a particular column in a table and the realtion(s) the column is attached to based off of the main table.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataSet.OrdinalMap.#ctor(GrapeCity.BI.Data.DataProviders.DataSet.OrdinalMapKind,System.Data.DataColumn,System.Data.DataRelation[],System.Data.DataRelation,System.String)">
+            <summary>
+            Stores information on how to map to a particular field, child relationship or field contained in a parent realtionship(s).
+            </summary>
+            <param name="mapKind">Indicates what type of map it is (e.g fieldOnly - field in current table, fieldWithNestedRelations - field in a nested set of parent relationships</param>
+            <param name="column">A <see cref="T:System.Data.DataColumn"/> for the field in the map</param>
+            <param name="childRelations">a <see cref="T:System.Data.DataRelation[]"/> containing the nested parent relationships for a field</param>
+            <param name="relation">a <see cref="T:System.Data.DataRelation"/> containting the parent relationship if the field is contained in a direct parent from the working table.</param>
+            <param name="fullFieldName">a <see cref="T:System.String"/> matching the full string name passed in to GetOrdinal.</param>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.DataSet.OrdinalMap.MapKind">
+             <summary>
+            Indicates what type of map it is. e.g, only a field (FieldOnly), a field with nested relations (FieldWithNestedRelations), etc... 
+             </summary>
+             <value></value>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.DataSet.OrdinalMap.Relation">
+            <summary>
+            Used instead of the array if there is only one relationship in the name (e.g FK_Order_Details_Orders.OrderID)
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.DataSet.OrdinalMap.Column">
+            <summary>
+            The particular column the field belongs to in its table.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.DataSet.OrdinalMap.ChildRelations">
+            <summary>
+            Used if there are nested relationships in the full field name. (e.g FK_Order_Details_Orders.FK_Orders_Customers.CompanyName)
+            It's called childRealtions because in respect to the location of the field, the relations are children relationships of the table containing the field.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.DataSet.OrdinalMap.FullFieldName">
+            <summary>
+            Stores the full field name that was passed in with GetOrdinal. Used with GetName.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.DataSetDataProviderFactory">
+            <summary>
+            Provides the <see cref="T:System.Data.Common.DbProviderFactory"/> implementation for DATASET.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.DbConnectionAdapter">
+            <summary>
+            Base class for the db connection adapters  
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DbConnectionAdapter.DisectString(System.String)">
+            <summary>
+            Creates a collection of strings broken into whole words (letters/numbers) and whole non-words.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.IDataProvidersFactory">
+            <summary>
+            Data providers factories abstract factory interface.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.IDataProvidersFactory.GetFactory(System.String)">
+            <summary>
+            Returns data provider factory.
+            </summary>
+            <param name="dataProviderName">Invariant data provider name (like SQL, OLEDB, etc..)</param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.IDataProvidersFactory.GetAdapter(System.String)">
+            <summary>
+            Returns adapter for multivalue paramters setting.
+            </summary>
+            <param name="dataProviderName">Invariant data provider name to return adapter for.</param>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter">
+            <summary>
+            Adapter for supporting of multivalue parameters and setting of credentials.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter.IsSetMultiValueParameterSupported">
+            <summary>
+            Returns true if adapter supports setting multivalue parameters.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter.SetMultiValueParameter(System.Data.Common.DbCommand,System.String,System.Object[])">
+            <summary>
+            Adds multivalue parameter values in to the command.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter.IsCredentialsSupported">
+            <summary>
+            Returns true if set credentials is supported by command.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter.SetCredentials(System.Data.Common.DbConnection,System.String,System.String)">
+            <summary>
+            Sets user login and password for the specified connection.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter.IsSetConnectionStringSupported">
+            <summary>
+            Returns true if custom SetConnectionString is supported by connection adapter.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.IDbConnectionAdapter.SetConnectionString(System.Data.Common.DbConnection,System.String)">
+            <summary>
+            Sets connection string.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.IExDbCommand">
+            <summary>
+            Allows to command to get underlying data from external source.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.IExDbCommand.LocateDataSource">
+            <summary>
+            Locates data source.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.IExDbCommand.CanBeCached">
+            <summary>
+            Determines whether data - retrieved with this command - can be cached
+            If unsure, return false
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException">
+            <summary>
+            An exception that occurs when the specified schema (usually field names) is invalid.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException"/> class with a specified error message.
+            </summary>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception.
+            If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.
+            </param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException"/> class with serialized data.
+            </summary>
+            <remarks>
+            This constructor is called during deserialization to reconstitute the exception object transmitted over a stream.
+            </remarks>
+            <param name="info">The object that holds the serialized object data.</param>
+            <param name="context">The contextual information about the source or destination.</param>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.IResourceLocatorEnabled">
+            <summary>
+            Provides ability to pass ResourceLocator to DataProviderFactory.
+            For internal use only.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.IResourceLocatorEnabled.ResourceLocator">
+            <summary>
+            Gets or sets the function that returns resource stream for a given name.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Json.JsonCommand">
+            <summary>
+            Provides an <see cref="T:System.Data.Common.DbCommand"/> object for using an json file or json data as a data source.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.JsonCommand.#ctor(GrapeCity.BI.Data.DataProviders.Json.JsonResourceInfo,GrapeCity.BI.Data.DataProviders.Json.JsonResourceInfo,System.Func{System.String,System.IO.Stream})">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.Json.JsonCommand"/> class.
+            </summary>
+            <param name="resourceLocator">Resource locator for web based datasets. In case jsonPath points to the web resource and resouceLocator is null, ArgumentNullException will be thrown. </param>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.Json.JsonCommand.LocateDataSource">
+            <summary>
+            Get or sets callback function which called to get csv data when Path is empty.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:GrapeCity.BI.Data.DataProviders.Json.JsonConnection" -->
+        <member name="T:GrapeCity.BI.Data.DataProviders.Json.JsonConnectionString">
+            <summary>
+            For internal use. Allows to parse or create json data provider connection string
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Json.JsonDataProviderException">
+            <summary>
+            JSON problems.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Json.JsonDataProviderException.ErrorCodes">
+            <summary>
+            Error codes.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.Json.JsonDataProviderException.ErrorCode">
+            <summary>
+            Error code of current exception.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.JsonDataProviderException.#ctor">
+            <summary>
+            For internal use only. Deserialization only.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.JsonDataProviderException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Enables environments where serialization is required to initialize instances of the <see cref="T:GrapeCity.BI.Data.DataProviders.Json.JsonDataProviderException" /> class.
+            Private if sealed class and protected if not sealed class.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Json.JsonDataProviderFactory">
+            <summary>
+            Provides the <see cref="!:DataProviderFactory"/> implementation for JSON.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Json.JsonDataReader">
+            <summary>
+            Provides an <see cref="T:System.Data.IDataReader"/> object for use with an json file or json data as a data source.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.JsonDataReader.#ctor(GrapeCity.BI.Data.DataProviders.Json.JsonResourceInfo,GrapeCity.BI.Data.DataProviders.Json.JsonResourceInfo,System.String,System.Func{System.String,System.IO.Stream},GrapeCity.BI.Data.DataProviders.Json.JsonCommand,System.Data.CommandBehavior)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.Json.JsonDataReader"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.JsonDataReader.#ctor(System.Collections.Generic.IEnumerable{Newtonsoft.Json.Linq.JToken},GrapeCity.BI.Data.DataProviders.Json.JsonFieldsManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.Json.JsonDataReader"/> class.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Json.JsonFieldsManager">
+            <summary>
+            Contains information about all json fields
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.JsonFieldsManager.#ctor(GrapeCity.BI.Data.DataProviders.Json.IJsonFieldsCollector)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.Json.JsonFieldsManager"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.JsonFieldsManager.GetFieldInfo(System.Int32)">
+            <summary>
+            Gets field info by the field index
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.JsonFieldsManager.GetFieldIndex(System.String)">
+            <summary>
+            Gets the index of the field.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.JsonFieldsManager.AddCustomField(System.String,System.String)">
+            <summary>
+            Adds the custom field in the fields collection.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.JsonPathParser.ReadValue(System.CharEnumerator,System.String@,System.Char[],System.Boolean,System.String)">
+            <summary>
+            Reads the value from emumerator.
+            </summary>
+            <returns>True if reached the end of string.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.JsonPathParser.Skip(System.CharEnumerator,System.String)">
+            <summary>
+            Skips the specified string.
+            </summary>
+            <returns>True if reached the end of string.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.JsonResourceInfoExtension.GetRequest(System.String,System.String,System.String,System.String)">
+            <summary>
+            Sends the request and returns a response stream
+            </summary>
+            <param name="url"></param>
+            <param name="method">Method get or post</param>
+            <param name="headers"></param>
+            <param name="data">Body for post request</param>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Json.HttpWebRequestExtensions">
+            <summary>
+            Internal class adds a new method SetHeaders for HttpWebRequest
+            because not all headers can be set via Headers.Set/Add
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.Schema.JsonSchemaElement.#ctor(System.String,GrapeCity.BI.Data.DataProviders.Json.Schema.JsonSchemaElementType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.Json.Schema.JsonSchemaElement"/> class.
+            Constructor for primitive types.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.Schema.JsonSchemaElement.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,GrapeCity.BI.Data.DataProviders.Json.Schema.JsonSchemaElement})">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.Json.Schema.JsonSchemaElement"/> class.
+            Constructor for object type.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Json.Schema.JsonSchemaElement.#ctor(System.String,GrapeCity.BI.Data.DataProviders.Json.Schema.JsonSchemaElement)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.Json.Schema.JsonSchemaElement"/> class.
+            Constructor for array type.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Json.Schema.JsonSchemaGenerator">
+            <summary>
+            Simple json schema generator
+            For internal use
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectCommand">
+            <summary>
+            Provides an <see cref="T:System.Data.Common.DbCommand"/> object for using an <see cref="T:System.Collections.IEnumerable"/> object as a data source.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectCommand.#ctor(GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectCommand"/> class.
+            </summary>
+            <param name="connection">An <see cref="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection"/> used as the source of data.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="connection"/> is <c>null</c>.</exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectCommand.ExecuteDbDataReader(System.Data.CommandBehavior)">
+            <summary>
+            Executes this command's statement and returns the results accessible with an <see cref="T:System.Data.IDataReader"/> object.
+            </summary>
+            <param name="behavior"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectCommand.Dispose(System.Boolean)">
+            <summary>
+            Implements the Dispose logic of this class.
+            </summary>
+            <param name="disposing">True if this method is called by this object's Dispose method; false if the finalizer invoked this method.</param>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection">
+            <summary>
+            Provides an <see cref="T:System.Data.Common.DbConnection"/> object for using an <see cref="T:System.Collections.IEnumerable"/> interface as a data source.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection"/> class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection.SourceObject">
+            <summary>
+            Gets or sets the specific <see cref="T:System.Collections.IEnumerable"/> object to use as the source of data.
+            </summary>
+            <value>
+            An <see cref="T:System.Object"/> representing a specific <see cref="T:System.Collections.IEnumerable"/> object to use as the source of data.
+            </value>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection.ConnectionString">
+            <summary>
+            The <see cref="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection"/> does not use ConnectionString, so setting this value has no effect.
+            </summary>
+            <remarks>
+            Implements <see cref="!:GrapeCity.ActiveReports.Extensibility.Data.IDbConnection.ConnectionString"/> for the IDbConnection interface, but is not applicable for this class.
+            </remarks>
+            <value>
+            A <see cref="T:System.String"/> that contains the ConnectionString used to connnect to the database.
+            </value>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection.Open">
+            <summary>
+            Does nothing for <see cref = "T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection" />.
+            </summary>
+            <remarks>
+            Implements <see cref="!:GrapeCity.ActiveReports.Extensibility.Data.IDbConnection.Open"/> for the IDbConnection interface, but is not applicable for this class.
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection.Close">
+            <summary>
+            Releases the resources used by the <see cref="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection"/>.
+            </summary>
+            <remarks>
+            Implements <see cref="!:GrapeCity.ActiveReports.Extensibility.Data.IDbConnection.Close"/>.
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection.CreateDbCommand">
+            <summary>
+            Returns an initialized command object associated with this connection.
+            </summary>
+            <remarks>
+            Implements <see cref="!:GrapeCity.ActiveReports.Extensibility.Data.IDbConnection.CreateCommand"/>.
+            </remarks>
+            <returns>An initialized object <see cref="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectCommand"/> associated with this connection.</returns>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection.ConnectionTimeout">
+            <summary>
+            Does nothing for <see cref="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection.BeginDbTransaction(System.Data.IsolationLevel)">
+            <summary>
+            Does nothing for <see cref="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection"/>.
+            </summary>
+            <remarks>
+            The <see cref="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection"/> object does not use transactions, so setting this value has no effect.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">An exception throws when trying to use this method.</exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectConnection.Dispose(System.Boolean)">
+            <summary>
+            Implements the Dispose logic of this class.
+            </summary>
+            <param name="disposing">True if this method is called by this object's Dispose method; false if the finalizer invoked this method.</param>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader">
+            <summary>
+            Provides an <see cref="!:GrapeCity.ActiveReports.Extensibility.Data.IDataReader"/> object for using an <see cref="T:System.Collections.IEnumerable"/> object as a data source.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.#ctor(System.Collections.IEnumerable)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader"/> class.
+            </summary>
+            <param name="sourceObject">An <see cref="T:System.Collections.IEnumerable"/> used as the source of data.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="sourceObject"/> is <c>null</c></exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.Read">
+            <summary>
+            Moves to the next record for <see cref="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader"/>
+            </summary>
+            <remarks>
+            Implements <see cref="!:GrapeCity.ActiveReports.Extensibility.Data.IDataReader.Read"/>.
+            </remarks>
+            <returns><c>True</c>, when passing to the next record or <c>False</c> if there are no more records.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.GetFieldType(System.Int32)">
+            <summary>
+            Gets the data type of the field at the specified index.
+            </summary>
+            <remarks>
+            Implements <see cref="!:GrapeCity.ActiveReports.Extensibility.Data.IDataRecord.GetFieldType"/>.
+            </remarks>
+            <param name="fieldIndex">An <see cref="T:System.Int32"/> representing the ordinal value of the field being examined.</param>
+            <returns>The <see cref = "T:System.Type" /> object representing the type of the field at the specified index.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when specifying a non-existent index.</exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.GetName(System.Int32)">
+            <summary>
+            Gets the name of the field at the specified field index.
+            </summary>
+            <remarks>
+            Implements <see cref="!:GrapeCity.ActiveReports.Extensibility.Data.IDataRecord.GetName"/>.
+            The <see cref="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.GetName(System.Int32)"/> should return the exact same string that was passed into GetOrdinal.
+            </remarks>
+            <param name="fieldIndex">An <see cref="T:System.Int32"/> representing the ordinal value of the field being examined.</param>
+            <returns>The <see cref="T:System.String"/> object representing the name of the field or empty string, if there is no value to return.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when specifying a non-existent index.</exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.GetOrdinal(System.String)">
+            <summary>
+            Returns the ordinal index of the field with the specified name.
+            </summary>
+            <remarks>
+            Implements <see cref="!:GrapeCity.ActiveReports.Extensibility.Data.IDataRecord.GetOrdinal"/>.
+            </remarks>
+            <param name="fieldName">A <see cref="T:System.String"/> value of the field name for which to get the ordinal.</param>
+            <returns>The index of the named field.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown when the <paramref name="fieldName"/> is <c>null</c>.</exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.BuildOrdinalMap(System.String)">
+            <summary>
+            Begins the process of building the OrdinalMap which is stored in a hashtable with the ordinal value being the key. BuildOrdinalMap will parse the field name to
+            determine if the field name is directly off the main working object or a property off of other nested properties.
+            </summary>
+            <param name="fieldName">The full string name to be parsed.</param>
+            <returns>The key of the OrdinalMap for the fieldName in the ordinal hashtable.</returns>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.FieldCount">
+            <summary>
+            Not used in the <see cref="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader"/>.
+            </summary>
+            <remarks>
+            Implements <see cref="!:GrapeCity.ActiveReports.Extensibility.Data.IDataRecord.FieldCount"/>.
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.GetDbDataReader(System.Int32)">
+            <summary>
+            Returns an <see cref="T:System.Data.IDataRecord"/> providing access to a related set of child records.
+            </summary>
+            <remarks>
+            Implements <see cref="!:GrapeCity.ActiveReports.Extensibility.Data.IDataRecord.GetData"/>.
+            The <see cref="!:GetData"/> will only work with a direct <see cref="T:System.Collections.IEnumerable"/> property on the main object.
+            </remarks>
+            <param name="fieldIndex">An <see cref="T:System.Int32"/> representing the ordinal value of the field being examined.</param>
+            <returns>The <see cref="T:System.Data.IDataRecord"/> that providing access to a related set of child records.</returns>
+            <exception cref="T:System.InvalidOperationException">An exception is thrown when, there are no records available.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">An exception is thrown when, field with the index <paramref name = "fieldIndex" /> not found.</exception>
+            <exception cref="T:GrapeCity.BI.Data.DataProviders.InvalidFieldNameException"></exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.GetValue(System.Int32)">
+            <summary>
+            Returns the value of the field at the specified index.
+            </summary>
+            <remarks>
+            Implements <see cref="!:GrapeCity.ActiveReports.Extensibility.Data.IDataRecord.GetValue"/>.
+            </remarks>
+            <param name="fieldIndex">An <see cref="T:System.Int32"/> representing the ordinal value of the field being examined.</param>
+            <returns>An <see cref="T:System.Object"/> representing the value of the field at the specified index.</returns>
+            <exception cref="T:System.InvalidOperationException">An exception is thrown when, there are no records available.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">An exception is thrown when, field with the index <paramref name = "fieldIndex" /> not found.</exception>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.HasTypeConverter(System.Reflection.PropertyInfo)">
+            <summary>
+            Returns true if specified <paramref name="propertyInfo"/> has custom 
+            <see cref="T:System.ComponentModel.TypeConverter"/> specified via <see cref="T:System.ComponentModel.TypeConverterAttribute"/>
+            </summary>
+            <param name="propertyInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.RollNestedProperties(System.Object,System.Reflection.PropertyInfo[])">
+            <summary>
+            This method that loops through the relationships in a map to get the value for the current row in the nested parent relationships
+            </summary>
+            <param name="activeObject">the object being investigated</param>
+            <param name="properties">The array of parent property info items to get the values from.</param>
+            <returns>returns the final parent object after rolling through the child properties.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.Close">
+            <summary>
+            Releases the resources used by the <see cref="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.Dispose(System.Boolean)">
+            <summary>
+            Implements the Dispose logic of this class.
+            </summary>
+            <param name="disposing">True if this method is called by this object's <see cref="!:Dispose()"/>  method; false if the finalizer invoked this method.</param>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.ObjectDataReader.CovertibleProxy">
+            <summary>
+            This class is used if real object has custom <see cref="T:System.ComponentModel.TypeConverter"/>.
+            Delegates conversion to the <see cref="T:System.ComponentModel.TypeConverter"/> if coversion is supported, 
+            otherwise <see cref="T:System.Convert"/> is used
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.OrdinalMapKind">
+            <summary>
+            Help determin the kind of ordinal map is being examined. 
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.ObjectDataSource.OrdinalMap">
+            <summary>
+            The ordinal map is used to break down field names into a particular column in a table and the realtion(s) the column is attached to based off of the main table.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.ObjectDataSource.OrdinalMap.#ctor(GrapeCity.BI.Data.DataProviders.ObjectDataSource.OrdinalMapKind,System.Reflection.PropertyInfo,System.Reflection.PropertyInfo[],System.String)">
+            <summary>
+            Stores information on how to map to a particular field, child relationship or field contained in a parent realtionship(s).
+            </summary>
+            <param name="mapKind">Indicates what type of map it is (e.g fieldOnly - field in current table, fieldWithNestedRelations - field in a nested set of parent relationships</param>
+            <param name="property">The property info to store if it's a single level</param>
+            <param name="childProperties">The array of properties infos to store for multiple level refrences.</param>
+            <param name="fullFieldName">A <see cref="T:System.String"/> matching the full string name passed in to GetOrdinal.</param>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.ObjectDataSource.OrdinalMap.MapKind">
+             <summary>
+            Indicates what type of map it is. e.g, only a field (FieldOnly), a field with nested relations (FieldWithNestedRelations), etc... 
+             </summary>
+             <value></value>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.ObjectDataSource.OrdinalMap.Property">
+            <summary>
+            Used instead of the array if there is only one relationship in the name (e.g FK_Order_Details_Orders.OrderID)
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.ObjectDataSource.OrdinalMap.ChildProperties">
+            <summary>
+            Used if there are nested relationships in the full field name. (e.g FK_Order_Details_Orders.FK_Orders_Customers.CompanyName)
+            It's called childRealtions because in respect to the location of the field, the relations are children relationships of the table containing the field.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.ObjectDataSource.OrdinalMap.FullFieldName">
+            <summary>
+            Stores the full field name that was passed in with GetOrdinal. Used with GetName.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.ObjectDataProviderFactory">
+            <summary>
+            Provides the <see cref="T:System.Data.Common.DbProviderFactory"/> implementation for OBJECT.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.SqlDbConnectionAdapter">
+            <summary>
+            Allows to apply multivalue parameter values to sql command. 
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.SqlDbConnectionAdapter.MultivalueParameterValueToString(System.Object[])">
+            <summary>
+            Returns the string representation of a multi-value parameter's value.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.SqlDbConnectionAdapter.CreateParameterNamePattern(System.String)">
+            <summary>
+            Sql Client command paremeters are always prefixed by @ symbol, 
+            we need to handle this(case 122665)
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Testing.TestingCommand">
+            <summary>
+            Provides a <see cref="T:System.Data.Common.DbCommand"/>  object.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Testing.TestingConnection">
+            <summary>
+            Provides a <see cref="T:System.Data.Common.DbConnection"/> object.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Testing.TestingDataProviderFactory">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Testing.TestingDataReader">
+            <summary>
+            Provides a <see cref="T:System.Data.Common.DbDataReader"/> object.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Testing.TestingDataReader.ParseCommandText">
+            <summary>
+            Parses the passed in command text.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Testing.TestingDataReader.GetFieldTypeFromString(System.String)">
+            <summary>
+            Returns a type based on the string value passed in from the header text string. If not match is found a string type is returned.
+            </summary>
+            <param name="fieldType">String value from the header command text string.</param>
+            <returns>Type representation of the string</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Testing.TestingDataReader.ParseHeader(System.String)">
+            <summary>
+            Parses the first line in the passed in command text string to create the field names and field data types. The field information
+            is stored in a <see cref="T:GrapeCity.BI.Data.DataProviders.Testing.Column"/> struct, and these column info items are stored in an ArrayList. The column name is also added
+            to a hashtable for easy lookup later.
+            </summary>
+            <param name="header">header string that contains all the fields.</param>
+            <returns>True if it can parse the header string, else false.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Testing.TestingDataReader.ParseDataRow(System.String)">
+            <summary>
+            Parses a row of data using a regular expression and stores the information inside an object array that is the current row of data.
+            If the row does not have the correct number of fields, an exception is raised.
+            </summary>
+            <param name="dataRow">String value representing a comma delimited data row</param>
+            <returns>True if it can parse the data string, else false.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Testing.TestingDataReader.ConvertValue(System.Type,System.String)">
+            <summary>
+            Coverts the string value coming from the command text to the appropriate data type, based off of the field's type.
+            This also checks a few string value rules to decide if a String.Empty of System.Data.DBNull needs to be returned.
+            </summary>
+            <param name="type">Type of the current column the data belongs to.</param>
+            <param name="originalValue">String value coming from the command text.</param>
+            <returns>Resulting object from the converted string, based off of the type.</returns>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbCommand">
+            <summary>
+            Base class for Db commands of text data providers (like csv, json, xml)
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbCommand.CommandText">
+            <summary>
+            Gets or sets the command to execute at the data source.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbCommand.CommandTimeout">
+            <summary>
+            Gets or sets the wait time before terminating an attempt to execute a command and generating an error.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbCommand.CommandType">
+            <summary>
+            Gets or sets a value indicating how the <see cref="P:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbCommand.CommandText"/> property is interpreted.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbConnection">
+            <summary>
+            Base class for connection of text data soruces (such as CSV, JSON, etc)
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbConnection.ConnectionString">
+            <summary>
+            Gets or sets the string used to open the connection to the data source.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbConnection.Open">
+            <summary>
+            Opens a data source connection.
+            </summary>
+            <remarks>It is used to validate connection string and make sure that source file is exists.</remarks>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbConnection.Close">
+            <summary>
+            Closes the connection to the data source.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.TextProvidersBase.TextDbConnection.BeginDbTransaction(System.Data.IsolationLevel)">
+            <summary>
+            Begins a data source transaction.
+            </summary>
+            <returns>An object representing the new transaction.</returns>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.DataProviders.TextDbDataReader">
+            <summary>
+            Provides some stubs for text data providers (like CSV, Json, etc.)
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.DataProviders.TextDbDataReader.NextResult">
+            <summary>
+            This method is used to move between result sets. It makes no sence for text data providers.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Xml.OrdinalMapKind">
+            <summary>
+            Help determin the kind of ordinal map is being examined. 
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Xml.OrdinalMap">
+            <summary>
+            The ordinal map is used to break down field names into a particular compiled XPathExpressions.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Xml.OrdinalMap.#ctor(GrapeCity.BI.Data.DataProviders.Xml.OrdinalMapKind,System.Xml.XPath.XPathExpression,System.Type,System.String)">
+            <summary>
+            Stores information on how to map to a particular field, child relationship or field contained in a parent realtionship(s).
+            </summary>
+            <param name="mapKind">A <see cref="T:GrapeCity.BI.Data.DataProviders.Xml.OrdinalMapKind"/> indicating what type of map the expression is for.</param>
+            <param name="dataType">A <see cref="T:System.Type"/> indicating the type of the value returned by the xpath expression; or IDataReader if it's a child data set.</param>
+            <param name="expression">A compiled <see cref="T:System.Xml.XPath.XPathExpression"/>to query the xml data with.</param>
+            <param name="fullFieldName">a <see cref="T:System.String"/> matching the full string name passed in to GetOrdinal.</param>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.Xml.OrdinalMap.MapKind">
+             <summary>
+            Indicates if the type of map the expression is for.
+             </summary>
+             <value></value>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.Xml.OrdinalMap.Expression">
+            <summary>
+            Returns the compiled xpath expression
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.Xml.OrdinalMap.DataType">
+            <summary>
+            Returns the data type for the xpath expression's results. Should be an acceptable type or IDataReader if it's a child data set item.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.Xml.OrdinalMap.FullFieldName">
+            <summary>
+            Stores the full field name that was passed in with GetOrdinal. Used with GetName.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Xml.XmlCommand">
+            <summary>
+            Provides an <see cref="T:System.Data.Common.DbCommand"/> object for using an xml file or xml data as a data source.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Xml.XmlCommand.#ctor(System.String,System.Uri)">
+            <summary>
+            Creates a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.Xml.XmlCommand"/> object.
+            </summary>
+            <param name="xmlData">The Xml data string.</param>
+            <param name="xsltPath">The path to the transformation xslt file to run against the xml data file.</param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Xml.XmlCommand.#ctor(System.Uri,System.Uri)">
+            <summary>
+            Creates a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.Xml.XmlCommand"/> object.
+            </summary>
+            <param name="xmlPath">The path to the xml file.</param>
+            <param name="xsltPath">The name of a transformation xslt to run against the xml data file.</param>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Xml.XmlCommand.GetXmlReader">
+            <summary>
+            Gets an XmlReader for the command to use. If a transformation file is specified the transformation will be done here.
+            </summary>
+            <remarks>Fix for CR# 21678. After reading through one dataset the xml reader was at the end of the file. We moved the creation of the <see cref="T:System.Xml.XmlReader"/> to the <see cref="T:GrapeCity.BI.Data.DataProviders.Xml.XmlCommand"/> instead of doing it in the <see cref="T:GrapeCity.BI.Data.DataProviders.Xml.XmlConnection"/>.</remarks>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Xml.XmlCommand.ExecuteDbDataReader(System.Data.CommandBehavior)">
+            <summary>Executes the command text against the connection.</summary>
+            <param name="behavior">An instance of <see cref="T:System.Data.CommandBehavior"></see>.</param>
+            <returns>A task representing the operation.</returns>
+            <exception cref="T:System.Data.Common.DbException">An error occurred while executing the command text.</exception>
+            <exception cref="T:System.ArgumentException">An invalid <see cref="T:System.Data.CommandBehavior"></see> value.</exception>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.Xml.XmlCommand.LocateDataSource">
+            <summary>
+            Locates data source.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Xml.XmlConnection">
+            <summary>
+            Provides an <see cref="T:System.Data.Common.DbConnection"/> object for use with a xml file or xml data as a data source.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Xml.XmlConnectionString">
+            <summary>
+            For internal use. Allows to parse or create xml data provider connection string
+            </summary>
+        </member>
+        <member name="P:GrapeCity.BI.Data.DataProviders.Xml.XmlDataProviderException.ErrorCode">
+            <summary>
+            Error code of current exception.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Xml.XmlDataProviderException.#ctor">
+            <summary>
+            For internal use only. Deserialization only.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Xml.XmlDataProviderException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Enables environments where serialization is required to initialize instances of the <see cref="T:GrapeCity.BI.Data.DataProviders.Xml.XmlDataProviderException" /> class.
+            Private if sealed class and protected if not sealed class.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.Xml.XmlDataReader">
+            <summary>
+            Provides an <see cref="T:System.Data.IDataReader"/> object for use with an xml file or xml data as a data source.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Xml.XmlDataReader.#ctor(System.Xml.XPath.XPathNodeIterator,System.Xml.XmlNamespaceManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.BI.Data.DataProviders.Xml.XmlDataReader"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Xml.XmlDataReader.ParseFieldName(System.String)">
+            <summary>
+            Attempts to create a OrdinalMap with an <see cref="T:System.Xml.XPath.XPathExpression"/> from the xpath field name passed into GetOrdinal. The method determines if the
+            xpath expression should be for a child dataset or or a regular expression to use with GetValue.
+            </summary>
+            <param name="fieldName">xpath field name to try and match</param>
+            <returns>ordinal for the position of the OrdinalMap in the ordinals hastable.</returns>
+        </member>
+        <member name="M:GrapeCity.BI.Data.DataProviders.Xml.XmlDataReader.GetObjectFromExpression(System.Xml.XPath.XPathExpression)">
+            <summary>
+            Evaluates the stored expression and returns the results.
+            </summary>
+            <param name="expression">Compiled <see cref="T:System.Xml.XPath.XPathExpression"/> stored in the ordinal map.</param>
+            <returns>results of the evaulation.</returns>
+        </member>
+        <member name="T:GrapeCity.BI.Data.DataProviders.XmlDataProviderFactory">
+            <summary>
+            Provides the <see cref="T:System.Data.Common.DbProviderFactory"/> implementation for XML.
+            </summary>
+        </member>
+    </members>
+</doc>

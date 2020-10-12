@@ -1,0 +1,844 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GrapeCity.ActiveReports.Core.Drawing.Gdi</name>
+    </assembly>
+    <members>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCanvasFactory">
+            <summary>
+            Provides capabilities for retrieving drawing graphics canvas impl.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCanvasFactory.Create(System.Drawing.Graphics,System.Nullable{System.Drawing.GraphicsUnit})">
+            <summary>
+            Creates graphics canvas for provided native graphics object.
+            </summary>
+            <param name="graphics">The graphics.</param>
+            <param name="graphicsUnit">The graphics page scale to twips if it should be modified.</param>
+            <returns>IDrawingCanvas impl for native graphics.</returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.GraphicsExtensions">
+            <summary>
+            Some usefull extension methods. For internal use only.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.GraphicsExtensions.IsPrinter(System.Drawing.Graphics)">
+            <summary>
+            Is printer? For internal use only.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.GraphicsExtensions.PreferGdiRendering(System.String)">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache">
+            <summary>
+            Class GraphicsCache. For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache.#ctor(System.Drawing.Graphics)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache" /> class. 
+            </summary>
+            <param name="gRef">The Graphics object used to paint.</param>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache.Graphics">
+            <summary>
+            The Graphics object used to paint.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache.DpiX">
+            <summary>
+            The values, in dots per inch, for the horizontal and vertical resolution supported by Graphics.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache.DpiY">
+            <summary>
+            The values, in dots per inch, for the horizontal and vertical resolution supported by Graphics.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache.StringFormat">
+            <summary>
+            The text layout information.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache.Dispose">
+            <summary>
+            Disposes this instance.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.RText">
+            <summary>
+            Summary description for RText.
+            
+            Limitations: 
+            - Right to left word ordering for BIDI not supported, but right to left text is
+            - Tab characters are ignored unless alignment=left
+            </summary>
+            <summary>
+            ShrinkToFit algorithm part
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabSize">
+            <summary>
+            The tabulation position in inches
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.SelectionRange">
+            <summary>
+            Represents text selection range
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.SelectionRange.Start">
+            <summary>
+            The start
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.SelectionRange.Length">
+            <summary>
+            The length
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.SelectionRange.End">
+            <summary>
+            Gets the last character in selection. Gets incorrect position in case of empty selection
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.SelectionRange.IsEmpty">
+            <summary>
+            Gets true if selection is empty
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.SelectionRange.Empty">
+            <summary>
+            Gets empty selection
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.SelectionRange.Intersect(GrapeCity.ActiveReports.Drawing.Gdi.RText.SelectionRange)">
+            <summary>
+            Returns intersection of current selection with another one
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.SelectionRange.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the SelectionRange class
+            </summary>
+            <param name="start"></param>
+            <param name="length"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.SelectionRange.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.SelectionRange.CompareTo(System.Object)">
+            <summary>
+            Compares to.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabStop">
+            <summary>
+            Represents the custom tab stop.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabStop.#ctor(System.Single,GrapeCity.ActiveReports.Drawing.Gdi.RText.TabType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabStop" /> class.
+            </summary>
+            <param name="position">The position.</param>
+            <param name="type">The type.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabStop.#ctor(System.Single,GrapeCity.ActiveReports.Drawing.Gdi.RText.TabType,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabStop" /> class.
+            </summary>
+            <param name="position">The position.</param>
+            <param name="type">The type.</param>
+            <param name="leadingChar">The leading character.</param>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabStop.Position">
+            <summary>
+            Specifies the position (in inches) of the current tab stop.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabStop.LeadingChar">
+            <summary>
+            Specifies the character which shall be used to fill in the space created by a tab which ends at this tab stop.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabStop.Type">
+            <summary>
+            Specifies the type of tab stop.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabType">
+            <summary>
+            Specifies tab stop types.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabType.Left">
+            <summary>
+            The left
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabType.Center">
+            <summary>
+            The center
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabType.Right">
+            <summary>
+            The right
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.Line">
+            <summary>
+            Class Line. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.Line._lineHeight">
+            <summary>
+            The line height
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.Line._contentWidth">
+            <summary>
+            The content width
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.Line.IsParaStart">
+            <summary>
+            True if parastart
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.Line.AddPiece(GrapeCity.ActiveReports.Drawing.Gdi.RText.LinePiece)">
+            <summary>
+            Adds the piece.
+            </summary>
+            <param name="piece">The piece.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.Line.GetText">
+            <summary>
+            Gets the text.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.Line.Pieces">
+            <summary>
+            Gets the pieces.
+            </summary>
+            <value>The pieces.</value>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.Line.GetPiece(System.Int32)">
+            <summary>
+            Gets the piece by index.
+            </summary>
+            <param name="index">The index.</param>
+            <returns>LinePiece.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.Line.GetPieceCount">
+            <summary>
+            Gets the piece count.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.Line.Selection">
+            <summary>
+            Gets line's selected area
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.Line.TextOffset">
+            <summary>
+            Gets the text offset.
+            </summary>
+            <value>The text offset.</value>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.LinePiece">
+            <summary>
+            Class LinePiece.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.LinePiece.#ctor(System.Single,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.LinePiece" /> class.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.LinePiece.X">
+            <summary>
+            The x
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.LinePiece.Text">
+            <summary>
+            The text
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.TextPiece">
+            <summary>
+            Class TextPiece. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.TextPiece.#ctor(System.Single,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.TextPiece" /> class.
+            </summary>
+            <param name="text">The text.</param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabPiece">
+            <summary>
+            Class TabPiece. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabPiece.#ctor(System.Single,System.Single,GrapeCity.ActiveReports.Drawing.Gdi.RText.TabStop)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabPiece" /> class.
+            </summary>
+            <param name="anchor">The anchor.</param>
+            <param name="tab">The tab.</param>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabPiece.Anchor">
+            <summary>
+            The anchor
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabPiece.Tab">
+            <summary>
+            The tab
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.TabPiece.Width">
+            <summary>
+            Gets the width.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText._characterSpacing">
+            <summary>
+            Determines the distance beetween two characters in the string. Applied only when UseCharacterSpacing is true.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText._wrapMode">
+            <summary>
+            The wrap mode.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText._enableKinsoku">
+            <summary>
+             A value indicating whether this <see cref="T:GrapeCity.ActiveReports.Drawing.Gdi.RText" /> is kinsoku.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText._isRightToLeft">
+            <summary>
+            A value indicating whether [right to left].
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText._align">
+            <summary>
+            The alignment.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText._textJustify">
+            <summary>
+            The text justify.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.m_bFormatted">
+            <summary>
+            True if formatted
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.m_formattedWidth">
+            <summary>
+            The formatted width
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.m_outputSize">
+            <summary>
+            The output size
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.m_lines">
+            <summary>
+            The lines
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.#ctor(System.String,System.Drawing.Font,System.Drawing.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Drawing.Gdi.RText" /> class.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="font">The font.</param>
+            <param name="textColor">Color of the text.</param>
+            <exception cref="T:System.ArgumentNullException">
+            text
+            or
+            font
+            </exception>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.#ctor(System.String,System.Drawing.Font,System.Drawing.Color,System.Collections.Generic.IEnumerable{GrapeCity.ActiveReports.Drawing.Gdi.RText.TabStop})">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Drawing.Gdi.RText" /> class.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="font">The font.</param>
+            <param name="textColor">Color of the text.</param>
+            <param name="tabStops">The tab stops.</param>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.Font">
+            <summary>
+            Gets or sets the font.
+            </summary>
+            <value>The font.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.FontIndex">
+            <summary>
+            Gets or sets the index of the font.
+            </summary>
+            <value>The index of the font.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.TextColor">
+            <summary>
+            Gets or sets the color of the text.
+            </summary>
+            <value>The color of the text.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.BackColor">
+            <summary>
+            Gets or sets the color of the back.
+            </summary>
+            <value>The color of the back.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.Selection">
+            <summary>
+            Gets or sets the selection.
+            </summary>
+            <value>The selection.</value>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.SetSelectionColors(System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Sets selection painting colors
+            </summary>
+            <param name="backColor"></param>
+            <param name="foreColor"></param>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.CharacterSpacing">
+            <summary>
+            Determines the distance beetween two characters in the string. Applied only when UseCharacterSpacing is true.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.LineSpacing">
+            <summary>
+             Determines the spacing in inches between text lines		
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.MultiParagraphProcessing">
+            <summary>
+            The multi paragraph processing, for internal use only.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText._padding">
+            <summary>
+            The padding.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.VerticalText">
+            <summary>
+            Gets or sets a value indicating whether [vertical text].
+            </summary>
+            <value>
+                <c>true</c> if [vertical text]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.TextAngle">
+            <summary>
+            Gets or sets the text angle.
+            </summary>
+            <value>The text angle.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.WrapMode">
+            <summary>
+            Gets or sets the wrap mode.
+            </summary>
+            <value>The wrap mode.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.Kinsoku">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:GrapeCity.ActiveReports.Drawing.Gdi.RText" /> is kinsoku.
+            </summary>
+            <value>
+                <c>true</c> if kinsoku; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.RightToLeft">
+            <summary>
+            Gets or sets a value indicating whether [right to left].
+            </summary>
+            <value>
+                <c>true</c> if [right to left]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.MultiLine">
+            <summary>
+            Gets or sets a value indicating whether [multi line].
+            </summary>
+            <value>
+                <c>true</c> if [multi line]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.Alignment">
+            <summary>
+            Gets or sets the alignment.
+            </summary>
+            <value>The alignment.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.VertAlignment">
+            <summary>
+            Gets or sets the vert alignment.
+            </summary>
+            <value>The vert alignment.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.TextJustify">
+            <summary>
+            Gets or sets the text justify.
+            </summary>
+            <value>The text justify.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.Printing">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:GrapeCity.ActiveReports.Drawing.Gdi.RText" /> is printing.
+            </summary>
+            <value>
+                <c>true</c> if printing; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.Padding">
+            <summary>
+            Gets or sets the padding.
+            </summary>
+            <value>The padding.</value>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.ClearRuns">
+            <summary>
+            Clears the runs.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.GetParagraphSize(GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache,System.Single)">
+            <summary>
+            Gets the size of the paragraph.
+            </summary>
+            <param name="cache">The cache.</param>
+            <param name="width">The width.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.GetBlocks">
+            <summary>
+            Gets the blocks.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.GetLines">
+            <summary>
+            Gets the lines.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.GetLastLinesIndexes">
+            <summary>		
+            Returns indexes of last paragraphs lines. Used to define lines which should not be justified.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.GetLogicalLines(System.Int32)">
+            <summary>		
+            Returns an array of lines that are "logically" together.
+            GetLines() splits the entire text based on width.
+            GetLines() &gt;= GetLogicalLines()
+            </summary>
+            <param name="clipLineCutoff">line number cut off(iteration starts from this line)</param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.FormatTextShrinkToFit(GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache,System.Drawing.Font,System.Single,System.Single)">
+            <summary>
+            FormatText and returns updated font.
+            
+            Uses textruns to go through m_text and creates LineDesc with ShrinkToFit algorithm
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.FormatTextShrinkToFit(GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache,System.Drawing.Font,System.Single,System.Single,System.Boolean)">
+            <summary>
+            Formats the text shrink to fit.
+            </summary>
+            <param name="cache">The cache.</param>
+            <param name="initialFont">The initial font.</param>
+            <param name="docWidth">Width of the document.</param>
+            <param name="docHeight">Height of the document.</param>
+            <param name="needSubtractPadding">if set to <c>true</c> [need subtract padding].</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.FormatText(GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache,System.Single)">
+            <summary>
+            FormatText
+            
+            Uses textruns to go through m_text and creates LineDesc
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.RenderWithGraphics(System.Drawing.Graphics,System.Drawing.RectangleF)">
+            <summary>
+            Renders text 
+            </summary>
+            <param name="g"></param>
+            <param name="rect">rectangle that the text has to be rendered on the canvas or design surface.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.Render(GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache,System.Drawing.RectangleF)">
+            <summary>
+            Renders Lines and pieces that contains text only.
+            This method is used to render
+            	Label, Textbox, CheckBox, RichtextBox at run time.
+            	Label, Textbox, CheckBox, at design time.
+            </summary>
+            <param name="cache">Cache that contains the graphics object used to render.</param>
+            <param name="outRect">rectangle that the text has to be rendered on the canvas or design surface.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.MeasureCharacterSpacing(GrapeCity.ActiveReports.Drawing.Gdi.GraphicsCache,System.String,System.Single)">
+            <summary>
+            RS: CR 23121 - Measures the total character spacing in the string
+            </summary>
+            <param name="text">The string</param>
+            <param name="characterSpacing">The character spacing in ????</param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.AlignValue(System.Single,System.Single)">
+            <summary>
+            CR 23752 - Aligns value, so it makes round number when multiplied by the dpi
+            </summary>
+            <param name="value"></param>
+            <param name="dpi"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.Justify">
+            <summary>
+            Line justification options
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.NormalizeLineFeeds(System.String)">
+            <summary>
+            Normalizes line-feed characters to unified presentation with \n as line delimiter
+            </summary>
+            <param name="inputString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.CalcRectRotation(System.Single,System.Single,System.Single,System.Single@,System.Single@,System.Single@,System.Single@)">
+            <summary>
+            Calculates the rect rotation.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <param name="angle">The angle.</param>
+            <param name="leftMostX">The left most x.</param>
+            <param name="topMostY">The top most y.</param>
+            <param name="dx">The dx.</param>
+            <param name="dy">The dy.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.IsLastLineInParagraph(System.Int32)">
+            <summary>
+            Returns true is the line at index "line" is the lasst line in the paragraph.
+            Done only for justified alignment and lineCount &gt; 1
+            </summary>
+            <param name="line">CurrentLine index that is being processed</param>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx">
+            <summary>
+            Padding class
+            </summary>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.Empty">
+            <summary>
+            DDPadding Empty Structure
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.#ctor(System.Int32)">
+            <summary>
+            DDPadding Constructor
+            </summary>
+            <param name="all">All</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            DDPadding Constructor
+            </summary>
+            <param name="left">Left</param>
+            <param name="top">Tol</param>
+            <param name="right">Right</param>
+            <param name="bottom">Bottom</param>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.All">
+            <summary>
+            Gets or sets padding
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.Bottom">
+            <summary>
+            Gets or sets bottom padding
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.Left">
+            <summary>
+            Gets or sets left padding
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.Right">
+            <summary>
+            Gets or sets right padding
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.Top">
+            <summary>
+            Gets or sets top padding
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.Horizontal">
+            <summary>
+            Gets horizontal padding property
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.Vertical">
+            <summary>
+            Gets versical padding property
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.Size">
+            <summary>
+            Gets size
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.op_Equality(GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx,GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx)">
+            <summary>
+            Implements the ==.
+            </summary>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.op_Inequality(GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx,GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx)">
+            <summary>
+            Implements the !=.
+            </summary>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.Equals(GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx)">
+            <summary>
+            Determines whether the specified <see cref="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx" /> is equal to this instance.
+            </summary>
+            <param name="paddingExEx">Another object to compare to.</param>
+            <returns>
+                <c>true</c> if the specified <see cref="T:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx" /> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to this instance.
+            </summary>
+            <param name="obj">Another object to compare to.</param>
+            <returns>
+                <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RText.PaddingEx.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
+        </member>
+        <member name="F:GrapeCity.ActiveReports.Drawing.Gdi.RText.ShrinkToFitMinFontSize">
+            <summary>
+            The minimum size the text is shrinked to.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.RTextExtensions">
+            <summary>
+            Utils method to use RText. For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.RTextExtensions.GetLines(System.String,System.Drawing.Font,System.Single,GrapeCity.ActiveReports.Drawing.StringFormatEx,System.String[]@,System.String[]@)">
+            <summary>
+            Gets lines for future rendering. For internal use.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.SafeGraphics">
+            <summary>
+            Wraps a limited subset of System.Drawing.Graphics functionality for implementing MediumTrust support
+            </summary>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.SafeGraphics.GraphicsFromHDCWorks">
+            <summary>
+             A hackish test to check if we running on Azure 
+            (on Azure Graphics.FromHdcInternal throws OOM exception.
+             see here for details:
+            http://social.msdn.microsoft.com/Forums/en/windowsazure/thread/04db1ebe-36b4-4562-b79c-cc9c61014b83
+             </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.SafeGraphics.CreateReferenceGraphics">
+            <summary>
+            Creates reference graphics instance. Call dispose after use
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.SafeGraphics.ReferenceGraphics">
+            <summary>
+            Get reference graphics instance. Do not dispose and wrap with using
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Drawing.Gdi.SafeGraphics.IsFullTrust">
+            <summary>
+            Check to see if the calling code is executing with FullTrust
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.LineBreakingUtils">
+            <summary>
+            Allows to divide text to lines according what you will see in viewer.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.LineBreakingUtils.BreakLines(System.String,GrapeCity.ActiveReports.Drawing.ITextMetricsProvider,GrapeCity.ActiveReports.Drawing.StringFormatEx,GrapeCity.ActiveReports.Drawing.FontInfo,System.Drawing.SizeF)">
+            <summary>
+            Gets pair of text lines and bool values - for last lines in original strings
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.TextMetricsProvider">
+            <summary>
+            Encapsulates string measurments and related functionality using the system graphics.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.TextMetricsProvider.MeasureString(GrapeCity.ActiveReports.Drawing.FontInfo,System.String,GrapeCity.ActiveReports.Drawing.StringFormatEx,System.Single,System.Single)">
+            <param name="boundWidth">Width of available bounds in Twips</param>
+            <param name="boundHeight">Height of available bounds in Twips</param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.Tools.ParagraphEmbeddingLevel">
+            <summary>
+            For Internal Use Only.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:GrapeCity.ActiveReports.Drawing.Gdi.Tools.BidiReference.DetermineParagraphEmbeddingLevel" -->
+        <!-- Badly formed XML comment ignored for member "M:GrapeCity.ActiveReports.Drawing.Gdi.Tools.BidiReference.DetermineExplicitEmbeddingLevels" -->
+        <!-- Badly formed XML comment ignored for member "M:GrapeCity.ActiveReports.Drawing.Gdi.Tools.BidiReference.GetReordering(System.Int32[])" -->
+        <member name="T:GrapeCity.ActiveReports.Drawing.Gdi.StringFormatProvider">
+            <summary>
+            Provide local factory which create own instances of StringFormat.GenericDefault
+            and StringFormat.GenericTypographic, independent of changes in GDI+ StringFormat
+            getter factories.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.StringFormatProvider.GetGenericDefault">
+            <summary>
+            Creates new instance of StringFormat with parameters, identical
+            to GDI+ StringFormat.GenericDefault.
+            </summary>
+            <returns>GenericDefault string format</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Drawing.Gdi.StringFormatProvider.GetGenericTypographic">
+            <summary>
+            Creates new instance of StringFormat with parameters, identical
+            to GDI+ StringFormat.GenericTypographic.
+            </summary>
+            <returns>GenericTypographic string format</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1214 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Gcef.Data.ExpressionInfo</name>
+    </assembly>
+    <members>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.CompoundExpressionInfo.IsConstant">
+            <summary>
+            Gets if this <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/> contains only constant values.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ConstantExpressionInfo">
+            <summary>
+            Represents an expression that is a constant value.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ConstantExpressionInfo.#ctor(System.String,System.Object,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ConstantExpressionInfo"/> class.
+            </summary>
+            <param name="expression">A string containing the expression this object represents.</param>
+            <param name="constantResult">The constant resulting value for this expression when <see cref="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ConstantExpressionInfo.GetConstantResult(System.String,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType@)"/> is called. This may be the same as the expression (e.g. \"1\"=="1") or not (\"hello world\"==hello world).</param>
+            <param name="resultType">The data type of this expression's resulting value.</param>
+            <param name="isExpression">True if this object represents an actual expression, or false if it represents a literal string, not to be interpreted as an expression (this value will be used as the value of <see cref="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.IsExpression"/>.</param>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ConstantExpressionInfo.IsConstant">
+            <summary>
+            Gets if this <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/> contains only constant values.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ConstantExpressionInfo.IsExpression">
+            <summary>
+            See <see cref="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.IsExpression"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ConstantExpressionInfo.Recognize(System.String,System.Boolean)">
+            <summary>
+            Attempts to parse the specified expression string as a <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ConstantExpressionInfo"/>. 
+            </summary>
+            <param name="expression">The expression to parse.</param>
+            /// <param name="isExpression">True if this object represents an actual expression, or false if it represents a literal string, not to be interpreted as an expression (this value will be used as the value of <see cref="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.IsExpression"/>.</param>
+            <returns>A <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ConstantExpressionInfo"/> instance if the expression is a valid constant expressionreference or null if the specified expression is not a valid constant.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ConstantExpressionInfo.IsInteger(System.String,System.Object@)">
+            <summary>
+            Tries to convert the string to an Int32.
+            </summary>
+            <param name="s"></param>
+            <param name="result"></param>
+            <returns>true if s represents an Int32, otherwise false</returns>
+            <remarks>based on http://msdn.microsoft.com/library/default.asp?url=/library/en-us/vbls7/html/vblrfvbspec2_4_2.asp </remarks>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ConstantExpressionInfo.ValidateDigit(System.Char,GrapeCity.Enterprise.Data.DataEngine.Expressions.ConstantExpressionInfo.DigitType,System.Int32@)">
+            <summary>
+            Determines if the character passed in is a valid digit based on DigitType.  If it is
+            its value is determined.
+            </summary>
+            <param name="c"></param>
+            <param name="type"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ConstantExpressionInfo.IsString(System.String,System.Object@)">
+            <remarks>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/vbls7/html/vblrfvbspec2_4_4.asp</remarks>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType">
+            <summary>
+            Specifies the data type of an expression result.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType.String">
+            <summary>
+            Expression results in a String type.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType.Boolean">
+            <summary>
+            Expression results in a Boolean type.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType.Integer">
+            <summary>
+            Expression results in a Integer type.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType.DateTime">
+            <summary>
+            Expression results in a DateTime type.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType.Float">
+            <summary>
+            Expression results in a Float type.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType.Binary">
+            <summary>
+            Expression results in a Binary type.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType.Variant">
+            <summary>
+            Expression results in a Variant type.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType.VariantArray">
+            <summary>
+            Expression results in a Variant Array type.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType.Error">
+            <summary>
+            Expression results in an Error.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionLevel">
+            <summary>
+            Defines the different levels that an expression can be in. 
+            </summary>
+            <remarks>
+            The level of an expression determines when it can be evaluated.
+            The relative value of each of these members is significant. See theimplementations of <see cref="M:ISummary.Update"/>
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionLevel.Constant">
+            <summary>
+            Consists of values from only the following global collections: Parameters, Globals, and User.
+            </summary>
+            <remarks>Can be evaluated immediately after constructing the ROM and before opening any data sources or continuing with additional report processing.</remarks>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionLevel.RowLevel">
+            <summary>
+            Consists of known expressions: fields, parameters, constants, and globals.
+            </summary>
+            <remarks>Can be evaluated as each record is read from the data source.</remarks>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionLevel.Pagination">
+            <summary>
+            Consists of epxression who's values are only available after pagination such as page number, page count, and page totals.
+            </summary>
+            <remarks>Evaluated at render time only.</remarks>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo">
+            <summary>
+            The ExpressionInfo class stores, evaluates, and provides information about an expression. ExpressionInfo provides aggregates, global collections, et cetera, as well as information about the expected data type of the expression's result. 
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.EmptyString">
+            <summary>
+            Returns a reference to an <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/> object representing a constant empty string expression.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.#ctor(System.String,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/> class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.Expression">
+            <summary>
+            The original expression.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.ResultType">
+            <summary>
+            The expected data type of the expression result. 
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.Children">
+            <summary>
+            Gets child sub-expressions.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.Validate">
+            <summary>
+            Performs validatation on the expression.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.SetErrorInfo(System.String,GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span)">
+            <summary>
+            Allows the error information to be noted on the Expression and TraceErrors.
+            </summary>
+            <param name="errorMessage">Error string</param>
+            <param name="errorSpan">location of the error.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.ToString">
+            <summary>
+            Returns the string representation of this object suitable for RDL output. 
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.FromString(System.String)">
+            <summary>
+            Parses the specified expression string and returns an <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/> object that represents the specified expression.
+            </summary>
+            <param name="expressionString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.Constant(System.Object)">
+            <summary>
+            Creates constant expression with specified value.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.Parse(System.String)">
+            <summary>
+            Parses the specified expression string and returns an <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/> object that represents the specified expression.
+            </summary>
+            <param name="expressionString">String to parse</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.Parse(System.String,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType)">
+            <summary>
+            Parses the specified expression string and returns an <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/> object that represents the specified expression.
+            </summary>
+            <param name="expressionString">The string to parse</param>
+            <param name="subType">If the expressionString parameter does not start with an equals sign (=), then the expression is treated as a constant with an enumerated ExpressionResultType.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.op_Implicit(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)~System.String">
+            <summary>
+            Defines an operator that allows implicit conversion from an ExpressionInfo to a string.  
+            </summary>
+            <param name="expression">The expression to be converted.</param>
+            <returns>The string representation of expression.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.op_Implicit(System.String)~GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo">
+            <summary>
+            Defines an operator that allows implicit conversion from a string to an ExpressionInfo. 
+            </summary>
+            <param name="expressionString">The string representation of expression.</param>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.IsConstant">
+            <summary>
+            Gets a Boolean value indicating whether the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/> object contains only constant values.  
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.IsExpression">
+            <summary>
+            Returns true if this object represents an actual dynamic expression. 
+            Returns false if the expression should be taken as a literal string value.
+            </summary>
+            <remarks>
+            Essentially if the expression was prefixed with an equal sign, it would be determined to be an expression. Otherwise it would NOT be considered an expression.
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.GenerateExpressionInfo(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Expression,System.String)">
+            <summary>
+            Creates an ExpressionInfo from the Parsed Expression object and the original expression.
+            </summary>
+            <param name="expression">Parsed expression</param>
+            <param name="originalExpression">Original string expression.</param>
+            <returns>ExpressionInfo object representing the expression.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.DetermineResultType(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType,GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.OperatorType,System.String@,System.Boolean@)">
+            <summary>
+            This function will predetermine what the Result type will be based on the 2 result types
+            given.
+            </summary>
+            <param name="leftResult">The first result type.</param>
+            <param name="rightResult">The second result type.</param>
+            <param name="operatorType">The type of operator used to combine these results.</param>
+            <param name="message">Error message (if applicable).</param>
+            <param name="leftOperandInError">True if the left operand causes an error, otherwise false.  Not applicable if there
+            is no error.</param>
+            <returns>Returns the expected ExpressionResultType of the combination of
+            the given result types.  Returns Variant if the result type cannot be determined.</returns>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.IsEmptyString">
+            <summary>
+            Indicates if this expression represents an empty string.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.GetHashCode">
+            <summary>
+            Generates a unique HashCode for this expression.  
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.Equals(System.Object)">
+            <summary>
+            Overloaded. Determines whether the specified ExpressionInfo object represents the same expression as this one.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.Equals(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Determines whether the specified ExpressionInfo object represents the same expression as this one.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.op_Equality(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Determines whether the two <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/> objects represent the same expression.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.op_Inequality(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Determines whether the specified <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/> objects represent different expressions.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.CompareTo(System.Object)">
+            <summary>
+            Compares this instance to a specified object and returns an integer that indicates their relationship to one another.
+            </summary>
+            <param name="obj">A <see cref="T:System.Boolean"/> object to compare to this instance.</param>
+            <returns>A signed integer that indicates the relative values of this instance and <paramref name="obj"/>.</returns>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection">
+            <summary>
+            Implements a strongly typed collection for <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.Add(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Add item to colletion
+            </summary>
+            <param name="value">Item to add</param>		
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.Contains(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Determines whether the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection"/> contains a specific value.
+            </summary>
+            <returns>
+            true if <paramref name="item"/> is found in the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection"/>; otherwise, false.
+            </returns>
+            <param name="item">The object to locate in the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection"/>.
+            </param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.CopyTo(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo[],System.Int32)">
+            <summary>
+            Copies the elements of the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection"/> to an <see cref="T:System.Array"/>, starting at a particular <see cref="T:System.Array"/> index.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the elements copied from <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection"/>. The <see cref="T:System.Array"/> must have zero-based indexing.</param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array"/> at which copying begins.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.Remove(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Remove item from collection
+            </summary>
+            <param name="item">Item for remove</param>
+            <returns></returns>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection"/> is read-only.
+            </summary>
+            <returns>
+            true if the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection"/> is read-only; otherwise, false.
+            </returns>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/> at the specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <returns>GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.OnValidate(System.Object)">
+            <summary>
+            Called when validation occurs.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.AddRange(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection)">
+            <summary>
+            Adds the range.
+            </summary>
+            <param name="expressions">The expressions.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.IndexOf(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Determines the index of a specific item in the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection"/>.
+            </summary>
+            <returns>
+            The index of <paramref name="item"/> if found in the list; otherwise, -1.
+            </returns>
+            <param name="item">The <see cref="T:System.Object"/> to locate in the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection"/>.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.Insert(System.Int32,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Inserts a new a ExpressionInfo into the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection"/> at the specified location.
+            </summary>
+            <param name="index"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.ToArray">
+            <summary>
+            Transforms this collection to array.
+            </summary>
+            <returns>GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo[].</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.OnInsertComplete(System.Int32,System.Object)">
+            <summary>
+            Fires OnItemAdded event after an item added to the collection.
+            </summary>
+            <param name="index">Insertion position.</param>
+            <param name="value">Added item.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.OnRemoveComplete(System.Int32,System.Object)">
+            <summary>
+            Fires OnItemRemoved event after an item removed from the collection.
+            </summary>
+            <param name="index">Index of removed item.</param>
+            <param name="value">Removed item.</param>
+        </member>
+        <member name="E:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.ItemAdded">
+            <summary>
+            Occurs immediately after adding an item to the collection.  
+            </summary>
+        </member>
+        <member name="E:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.ItemRemoved">
+            <summary>
+            Occurs immediately after removing an item from the collection. 
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.OnItemAdded(System.Int32,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Fires the OnItemAdded event.
+            </summary>
+            <param name="index">Index of the item added.</param>
+            <param name="value">Value of the item added.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.OnItemRemoved(System.Int32,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Fires the OnItemRemoved event.
+            </summary>
+            <param name="index">Index of the item removed.</param>
+            <param name="value">Value of the item removed.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.GetEnumerator">
+            <summary>
+            Gets the enumerator.
+            </summary>
+            <returns>System.Collections.Generic.IEnumerator&lt;GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo&gt;.</returns>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollectionEventHandler">
+            <summary>
+            Represents the method that handles the <see cref="E:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.ItemAdded"/> or <see cref="E:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.ItemRemoved"/> event.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollectionEventArgs">
+            <summary>
+            Provides data for the <see cref="E:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.ItemAdded"/> or <see cref="E:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection.ItemRemoved"/> event of the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollection"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollectionEventArgs.#ctor(System.Int32,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Initializes a new instance of <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollectionEventArgs"/> class. 
+            </summary>
+            <param name="index">The index of object that was added or removed.</param>
+            <param name="value">The object that was added or removed.</param>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollectionEventArgs.Value">
+            <summary>
+            Returns the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/> object that was added or removed.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfoCollectionEventArgs.Index">
+            <summary>
+            Returns the Integer for the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo"/> object that was added or removed.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.FunctionExpressionInfo">
+            <summary>
+            Represents an expression that is a constant value.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.FunctionExpressionInfo.#ctor(System.String,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo,System.String,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.FunctionExpressionInfo"/>.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.FunctionExpressionInfo.Qualifier">
+            <summary>
+            Gets call target.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.FunctionExpressionInfo.MethodName">
+            <summary>
+            Gets name of method to be called.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.FunctionExpressionInfo.Arguments">
+            <summary>
+            Gets call arguments.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.IdentifierExpressionInfo">
+            <summary>
+            Represents an identifier in an expression, such as constants or enums.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.IdentifierExpressionInfo.Identifier">
+            <summary>
+            Gets identifier name referenced by this expression.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.IntrinsicCastExpressionInfo.#ctor(System.String,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo,GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionResultType,GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.IntrinsicType)">
+            <summary>
+            Creates a new ExpressionInfo that has a sub expression that is cast based on the Intrinsic type.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.IntrinsicCastExpressionInfo.IsExpression">
+            <summary>
+            Returns true if this object represents an actual dynamic expression. 
+            Returns false if the expression should be taken as a literal string value.
+            </summary>
+            <remarks>
+            Essentially if the expression was prefixed with an equal sign, it would be determined to be an expression. Otherwise it would NOT be considered an expression.
+            </remarks>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.NewExpressionInfo">
+            <summary>
+            Represents a constructor in an expression, such as new.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.NewExpressionInfo.Arguments">
+            <summary>
+            Gets call arguments.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.NothingExpressionInfo">
+            <summary>
+            Represents the value "Nothing" in Visual Basic.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.NothingExpressionInfo.#ctor">
+            <summary>
+            Use <see cref="M:Create"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.NothingExpressionInfo.Create">
+            <summary>
+            Returns an instance of <see cref="T:NothingExpressionInfo"/>.
+            </summary>
+            <returns></returns>
+            <remarks>
+            This class is using a Create method to permit using a singleton instance. If it becomes necessary to not use a singleton, it will only be necessary to change this function's implementation.
+            </remarks>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location">
+            <summary>
+            Describes a location in text.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location.Empty">
+            <summary>
+            Represents an uninitialized <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location"/> object.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location.#ctor(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location"/> structure.
+            </summary>
+            <param name="index">The initial value for <see cref="P:Index"/>.</param>
+            <param name="line">The initial value for <see cref="P:Line"/>.</param>
+            <param name="column">The initial value for <see cref="P:Column"/>.</param>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location.Index">
+            <summary>
+            The zero based index into the stream of text.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location.Line">
+            <summary>
+            The one based line number.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location.Column">
+            <summary>
+            The one based column number.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location.IsValid">
+            <summary>
+            Determines if this object describes a valid location.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location.Before(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location)">
+            <summary>
+            Determins if the specific location occurs before this location.
+            </summary>
+            <param name="otherLocation">The location to compare this location to.</param>
+            <returns>True if the specified location occurs this location, otherwise false.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location.ToString">
+            <summary>
+            Returns a string representation of this object.
+            </summary>
+            <returns>A string that represents this object.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location.Equals(System.Object)">
+            <summary>
+            Determines if the specified object is equal to this object.
+            </summary>
+            <param name="obj">The object to compare this object to.</param>
+            <returns>True if the specified object is equal to this one.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location.Equals(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location)">
+            <summary>
+            Determines if the specified <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location"/> is equal to this object.
+            </summary>
+            <param name="location">The object to compare this object to.</param>
+            <returns>True if the specified <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location"/> is equal to this one.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location.GetHashCode">
+            <summary>
+            See <see cref="M:System.Object.GetHashCode"/>
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseExpression(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Scanner,System.Collections.ArrayList)">
+            <summary>
+            Parse an expression.
+            </summary>
+            <param name="scanner">The scanner to use to fetch the tokens.</param>
+            <param name="errorTable">The list of errors produced during parsing.</param>
+            <returns>An expression-level parse tree.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseTypeName(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Scanner,System.Collections.ArrayList)">
+            <summary>
+            Parse a type name.
+            </summary>
+            <param name="scanner">The scanner to use to fetch the tokens.</param>
+            <param name="errorTable">The list of errors produced during parsing.</param>
+            <returns>A typename-level parse tree.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.Dispose">
+            <summary>
+            Disposes the Scanner.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.Peek">
+            <summary>
+            Gets the next token without advancing the scanner position.
+            </summary>
+            <returns>Next token</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.Read">
+            <summary>
+            Gets the next token and advancing the scanner position.
+            </summary>
+            <returns>Next token.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ReadLocation">
+            <summary>
+            Reads next token and returns its starting location.
+            </summary>
+            <returns>Next token starting location.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.Backtrack(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Token)">
+            <summary>
+            Sets the scanner position to the beginning of the token.
+            </summary>
+            <param name="token">The token in which to reposition the scanner.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ResyncAt(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.TokenType[])">
+            <summary>
+            Set the scanner to position at the first of the tokenTypes.
+            </summary>
+            <param name="tokenTypes">Array of token types to match.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.SpanFrom(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Token)">
+            <summary>
+            Creates a span based on the token passed in and the current token (or
+            previous token if there is no current token).
+            </summary>
+            <param name="token">The token to base the new Span on.</param>
+            <returns>new Span</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.SpanFrom(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Token,GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Token)">
+            <summary>
+            Create a new Span based on the two Token objects passed in.
+            </summary>
+            <param name="startToken">First token to base Span on.</param>
+            <param name="endToken">Second token to base Span on.</param>
+            <returns>new Span</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.SpanFrom(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Token,GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Tree)">
+            <summary>
+            Create a new Span based on a Token and Tree.
+            </summary>
+            <param name="startToken">Token to start the Span with.</param>
+            <param name="endTree">Tree to end the Span with.</param>
+            <returns>new Span.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.CanEndStatement(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.TokenType)">
+            <summary>
+            Determines if the TokenType can end a statement.
+            </summary>
+            <param name="tokenType">TokenType to verify.</param>
+            <returns>true if the TokenType can end a statement, otherwise false.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.BeginsStatement(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.TokenType)">
+            <summary>
+            Determines if the TokenType begins a statement.
+            </summary>
+            <param name="tokenType">TokenType to verify.</param>
+            <returns>true if the tokenType begins the statement, otherwise false.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.MustEndStatement(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Token)">
+            <summary>
+            Determines if the token signifies that the statement must end
+            </summary>
+            <param name="token">Token to verify.</param>
+            <returns>true if the token must end the statement, otherwise false.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseSimpleName(System.Boolean)">
+            <summary>
+            Reads in the next token and forms a SimpleName object out of it.
+            </summary>
+            <param name="allowKeyword">whether or not the SimpleName can be a keyword.</param>
+            <returns>The next token as a SimpleName.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseName">
+            <summary>
+            Gets the next token as a Name.
+            </summary>
+            <returns>The next Name.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseArgument(System.Boolean@)">
+            <summary>
+            Determines the next token(s) as an Argument.
+            </summary>
+            <param name="foundNamedArgument">ref to a bool</param>
+            <returns>The next Token(s) as an Argument.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ArgumentsContinue">
+            <summary>
+            Determines if there are more to the Arguments of the statement.
+            </summary>
+            <returns>true if the Arguments continue, otherwise false.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseArguments">
+            <summary>
+            Creates a collection of Arguments.
+            </summary>
+            <returns>collection of Arguments.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseLiteralExpression">
+            <summary>
+            Creates a literal expression out of the next token.
+            </summary>
+            <returns>next token as a LiteralExpression.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseCastExpression">
+            <summary>
+            Creates an Expression out of an intrisic cast.
+            </summary>
+            <returns>IntrinsicCastExpression.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseCTypeExpression">
+            <summary>
+            Creates a casting expression.
+            </summary>
+            <returns>A casting expression.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseInstanceExpression">
+            <summary>
+            Creates an instance expression from the next token.
+            </summary>
+            <returns>InstanceExpression.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseParentheticalExpression">
+            <summary>
+            Creates an expression for parenthesis.
+            </summary>
+            <returns>ParentheticalExpression.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseSimpleNameExpression">
+            <summary>
+            Create a SimpleName expression from the next token.
+            </summary>
+            <returns>SimpleNameExpression.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseDotBangExpression(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Token,GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Expression)">
+            <summary>
+            Create a dictionary lookup expression or a qualified name expression from next token.
+            </summary>
+            <param name="start">Token to start at</param>
+            <param name="terminal">expression to end with.</param>
+            <returns>dictionary lookup expression or a qualified name expression</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseCallOrIndexExpression(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Token,GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Expression)">
+            <summary>
+            Creates a Call or Index expression with arguments.
+            </summary>
+            <param name="start">Token at beginning of call or index.</param>
+            <param name="terminal">Target expression.</param>
+            <returns>CallOrIndexExpression.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseTypeOfExpression">
+            <summary>
+            Creates a typeof expression - "TypeOf expression Is TypeName".
+            </summary>
+            <returns>TypeOfExpression</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseGetTypeExpression">
+            <summary>
+            Creates a GetType expression - "GetType(target)"
+            </summary>
+            <returns>GetTypeExpression</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.ParseNewExpression">
+            <summary>
+            Creates a new expression.
+            </summary>
+            <returns>NewExpression</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.GetBinaryOperator(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.TokenType)">
+            <summary>
+            Determines the OperatorType based on the TokenType.
+            </summary>
+            <param name="type">TokenType to get the binary operator for.</param>
+            <returns>OperatorType that corresponds with the TokenType.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.GetOperatorPrecedence(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.OperatorType)">
+            <summary>
+            Gets the Precedencs level of the OperatorType.
+            </summary>
+            <param name="operatorType">OperatorType to get the Precedence level of.</param>
+            <returns>Precendence level of the OperatorType argument.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Parser.FinishParsing">
+            <summary>
+            End parsing - looking for errors and reseting internal values.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Scanner.ScanStringLiteral">
+            <summary>
+            Scans for strings and char literals.
+            </summary>
+            <returns>Literal Token</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Scanner.ScanComment">
+            <summary>
+            Scan a comment that begins with a tick mark
+            </summary>
+            <returns>the comment token</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Scanner.ScanComment(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location)">
+            <summary>
+            Scan a comment that begins with REM
+            </summary>
+            <returns>the comment token</returns>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span">
+            <summary>
+            Describes the location of a span of text.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span.Empty">
+            <summary>
+            Represents an uninitialized <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span"/> object.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span.#ctor(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location,GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Location)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span"/> structure.
+            </summary>
+            <param name="start">The value for <see cref="P:Start"/>.</param>
+            <param name="finish">The value for <see cref="P:Finish"/>.</param>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span.Start">
+            <summary>
+            The starting location of the text.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span.Finish">
+            <summary>
+            The ending location of the text.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span.IsValid">
+            <summary>
+            Determines if this object describes a valid location.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span.ToString">
+            <summary>
+            Returns a string representation of this object.
+            </summary>
+            <returns>A string that represents this object.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span.Equals(System.Object)">
+            <summary>
+            Determines if the specified object is equal to this object.
+            </summary>
+            <param name="obj">The object to compare this object to.</param>
+            <returns>True if the specified object is equal to this one.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span.Equals(GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span)">
+            <summary>
+            Determines if the specified <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span"/> is equal to this object.
+            </summary>
+            <param name="span">The object to compare this object to.</param>
+            <returns>True if the specified <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span"/> is equal to this one.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span.GetHashCode">
+            <summary>
+            See <see cref="M:System.Object.GetHashCode"/>
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults">
+            <summary>
+            Used to contain results from ExpressionInfo validation.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults.Valid">
+            <summary>
+            Valid results.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults.#ctor(System.String,GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span)">
+            <summary>
+            Creates a new instance with a single error.
+            </summary>
+            <param name="errorMessage">The error message,</param>
+            <param name="errorSpan">The location of the error.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults.#ctor(GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults.ErrorInformation[])">
+            <summary>
+            Creates a new instance with multiple errors.
+            </summary>
+            <param name="errors">An array of validation errors.</param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults.#ctor(GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults,GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults)">
+            <summary>
+            Creates a new instance by combining the results of 2 instances.
+            </summary>
+            <param name="resultsLeft">The first validation results to be combined.</param>
+            <param name="resultsRight">The second validation results to be combined.</param>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults.IsValid">
+            <summary>
+            Gets whether or not this expression is valid.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults.ErrorDetails">
+            <summary>
+            Gets an array of error information (messages and locations).
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults.ErrorInformation">
+            <summary>
+            Contains information about an error (message and location).
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults.ErrorInformation.#ctor(System.String,GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span)">
+            <summary>
+            Initializes new instance of ErrorInformation with a given message and <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Expressions.Parser.Span"/>
+            </summary>
+            <param name="message">The error message</param>
+            <param name="span">The error location.</param>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults.ErrorInformation.ErrorMessage">
+            <summary>
+            Strings defining the errors associated with an expression.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Expressions.ValidationResults.ErrorInformation.ErrorSpan">
+            <summary>
+            Spans defining the locations of the errors associated with an expression.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Extensions.EnumerableExtensions">
+            <summary>
+            Provides additional LINQ extensions.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.EnumerableExtensions.Flatten``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``0}})">
+            <summary>
+            This method extends the LINQ methods to flatten a collection of items that have a property of children of the same type.
+            </summary>
+            <typeparam name="T">Item type</typeparam>
+            <param name="source">Source collection.</param>
+            <param name="childSelector">function that returns a collection of children for each item</param>
+            <returns>Returns a one level list of elements of type T.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.EnumerableExtensions.Flatten``1(``0,System.Func{``0,System.Collections.Generic.IEnumerable{``0}})">
+            <summary>
+            This method extends the LINQ methods to obtain a single-level collection of descendants(is a collections) of an object of type T
+            </summary>
+            <typeparam name="T">Item type.</typeparam>
+            <param name="source">The object of type T.</param>
+            <param name="childSelector">function that returns a collection of children </param>
+            <returns>Returns a one level list of elements of type T.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.EnumerableExtensions.Flatten``1(``0,System.Func{``0,``0})">
+            <summary>
+            This method extends the LINQ methods to obtain a single-level collection of descendants(is an object) of an object of type T
+            </summary>
+            <typeparam name="T">Item type.</typeparam>
+            <param name="source">The object of type T.</param>
+            <param name="childSelector">function that returns of children object of type T.</param>
+            <returns>Returns a one level list of elements of type T.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.EnumerableExtensions.Select``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean,System.Boolean,``1})">
+            <summary>
+            Projection of given sequence with first, last markers.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TR"></typeparam>
+            <param name="items"></param>
+            <param name="selector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.EnumerableExtensions.ZipEx``3(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Func{``0,``1,``2})">
+            <summary>
+            Applies a specified function to the corresponding elements of two sequences, producing a sequence of the results
+            </summary>
+            <typeparam name="T1">The type of the elements of the first input sequence</typeparam>
+            <typeparam name="T2">The type of the elements of the second input sequence</typeparam>
+            <typeparam name="TR">The type of the elements of the result sequence</typeparam>
+            <param name="first">The first sequence to merge</param>
+            <param name="second">The second sequence to merge</param>
+            <param name="selector">A function that specifies how to merge the elements from the two sequences</param>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> that contains merged elements of two input sequences</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.EnumerableExtensions.ZipEx``3(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``1},System.Func{System.Int32,``0,``1,``2})">
+            <summary>
+            Applies a specified function to the corresponding elements of two sequences, producing a sequence of the results
+            </summary>
+            <typeparam name="T1">The type of the elements of the first input sequence</typeparam>
+            <typeparam name="T2">The type of the elements of the second input sequence</typeparam>
+            <typeparam name="TR">The type of the elements of the result sequence</typeparam>
+            <param name="first">The first sequence to merge</param>
+            <param name="second">The second sequence to merge</param>
+            <param name="selector">A function that specifies how to merge the elements from the two sequences</param>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> that contains merged elements of two input sequences</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.EnumerableExtensions.AsIndexed``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            This method extends the LINQ methods to add index for each item
+            </summary>
+            <typeparam name="T">Item type</typeparam>
+            <param name="items">Initial sequence.</param>
+            <returns>Returns <see cref="T:System.Collections.Generic.IEnumerable`1" /> that  represents sequence with indeses for items </returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.EnumerableExtensions.WithIndex``1(``0,System.Int32)">
+            <summary>
+            Wraps an item of type T into type <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Extensions.OrderedItem`1"/>, adding the specified index
+            </summary>
+            <typeparam name="T">Item type</typeparam>
+            <param name="item">The item</param>
+            <param name="index">Index for item</param>
+            <returns>Returns new instance <see cref="T:GrapeCity.Enterprise.Data.DataEngine.Extensions.OrderedItem`1"/> with the specified index</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.EnumerableExtensions.Repeat``1(``0,System.Int32)">
+            <summary>
+            Generates a sequence that contains one repeated value.
+            </summary>
+            <typeparam name="T">The type of the value to be repeated in the result sequence.</typeparam>
+            <param name="item">The value to be repeated.</param>
+            <param name="times">The number of times to repeat the value in the generated sequence</param>
+            <returns>An <see cref="T:System.Collections.Generic.IEnumerable`1"/> that contains a repeated value.</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.EnumerableExtensions.SelectWithNext``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``0,``1})">
+            <summary>
+            Proceeds each item in enumerable with its follower.
+            </summary>
+            <param name="source">Source collection.</param>
+            <param name="projection">Projection function (x,y) -> z, where x is current item and y is next.</param>
+            <typeparam name="TSource">Type of collection item.</typeparam>
+            <typeparam name="TResult">Type of result collection item.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Extensions.OrderedItem`1">
+            <summary>
+            Representation of item with index.
+            </summary>
+            <typeparam name="T">Item type.</typeparam>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Extensions.OrderedItem`1.Index">
+            <summary>
+            Index of the item in collection.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Enterprise.Data.DataEngine.Extensions.OrderedItem`1.Item">
+            <summary>
+            Item itself.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Extensions.FunctionalExtensions">
+            <summary>
+            FP-style extensions
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.FunctionalExtensions.Match``2(``0)">
+            <summary>
+            Start match block (advanced 'switch').
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TResult"></typeparam>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.FunctionalExtensions.Match``2(``0,System.Func{``1})">
+            <summary>
+            The same as Match but type is defined
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TResult"></typeparam>
+            <param name="item"></param>
+            <param name="fallbackValue">The value to be returned if all patterns failed to match.</param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.FunctionalExtensions.Match``2(``0,``1)">
+            <summary>
+            The same as Match but type is defined
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TResult"></typeparam>
+            <param name="item"></param>
+            <param name="fallbackValue">The value to be returned if all patterns failed to match.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.DataEngine.Extensions.FunctionalExtensions.MatchBlock`2">
+            <summary>
+            Represents expression matching result.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TResult"></typeparam>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Extensions.FunctionalExtensions.MatchBlock`2.Item">
+            <summary>
+            Gets the value of the matched expression.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Extensions.FunctionalExtensions.MatchBlock`2.Result">
+            <summary>
+            Gets the result of successful match block.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Extensions.FunctionalExtensions.MatchBlock`2.End">
+            <summary>
+            Closes the match block a return the matching result.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Enterprise.Data.DataEngine.Extensions.FunctionalExtensions.MatchBlock`2.Matched">
+            <summary>
+            Gets true if at least one match succeeded (Otherwise block is ignored).
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.FunctionalExtensions.MatchBlock`2.When``1(System.Func{``0,`1})">
+            <summary>
+            Matches item by type.
+            </summary>
+            <typeparam name="TExpected"></typeparam>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.FunctionalExtensions.MatchBlock`2.When``1(``0,System.Func{``0,`1})">
+            <summary>
+            Matches the item by value.
+            </summary>
+            <typeparam name="TExpected"></typeparam>
+            <param name="value"></param>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.FunctionalExtensions.MatchBlock`2.When``1(System.Predicate{``0},System.Func{``0,`1})">
+            <summary>
+            Matches the item by value.
+            </summary>
+            <typeparam name="TExpected"></typeparam>
+            <param name="guardCondition"> </param>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.DataEngine.Extensions.FunctionalExtensions.MatchBlock`2.Otherwise(System.Func{`0,`1})">
+            <summary>
+            Allows to provide fallback implementation (in case no other matches).
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Enterprise.Data.Expressions.ExpressionExtensions">
+            <summary>
+            Provides additional methods to work with expressions
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.Expressions.ExpressionExtensions.IsValid(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Returns a value that indicates whether the given expression is valid
+            </summary>
+            <param name="expression"></param>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.Expressions.ExpressionExtensions.IsNullOrEmpty(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Does a quick Empty check on an ExpressionInfo.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.Expressions.ExpressionExtensions.Replace(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo,System.Func{System.String,System.String},System.Boolean@)">
+            <summary>
+            Re-creates new expression tree with renamed identifier
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.Expressions.ExpressionExtensions.ReplaceIdentifier(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo,System.Func{System.String,System.String})">
+            <summary>
+            Replaces all occurances of the identifier in current expression, using provided function
+            </summary>
+            <param name="originalExpression">Original expression</param>
+            <param name="replacer">Replacing function</param>
+            <returns>New ExpressionInfo instance with replaced identifier or exact instance if no changes were made</returns>
+        </member>
+        <member name="M:GrapeCity.Enterprise.Data.Expressions.ExpressionExtensions.Not(GrapeCity.Enterprise.Data.DataEngine.Expressions.ExpressionInfo)">
+            <summary>
+            Returns the inverse of this expression.
+            </summary>
+            <param name="originalExpression"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

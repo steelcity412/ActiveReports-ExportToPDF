@@ -1,0 +1,10 @@
+Copyright (c) GrapeCity, Inc.
+
+The End User License Agreement (“EULA”) contains the terms and conditions that
+govern Your use of GrapeCity, Inc. (“GC”) SOFTWARE enclosed or otherwise
+accompanied herewith (individually and collectively, the “SOFTWARE”) (as linked
+to below) and imposes material limitations on Your License. You should read
+this EULA carefully and treat it as valuable property.
+
+You may obtain a complete copy of the EULA at:
+https://www.grapecity.com/legal/eula

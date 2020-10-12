@@ -1,0 +1,81 @@
+﻿<Project>
+  <Target Name="ApplyLicenseForActiveReports" AfterTargets="CompileLicxFiles" Inputs="" Outputs="$(IntermediateOutputPath).gclicx"
+          Condition="$(DisableGclm) != true">
+
+    <PropertyGroup>
+      <GCPID>de456e2c-d2e3-4246-94e8-9648bbd6fbf0</GCPID>
+      <GCPInfo>
+        <Product Name="ActiveReports 14"/>
+      </GCPInfo>
+
+      <!-- The min version of GCLM tool that your Product need -->
+      <GclmMinVersion>1.0</GclmMinVersion>
+
+      <!-- The Built-in Trial License Data (Remeber to replace ";" with %3B ) -->
+      <GCPTrialLic>ZGU0NTZlMmMtZDJlMy00MjQ2LTk0ZTgtOTY0OGJiZDZmYmYw,MDIwMjM4MzZYWFhYWFhYWDA1MQ,Kg,VHJ1ZQ,NzI1NQ,VHJ1ZQ,LTMw,LTMw,UHJvZmVzc2lvbmFs,ZGVzaWduZXIsd2ViLXZpZXdlcix3ZWItZGVzaWduZXIsZXhwb3J0LXBybyxjb250cm9sLXBybw,;KWous0ATlrZW4qG0QfOkJDuHkIRm6TKPRL6wxPU0HCX0tC5ZN1paXqhQ3gnquhUnJy3QTiJdat2b3nZ48RicFOTvgR5imucWeecCzK7OLYSNkKoK3TPu1nL85yUTFcrLwXNpyxjSwOiNgmdGV59zKJi1L2YYWv62iwSc0WPR9cY</GCPTrialLic>
+
+      <!-- License folder path -->
+      <!-- Linux (per user) -->
+      <GrapeCityRootFolder Condition="$([MSBuild]::IsOSUnixLike())">$([System.Environment]::GetFolderPath(System.Environment+SpecialFolder.LocalApplicationData))</GrapeCityRootFolder>
+      <GclmExe Condition="$([MSBuild]::IsOSUnixLike())">gclm</GclmExe>
+      <!-- Windows (per machine) -->
+      <GrapeCityRootFolder Condition="!$([MSBuild]::IsOSUnixLike())">$([System.Environment]::GetFolderPath(System.Environment+SpecialFolder.CommonApplicationData))</GrapeCityRootFolder>
+      <GclmPath Condition="!$([MSBuild]::IsOSUnixLike())">$([MSBuild]::NormalizePath($(GrapeCityRootFolder),'GrapeCity','gclm'))</GclmPath>
+      <GclmExe Condition="!$([MSBuild]::IsOSUnixLike())">$([MSBuild]::NormalizePath($(GclmPath),'gclm.exe'))</GclmExe>
+      <TempFolder>$([System.IO.Path]::GetTempPath())</TempFolder>
+      <DeployPath>$([MSBuild]::NormalizePath($(TempFolder),'gclm_deploy.exe'))</DeployPath>
+
+      <!-- Common -->
+      <GCPInfoPath>$([MSBuild]::NormalizePath($(GrapeCityRootFolder),'GrapeCity',$(GCPID),'.info'))</GCPInfoPath>
+
+    </PropertyGroup>
+
+    <!-- Register the Product Info in system folder -->
+    <WriteLinesToFile Condition="!Exists($(GCPInfoPath))" File="$(GCPInfoPath)" Lines="$(GCPInfo)" Encoding="utf-8" Overwrite="true"/>
+
+    <!--Check License Tool installation-->
+    <Exec Command="$(GclmExe) --version" ConsoleToMsBuild="true" ContinueOnError="true" IgnoreExitCode="true">
+      <Output PropertyName="GclmVersionResult" TaskParameter="ConsoleOutput"/>
+    </Exec>
+    <CreateProperty Value="true" Condition="$(GclmVersionResult.StartsWith('GrapeCity License Manager'))">
+      <Output PropertyName="GclmInstalled" TaskParameter="Value"/>
+    </CreateProperty>
+    <CreateProperty Value="$(GclmVersionResult.Split(',')[1])" Condition="$(GclmInstalled) == true">
+      <Output PropertyName="GclmVersion" TaskParameter="Value"/>
+    </CreateProperty>
+
+    <!-- For Linux -->
+    <!-- If not installed, install the License Tool -->
+    <Exec Command="dotnet tool install -g GrapeCity.LicenseManagerTool" ContinueOnError="true" IgnoreExitCode="true" Condition="$([MSBuild]::IsOSUnixLike()) AND $(GclmInstalled) != true"/>
+    <!-- If not latest, update the License Tool -->
+    <Exec Command="dotnet tool update -g GrapeCity.LicenseManagerTool" ContinueOnError="true" IgnoreExitCode="true" Condition="$([MSBuild]::IsOSUnixLike()) AND $(GclmInstalled) == true AND $(GclmVersion) &lt; $(GclmMinVersion)"/>
+    <!-- End Linux -->
+
+    <!-- For Windows -->
+    <!-- Verify need download gclm tool or not -->
+    <CreateProperty Value="Yes" Condition="!$([MSBuild]::IsOSUnixLike()) AND ($(GclmInstalled) != true OR ($(GclmInstalled) == true AND $(GclmVersion) &lt; $(GclmMinVersion)))">
+      <Output PropertyName="NeedDownloadGclm" TaskParameter="Value"/>
+    </CreateProperty>
+    <!-- Download gclm deploy tool -->
+    <DownloadFile SourceUrl="https://cdn.grapecity.com/license/gclm_deploy.exe" DestinationFolder="$(TempFolder)" Condition="$(NeedDownloadGclm) == 'Yes'" SkipUnchangedFiles="false"/>
+    <!-- Run gclm deploy tool -->
+    <Exec Command="$(DeployPath)" IgnoreExitCode="true" Condition="$(NeedDownloadGclm) == 'Yes'"/>
+    <!-- End Windows -->
+
+    <!-- Initialize the Product License -->
+    <Exec Command="$(GCLMExe) $(GCPID) -init &quot;$(GCPTrialLic)&quot;"
+          IgnoreExitCode="true">
+    </Exec>
+
+    <!-- Compile the Product License into .gclicx file and link it with the output assembly -->
+    <FindInList List="@(CompiledLicenseFile)" ItemSpecToFind="$(IntermediateOutputPath).gclicx">
+      <Output TaskParameter="ItemFound" ItemName="GclicxItems"/>
+    </FindInList>
+    <Exec Command="$(GCLMExe) $(GCPID) -lc $(IntermediateOutputPath).gclicx $(TargetFileName)"
+          Outputs="$(IntermediateOutputPath).gclicx"
+          IgnoreExitCode="true">
+      <Output Condition="@(GclicxItems->Count()) == 0"  TaskParameter="Outputs" ItemName="CompiledLicenseFile" />
+    </Exec>
+
+  </Target>
+</Project>

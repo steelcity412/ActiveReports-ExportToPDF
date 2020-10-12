@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GrapeCity.ActiveReports.Export.Rdf</name>
+    </assembly>
+    <members>
+        <member name="T:GrapeCity.ActiveReports.Export.Rdf.DocumentExportExtension">
+            <summary>
+            Extension methods.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.DocumentExportExtension.RenderSectionDocument(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Renders RDL/Page report to RDF format.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Rdf.RdfRenderingExtension">
+            <summary>
+            Rdf RE provide the functionality that user can transfer the Page-based report to Section-based report.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.RdfRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider)">
+            <summary>
+            Implement the render method of IRenderingExtension interface
+            </summary>
+            <param name="report">rendered report.</param>
+            <param name="streams">stream of output file.</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.RdfRenderingExtension.Render(GrapeCity.ActiveReports.Extensibility.Rendering.Components.IReport,GrapeCity.ActiveReports.Extensibility.Rendering.IO.StreamProvider,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Implement the render method of IRenderingExtension interface
+            </summary>
+            <param name="report">rendered report.</param>
+            <param name="streams">stream of output file.</param>
+            <param name="settings">export settings</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.RdfRenderingExtension.TransferToSectionPage(GrapeCity.ActiveReports.Export.Rdf.Tools.RdfRenderContext,System.Int32)">
+            <summary>
+            Transfer tha layout page to section page
+            </summary>
+            <param name="context"></param>
+            <param name="pageIndex"></param>
+            <returns>Section Page</returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.RdfRenderingExtension.RenderSection(GrapeCity.ActiveReports.Export.Rdf.Tools.RdfRenderContext,GrapeCity.ActiveReports.Document.Section.Page,GrapeCity.ActiveReports.Extensibility.Layout.ILayoutArea)">
+            <summary>
+            Transfer the layout section to section-based report section
+            </summary>
+            <param name="context"></param>
+            <param name="sPage"></param>
+            <param name="section"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.RdfRenderingExtension.OnLayoutNotify(GrapeCity.ActiveReports.Extensibility.Layout.LayoutState)">
+            <summary>
+            Callback method that used by the BuildLayout process.
+            </summary>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.RdfRenderingExtension.LayoutComplete">
+            <summary>
+            Process for the whole layout tree has been created.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.RdfRenderingExtension.DrawDelayedText(GrapeCity.ActiveReports.Export.Rdf.Tools.RdfRenderContext,GrapeCity.ActiveReports.Document.SectionDocument,GrapeCity.ActiveReports.Extensibility.Rendering.Components.ToC.IBookmarkService)">
+            <summary>
+            Draw the delayed text
+            </summary>
+            <param name="context"></param>
+            <param name="doc">section document</param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.RdfRenderingExtension.RenderTOC(GrapeCity.ActiveReports.Extensibility.Layout.ILayoutTree,GrapeCity.ActiveReports.Document.SectionDocument)">
+            <summary>
+            Export the document map label from layout tree to section document.
+            </summary>
+            <param name="layoutTree"></param>
+            <param name="doc"></param>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.RdfRenderingExtension.RenderTOCEntry(System.String,GrapeCity.ActiveReports.Extensibility.Rendering.Components.IMetadataDictionaryEntry,GrapeCity.ActiveReports.Document.SectionDocument)">
+            <summary>
+            Export document map label from a toc entry to section document.
+            </summary>
+            <param name="parent"></param>
+            <param name="tocEntry"></param>
+            <param name="doc"></param>
+        </member>
+        <member name="T:GrapeCity.ActiveReports.Export.Rdf.Settings">
+            <summary>
+                <see cref="T:GrapeCity.ActiveReports.Extensibility.Rendering.ISettings" /> implementation for RDF Rendering Extension. 
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.Settings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.ActiveReports.Export.Rdf.Settings" /> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.Settings.#ctor(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Allows internal consumers to initialize new instance the class passing 
+            settings values via NameValueCollection.
+            </summary>
+            <param name="settings"></param>
+        </member>
+        <member name="P:GrapeCity.ActiveReports.Export.Rdf.Settings.Pagination">
+            <summary>
+            Gets or sets the value indicates should pagination be used for resulted rdf document or not.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.Settings.SerializeSettings">
+            <summary>
+            Gets <see cref="T:System.Collections.Specialized.NameValueCollection" /> of the settings of the class instance.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.Settings.DeserializeSettings(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Sets values of the class instance properties using values passed via <see cref="T:System.Collections.Specialized.NameValueCollection" />.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.ActiveReports.Export.Rdf.Settings.op_Implicit(GrapeCity.ActiveReports.Export.Rdf.Settings)~System.Collections.Specialized.NameValueCollection">
+            <summary>
+            Performs an implicit conversion from <see cref="T:GrapeCity.ActiveReports.Export.Rdf.Settings" /> to <see cref="T:System.Collections.Specialized.NameValueCollection" />.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns>The result of the conversion.</returns>
+        </member>
+    </members>
+</doc>

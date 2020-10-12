@@ -1,0 +1,3550 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GrapeCity.Documents.Common.Windows</name>
+    </assembly>
+    <members>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.WicContainerFormat">
+            <summary>
+            Specifies the image container format.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicContainerFormat.Unknown">
+            <summary>
+            Unknown format.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicContainerFormat.Bmp">
+            <summary>
+            BMP (Windows Bitmap Format), BMP Specification v5.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicContainerFormat.Gif">
+            <summary>
+            GIF (Graphics Interchange Format 89a), GIF Specification 89a/89m.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicContainerFormat.Ico">
+            <summary>
+            ICO (Icon Format).
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicContainerFormat.Jpeg">
+            <summary>
+            JPEG (Joint Photographic Experts Group), JFIF Specification 1.02.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicContainerFormat.JpegXR">
+            <summary>
+            HD Photo, also known as Windows Media Photo.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicContainerFormat.Png">
+            <summary>
+            PNG (Portable Network Graphics), PNG Specification 1.2.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicContainerFormat.Tiff">
+            <summary>
+            TIFF (Tagged Image File Format), TIFF Specification 6.0.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.WicDitherType">
+            <summary>
+            Specifies the type of dither algorithm to apply when converting between pixel formats.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicDitherType.None">
+            <summary>
+            A solid color algorithm without dither.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicDitherType.Solid">
+            <summary>
+            A solid color algorithm without dither.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicDitherType.Ordered4x4">
+            <summary>
+            A 4x4 ordered dither algorithm.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicDitherType.Ordered8x8">
+            <summary>
+            An 8x8 ordered dither algorithm.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicDitherType.Ordered16x16">
+            <summary>
+            A 16x16 ordered dither algorithm.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicDitherType.Spiral4x4">
+            <summary>
+            A 4x4 spiral dither algorithm.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicDitherType.Spiral8x8">
+            <summary>
+            An 8x8 spiral dither algorithm.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicDitherType.DualSpiral4x4">
+            <summary>
+            A 4x4 dual spiral dither algorithm.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicDitherType.DualSpiral8x8">
+            <summary>
+            An 8x8 dual spiral dither algorithm.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicDitherType.ErrorDiffusion">
+            <summary>
+            An error diffusion algorithm.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.WicInterpolationMode">
+            <summary>
+            Specifies the sampling or filtering mode to use when scaling an image.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicInterpolationMode.NearestNeighbor">
+            <summary>
+            A nearest neighbor interpolation algorithm. Also known as nearest pixel or point interpolation.
+            </summary>
+            <remarks>
+            The output pixel is assigned the value of the pixel that the point falls within. No other pixels are considered.
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicInterpolationMode.Linear">
+            <summary>
+            A bilinear interpolation algorithm.
+            </summary>
+            <remarks>
+            The output pixel values are computed as a weighted average of the nearest four pixels in a 2x2 grid.
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicInterpolationMode.Cubic">
+            <summary>
+            A bicubic interpolation algorithm.
+            </summary>
+            <remarks>
+            Destination pixel values are computed as a weighted average of the nearest sixteen pixels in a 4x4 grid.
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicInterpolationMode.Fant">
+            <summary>
+            A Fant resampling algorithm.
+            </summary>
+            <remarks>
+            Destination pixel values are computed as a weighted average of the all the pixels that map to the new pixel.
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicInterpolationMode.HighQualityCubic">
+            <summary>
+            A high quality bicubic interpolation algorithm.
+            </summary>
+            <remarks>
+            Destination pixel values are computed using a much denser sampling kernel than regular cubic.
+            The kernel is resized in response to the scale factor, making it suitable for downscaling by factors greater than 2.
+            This value is supported beginning with Windows 10.
+            </remarks>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.WicPaletteType">
+            <summary>
+            Specifies the type of palette used for indexed pixel formats.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.Custom">
+            <summary>
+            An arbitrary custom palette provided by caller.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.MedianCut">
+            <summary>
+            An optimal palette generated using a median-cut algorithm. Derived from the colors in an image.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.FixedBW">
+            <summary>
+            A black and white palette.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.FixedHalftone8">
+            <summary>
+            A palette that has its 8-color on-off primaries and the 16 system colors added. With duplicates removed, 16 colors are available.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.FixedHalftone27">
+            <summary>
+            A palette that has 3 intensity levels of each primary: 27-color on-off primaries and the 16 system colors added. With duplicates removed, 35 colors are available.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.FixedHalftone64">
+            <summary>
+            A palette that has 4 intensity levels of each primary: 64-color on-off primaries and the 16 system colors added. With duplicates removed, 72 colors are available.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.FixedHalftone125">
+            <summary>
+            A palette that has 5 intensity levels of each primary: 125-color on-off primaries and the 16 system colors added. With duplicates removed, 133 colors are available.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.FixedHalftone216">
+            <summary>
+            A palette that has 6 intensity levels of each primary: 216-color on-off primaries and the 16 system colors added. With duplicates removed, 224 colors are available.
+            </summary>
+            <remarks>
+            This is the same as FixedHalftoneWeb.
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.FixedWebPalette">
+            <summary>
+            A palette that has 6 intensity levels of each primary: 216-color on-off primaries and the 16 system colors added. With duplicates removed, 224 colors are available.
+            </summary>
+            <remarks>
+            This is the same as WICBitmapPaletteTypeFixedHalftone216.
+            </remarks>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.FixedHalftone252">
+            <summary>
+            A palette that has its 252-color on-off primaries and the 16 system colors added. With duplicates removed, 256 colors are available.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.FixedHalftone256">
+            <summary>
+            A palette that has its 256-color on-off primaries and the 16 system colors added. With duplicates removed, 256 colors are available.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.FixedGray4">
+            <summary>
+            A palette that has 4 shades of gray.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.FixedGray16">
+            <summary>
+            A palette that has 16 shades of gray.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPaletteType.FixedGray256">
+            <summary>
+            A palette that has 256 shades of gray.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.WicPixelFormat">
+            <summary>
+            Describes the memory layout of each pixel in a bitmap.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Unknown">
+            <summary>
+            Unknown format.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.FormatBlackWhite">
+            <summary>
+            See GUID_WICPixelFormatBlackWhite.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format1bppIndexed">
+            <summary>
+            See GUID_WICPixelFormat1bppIndexed.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format2bppGray">
+            <summary>
+            See GUID_WICPixelFormat2bppGray.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format2bppIndexed">
+            <summary>
+            See GUID_WICPixelFormat2bppIndexed.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format4bppGray">
+            <summary>
+            See GUID_WICPixelFormat4bppGray.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format4bppIndexed">
+            <summary>
+            See GUID_WICPixelFormat4bppIndexed.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format8bppAlpha">
+            <summary>
+            See GUID_WICPixelFormat8bppAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format8bppCb">
+            <summary>
+            See GUID_WICPixelFormat8bppCb.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format8bppCr">
+            <summary>
+            See GUID_WICPixelFormat8bppCr.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format8bppGray">
+            <summary>
+            See GUID_WICPixelFormat8bppGray.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format8bppIndexed">
+            <summary>
+            See GUID_WICPixelFormat8bppIndexed.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format8bppY">
+            <summary>
+            See GUID_WICPixelFormat8bppY.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format16bppBGR555">
+            <summary>
+            See GUID_WICPixelFormat16bppBGR555.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format16bppBGR565">
+            <summary>
+            See GUID_WICPixelFormat16bppBGR565.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format16bppBGRA5551">
+            <summary>
+            See GUID_WICPixelFormat16bppBGRA5551.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format16bppCbCr">
+            <summary>
+            See GUID_WICPixelFormat16bppCbCr.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format16bppGray">
+            <summary>
+            See GUID_WICPixelFormat16bppGray.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format16bppGrayFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat16bppGrayFixedPoint.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format16bppGrayHalf">
+            <summary>
+            See GUID_WICPixelFormat16bppGrayHalf.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format24bpp3Channels">
+            <summary>
+            See GUID_WICPixelFormat24bpp3Channels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format24bppBGR">
+            <summary>
+            See GUID_WICPixelFormat24bppBGR.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format24bppRGB">
+            <summary>
+            See GUID_WICPixelFormat24bppRGB.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bpp3ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat32bpp3ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bpp4Channels">
+            <summary>
+            See GUID_WICPixelFormat32bpp4Channels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bppBGR">
+            <summary>
+            See GUID_WICPixelFormat32bppBGR.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bppBGR101010">
+            <summary>
+            See GUID_WICPixelFormat32bppBGR101010.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bppBGRA">
+            <summary>
+            See GUID_WICPixelFormat32bppBGRA.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bppCMYK">
+            <summary>
+            See GUID_WICPixelFormat32bppCMYK.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bppGrayFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat32bppGrayFixedPoint.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bppGrayFloat">
+            <summary>
+            See GUID_WICPixelFormat32bppGrayFloat.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bppPBGRA">
+            <summary>
+            See GUID_WICPixelFormat32bppPBGRA.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bppPRGBA">
+            <summary>
+            See GUID_WICPixelFormat32bppPRGBA.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bppRGB">
+            <summary>
+            See GUID_WICPixelFormat32bppRGB.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bppRGBA">
+            <summary>
+            See GUID_WICPixelFormat32bppRGBA.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bppRGBA1010102">
+            <summary>
+            See GUID_WICPixelFormat32bppRGBA1010102.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bppRGBA1010102XR">
+            <summary>
+            See GUID_WICPixelFormat32bppRGBA1010102XR.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format32bppRGBE">
+            <summary>
+            See GUID_WICPixelFormat32bppRGBE.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format40bpp4ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat40bpp4ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format40bpp5Channels">
+            <summary>
+            See GUID_WICPixelFormat40bpp5Channels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format40bppCMYKAlpha">
+            <summary>
+            See GUID_WICPixelFormat40bppCMYKAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format48bpp3Channels">
+            <summary>
+            See GUID_WICPixelFormat48bpp3Channels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format48bpp5ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat48bpp5ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format48bpp6Channels">
+            <summary>
+            See GUID_WICPixelFormat48bpp6Channels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format48bppBGR">
+            <summary>
+            See GUID_WICPixelFormat48bppBGR.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format48bppBGRFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat48bppBGRFixedPoint.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format48bppRGB">
+            <summary>
+            See GUID_WICPixelFormat48bppRGB.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format48bppRGBFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat48bppRGBFixedPoint.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format48bppRGBHalf">
+            <summary>
+            See GUID_WICPixelFormat48bppRGBHalf.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format56bpp6ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat56bpp6ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format56bpp7Channels">
+            <summary>
+            See GUID_WICPixelFormat56bpp7Channels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bpp3ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat64bpp3ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bpp4Channels">
+            <summary>
+            See GUID_WICPixelFormat64bpp4Channels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bpp7ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat64bpp7ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bpp8Channels">
+            <summary>
+            See GUID_WICPixelFormat64bpp8Channels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bppBGRA">
+            <summary>
+            See GUID_WICPixelFormat64bppBGRA.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bppBGRAFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat64bppBGRAFixedPoint.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bppCMYK">
+            <summary>
+            See GUID_WICPixelFormat64bppCMYK.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bppPBGRA">
+            <summary>
+            See GUID_WICPixelFormat64bppPBGRA.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bppPRGBA">
+            <summary>
+            See GUID_WICPixelFormat64bppPRGBA.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bppPRGBAHalf">
+            <summary>
+            See GUID_WICPixelFormat64bppPRGBAHalf.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bppRGB">
+            <summary>
+            See GUID_WICPixelFormat64bppRGB.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bppRGBA">
+            <summary>
+            See GUID_WICPixelFormat64bppRGBA.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bppRGBAFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat64bppRGBAFixedPoint.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bppRGBAHalf">
+            <summary>
+            See GUID_WICPixelFormat64bppRGBAHalf.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bppRGBFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat64bppRGBFixedPoint.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format64bppRGBHalf">
+            <summary>
+            See GUID_WICPixelFormat64bppRGBHalf.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format72bpp8ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat72bpp8ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format80bpp4ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat80bpp4ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format80bpp5Channels">
+            <summary>
+            See GUID_WICPixelFormat80bpp5Channels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format80bppCMYKAlpha">
+            <summary>
+            See GUID_WICPixelFormat80bppCMYKAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format96bpp5ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat96bpp5ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format96bpp6Channels">
+            <summary>
+            See GUID_WICPixelFormat96bpp6Channels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format96bppRGBFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat96bppRGBFixedPoint.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format96bppRGBFloat">
+            <summary>
+            See GUID_WICPixelFormat96bppRGBFloat.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format112bpp6ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat112bpp6ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format112bpp7Channels">
+            <summary>
+            See GUID_WICPixelFormat112bpp7Channels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format128bpp7ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat128bpp7ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format128bpp8Channels">
+            <summary>
+            See GUID_WICPixelFormat128bpp8Channels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format128bppPRGBAFloat">
+            <summary>
+            See GUID_WICPixelFormat128bppPRGBAFloat.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format128bppRGBAFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat128bppRGBAFixedPoint.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format128bppRGBAFloat">
+            <summary>
+            See GUID_WICPixelFormat128bppRGBAFloat.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format128bppRGBFixedPoint">
+            <summary>
+            See GUID_WICPixelFormat128bppRGBFixedPoint.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format128bppRGBFloat">
+            <summary>
+            See GUID_WICPixelFormat128bppRGBFloat.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPixelFormat.Format144bpp8ChannelsAlpha">
+            <summary>
+            See GUID_WICPixelFormat144bpp8ChannelsAlpha.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.WicPngFilter">
+            <summary>
+            Describes the PNG filters available for compression optimization.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPngFilter.Unspecified">
+            <summary>
+            Indicates an unspecified PNG filter. This enables WIC to algorithmically choose the best filtering option for the image.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPngFilter.None">
+            <summary>
+            Indicates no PNG filter.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPngFilter.Sub">
+            <summary>
+            Indicates a PNG sub filter.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPngFilter.Up">
+            <summary>
+            Indicates a PNG up filter.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPngFilter.Average">
+            <summary>
+            Indicates a PNG average filter.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPngFilter.Paeth">
+            <summary>
+            Indicates a PNG paeth filter.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicPngFilter.Adaptive">
+            <summary>
+            Indicates a PNG adaptive filter. This enables WIC to choose the best filtering mode on a per-scanline basis.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.WicTiffCompression">
+            <summary>
+            Specifies the Tagged Image File Format (TIFF) compression options.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTiffCompression.DontCare">
+            <summary>
+            Indicates a suitable compression algorithm based on the image and pixel format.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTiffCompression.None">
+            <summary>
+            Indicates no compression.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTiffCompression.CCITT3">
+            <summary>
+            Indicates a CCITT3 compression algorithm.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTiffCompression.CCITT4">
+            <summary>
+            Indicates a CCITT4 compression algorithm.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTiffCompression.LZW">
+            <summary>
+            Indicates a LZW compression algorithm.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTiffCompression.RLE">
+            <summary>
+            Indicates a RLE compression algorithm.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTiffCompression.ZIP">
+            <summary>
+            Indicates a ZIP compression algorithm.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTiffCompression.LZWHDifferencing">
+            <summary>
+            Indicates an LZWH differencing algorithm.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.WicTransformOptions">
+            <summary>
+            Specifies the flip and rotation transforms.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTransformOptions.Rotate0">
+            <summary>
+            A rotation of 0 degrees.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTransformOptions.Rotate90">
+            <summary>
+            A clockwise rotation of 90 degrees.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTransformOptions.Rotate180">
+            <summary>
+            A clockwise rotation of 180 degrees.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTransformOptions.Rotate270">
+            <summary>
+            A clockwise rotation of 270 degrees.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTransformOptions.FlipHorizontal">
+            <summary>
+            A horizontal flip. Pixels are flipped around the vertical y-axis.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.WicTransformOptions.FlipVertical">
+            <summary>
+            A vertical flip. Pixels are flipped around the horizontal x-axis.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.FontCache">
+            <summary>
+            Collects DirectWrite fonts for using in various <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/>s.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.FontCache.#ctor">
+            <summary>
+            Initializes an instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.FontCache"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.FontCache.#ctor(GrapeCity.Documents.DX.DirectWrite.Factory1)">
+            <summary>
+            Initializes an instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.FontCache"/> class.
+            </summary>
+            <param name="dwFactory">The existing DirectWrite factory, to avoid duplicating factories.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.FontCache.Dispose">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.FontCache.Dispose(System.Boolean)">
+            <summary>
+            Performs cleanup operations on managed and unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.FontCache.Finalize">
+            <summary>
+            Performs cleanup operations on unmanaged resources.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.FontCache.DWFactory">
+            <summary>
+            Gets an instance of the <see cref="T:GrapeCity.Documents.DX.DirectWrite.Factory1"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.FontCache.GetFontFace(GrapeCity.Documents.Text.Font)">
+            <summary>
+            Gets an instance of the <see cref="T:GrapeCity.Documents.DX.DirectWrite.FontFace"/> for a given <see cref="T:GrapeCity.Documents.Text.Font"/>.
+            </summary>
+            <param name="font">The source <see cref="T:GrapeCity.Documents.Text.Font"/> object.</param>
+            <returns>The resulting <see cref="T:GrapeCity.Documents.DX.DirectWrite.FontFace"/>.</returns>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.FontCache.Clear">
+            <summary>
+            Clears the font cache.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap">
+            <summary>
+            Represents a bitmap based on Windows Imaging Component.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SetLicenseKey(System.String)">
+            <summary>
+            Sets the license key.
+            </summary>
+            <param name="key">The license key to set.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.ApplyLicenseKey(System.String)">
+            <summary>
+            Applies a license key to an instance of <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/>.
+            </summary>
+            <param name="key">The license key to set.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.#ctor">
+            <summary>
+            Initializes an instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.#ctor(System.Int32,System.Int32,System.Boolean,System.Single,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> class and creates the image.
+            <para>The image content is not initialized and can contain any random data.</para>
+            </summary>
+            <param name="pixelWidth">The width of the image, in pixels.</param>
+            <param name="pixelHeight">The height of the image, in pixels.</param>
+            <param name="opaque">Indicates whether the alpha channel should be ignored.</param>
+            <param name="dpiX">The horizontal dpi of the image.</param>
+            <param name="dpiY">The vertical dpi of the image.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.#ctor(System.IO.Stream,System.Int32,System.Nullable{System.Drawing.Rectangle})">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> class.
+            </summary>
+            <param name="stream">The source stream.</param>
+            <param name="frameIndex">Index of an image frame to read, pass 0 for image formats not supporting multiple frames.</param>
+            <param name="imageRect">Clipping rectangle of the image to be loaded.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.#ctor(System.String,System.Int32,System.Nullable{System.Drawing.Rectangle})">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> class.
+            </summary>
+            <param name="path">The file path to the image.</param>
+            <param name="frameIndex">Index of an image frame to read, pass 0 for image formats not supporting multiple frames.</param>
+            <param name="imageRect">Clipping rectangle of the image to be loaded.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.#ctor(System.Byte[],System.Int32,System.Nullable{System.Drawing.Rectangle})">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> class.
+            </summary>
+            <param name="bytes">The image data.</param>
+            <param name="frameIndex">Index of an image frame to read, pass 0 for image formats not supporting multiple frames.</param>
+            <param name="imageRect">Clipping rectangle of the image to be loaded.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.#ctor(GrapeCity.Documents.Drawing.Image,System.Nullable{System.Drawing.Rectangle})">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> class.
+            </summary>
+            <param name="image"><see cref="T:GrapeCity.Documents.Drawing.Image"/> used as the source of image data.</param>
+            <param name="imageRect">Clipping rectangle of the image to be loaded.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.#ctor(GrapeCity.Documents.Imaging.GcBitmap,GrapeCity.Documents.DX.WIC.ImagingFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> class from an instance of <see cref="T:GrapeCity.Documents.Imaging.GcBitmap"/>.
+            <para>If the source image is not opaque, the color channels must be premultiplied with the alpha channel.</para>
+            </summary>
+            <param name="bitmap">The source <see cref="T:GrapeCity.Documents.Imaging.GcBitmap"/>.</param>
+            <param name="imagingFactory">The existing imaging factory, to avoid duplicating factories.</param>
+            <seealso cref="M:GrapeCity.Documents.Imaging.GcBitmap.ConvertToPremultipliedAlpha"/>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.#ctor(GrapeCity.Documents.DX.WIC.ImagingFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> class.
+            </summary>
+            <param name="imagingFactory">The existing imaging factory, to avoid duplicating factories.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Dispose">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Finalize">
+            <summary>
+            Performs cleanup operations on unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Dispose(System.Boolean)">
+            <summary>
+            Performs cleanup operations on managed and unmanaged resources.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.IsDisposed">
+            <summary>
+            Gets a value indicating whether the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> has been disposed of.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.GlyphPathCache">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.InnerID">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.NativeBitmap">
+            <summary>
+            Gets the internal image that is an IWICBitmap.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.HasImage">
+            <summary>
+            Gets a value indicating whether the internal image is loaded or created.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.ImagingFactory">
+            <summary>
+            Gets an instance of the <see cref="T:GrapeCity.Documents.DX.WIC.ImagingFactory"/> class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Graphics">
+            <summary>
+            Gets an instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics"/> class.
+            <para>
+            The Graphics becomes available after executing the <see cref="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.CreateGraphics(System.Nullable{System.Drawing.Color})"/> method.
+            </para>
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.RenderTarget">
+            <summary>
+            Gets an instance of the <see cref="T:GrapeCity.Documents.DX.Direct2D.RenderTarget"/> class.
+            <para>
+            The render target becomes available after executing the <see cref="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.EnsureRenderTargetCreated"/> method.
+            </para>
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.D2DFactory">
+            <summary>
+            Gets an instance of the <see cref="T:GrapeCity.Documents.DX.Direct2D.Factory1"/> class.
+            <para>
+            The factory becomes available after executing the <see cref="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.EnsureRenderTargetCreated"/> method.
+            </para>
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.DWFactory">
+            <summary>
+            Gets an instance of the <see cref="T:GrapeCity.Documents.DX.DirectWrite.Factory1"/> class.
+            <para>
+            The factory becomes available after initializing the font cache (see the <see cref="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SetFontCache(GrapeCity.Documents.Imaging.Windows.FontCache)"/> method).
+            </para>
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Brush">
+            <summary>
+            Gets an instance of the <see cref="T:GrapeCity.Documents.DX.Direct2D.SolidColorBrush"/> class.
+            <para>
+            The brush becomes available after executing the <see cref="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.EnsureRenderTargetCreated"/> method.
+            </para>
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.PixelFormat">
+            <summary>
+            Gets the pixel format of the image.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.PixelWidth">
+            <summary>
+            Gets the pixel width of the image.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.PixelHeight">
+            <summary>
+            Gets the pixel height of the image.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Width">
+            <summary>
+            Gets the width of the image, in DIPs.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Height">
+            <summary>
+            Gets the height of the image, in DIPs.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.DpiX">
+            <summary>
+            Gets the x-axis dpi resolution.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.DpiY">
+            <summary>
+            Gets the y-axis dpi resolution.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.CreateImage(System.Int32,System.Int32,System.Boolean,System.Single,System.Single)">
+            <summary>
+            Creates the image of the given size and resolution.
+            <para>The content is not initialized and can contain any random data.</para>
+            </summary>
+            <param name="pixelWidth">The width of the image, in pixels.</param>
+            <param name="pixelHeight">The height of the image, in pixels.</param>
+            <param name="opaque">Indicates if the alpha channel should be ignored.</param>
+            <param name="dpiX">The horizontal dpi of the image.</param>
+            <param name="dpiY">The vertical dpi of the image.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.DiscardImage">
+            <summary>
+            Releases the internal image and clears all metadata.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SetFontCache(GrapeCity.Documents.Imaging.Windows.FontCache)">
+            <summary>
+            Assigns a shared instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.FontCache"/> object.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.CreateGraphics(System.Nullable{System.Drawing.Color})">
+            <summary>
+            Creates an instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics"/> class.
+            </summary>
+            <param name="backColor">If not null, specifies the color to clear the image with.</param>
+            <returns>A new instance of <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics"/>.</returns>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.EnsureRenderTargetCreated">
+            <summary>
+            Creates a render target for the internal WIC image, if it has not been created yet.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SetDpi(System.Single)">
+            <summary>
+            Changes the physical resolution of the image.
+            </summary>
+            <param name="dpi">The horizontal and vertical resolution.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SetDpi(System.Single,System.Single)">
+            <summary>
+            Changes the physical resolution of the image.
+            </summary>
+            <param name="dpiX">The horizontal resolution.</param>
+            <param name="dpiY">The vertical resolution.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.GetImageStride">
+            <summary>
+            Returns the image stride (bytes per row).
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Load(System.IO.Stream,GrapeCity.Documents.Imaging.Windows.BaseTransform[])">
+            <summary>
+            Loads the image from a System.IO.Stream.
+            </summary>
+            <param name="stream">The input stream.</param>
+            <param name="transforms">The transformation chain for the image that is being loaded.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Load(System.IO.Stream,GrapeCity.Documents.Imaging.Windows.WicContainerFormat,System.Int32,System.Nullable{System.Drawing.Rectangle},GrapeCity.Documents.Imaging.Windows.BaseTransform[])">
+            <summary>
+            Loads the image from a System.IO.Stream.
+            </summary>
+            <param name="stream">The input stream.</param>
+            <param name="containerFormat">The image container format; use Unknown to detect the format automatically.</param>
+            <param name="frameIndex">Index of an image frame to read, pass 0 for image formats not supporting multiple frames.</param>
+            <param name="imageRect">Clipping rectangle for the image after all transformations.</param>
+            <param name="transforms">The transformation chain for the image that is being loaded.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Load(System.String,GrapeCity.Documents.Imaging.Windows.BaseTransform[])">
+            <summary>
+            Loads the image from a file.
+            </summary>
+            <param name="path">The file path to the image.</param>
+            <param name="transforms">The transformation chain for the image that is being loaded.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Load(System.String,GrapeCity.Documents.Imaging.Windows.WicContainerFormat,System.Int32,System.Nullable{System.Drawing.Rectangle},GrapeCity.Documents.Imaging.Windows.BaseTransform[])">
+            <summary>
+            Loads the image from a file.
+            </summary>
+            <param name="path">The file path to the image.</param>
+            <param name="containerFormat">The image container format; use Unknown to detect the format automatically.</param>
+            <param name="frameIndex">Index of an image frame to read, pass 0 for image formats not supporting multiple frames.</param>
+            <param name="imageRect">Clipping rectangle for the image after all transformations.</param>
+            <param name="transforms">The transformation chain for the image that is being loaded.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Save(System.IO.Stream,GrapeCity.Documents.Imaging.Windows.WicContainerFormat,GrapeCity.Documents.Imaging.Windows.BaseOptions)">
+            <summary>
+            Saves the image to a System.IO.Stream using the specified format and options.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="format">The container format that determines the image encoder.</param>
+            <param name="options">The options for the specified image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SaveAsBmp(System.IO.Stream,GrapeCity.Documents.Imaging.Windows.BmpOptions)">
+            <summary>
+            Saves the image to a System.IO.Stream in BMP format.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="options">The options for the BMP image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SaveAsGif(System.IO.Stream,GrapeCity.Documents.Imaging.Windows.GifOptions)">
+            <summary>
+            Saves the image to a System.IO.Stream in GIF format.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="options">The options for the GIF image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SaveAsJpeg(System.IO.Stream,GrapeCity.Documents.Imaging.Windows.JpegOptions)">
+            <summary>
+            Saves the image to a System.IO.Stream in JPEG format.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="options">The options for the JPEG image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SaveAsJpegXR(System.IO.Stream,GrapeCity.Documents.Imaging.Windows.JpegXROptions)">
+            <summary>
+            Saves the image to a System.IO.Stream in JPEG XR format.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="options">The options for the JPEG XR image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SaveAsPng(System.IO.Stream,GrapeCity.Documents.Imaging.Windows.PngOptions)">
+            <summary>
+            Saves the image to a System.IO.Stream in PNG format.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="options">The options for the PNG image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SaveAsTiff(System.IO.Stream,GrapeCity.Documents.Imaging.Windows.TiffOptions)">
+            <summary>
+            Saves the image to a System.IO.Stream in TIFF format.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="options">The options for the TIFF image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Save(System.String,GrapeCity.Documents.Imaging.Windows.WicContainerFormat,GrapeCity.Documents.Imaging.Windows.BaseOptions)">
+            <summary>
+            Saves the image to a file using the specified format and options.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="format">The container format that determines the image encoder.</param>
+            <param name="options">The options for the specified image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SaveAsBmp(System.String,GrapeCity.Documents.Imaging.Windows.BmpOptions)">
+            <summary>
+            Saves the image to a file in BMP format.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="options">The options for the BMP image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SaveAsGif(System.String,GrapeCity.Documents.Imaging.Windows.GifOptions)">
+            <summary>
+            Saves the image to a file in GIF format.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="options">The options for the GIF image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SaveAsJpeg(System.String,GrapeCity.Documents.Imaging.Windows.JpegOptions)">
+            <summary>
+            Saves the image to a file in JPEG format.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="options">The options for the JPEG image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SaveAsJpegXR(System.String,GrapeCity.Documents.Imaging.Windows.JpegXROptions)">
+            <summary>
+            Saves the image to a file in JPEG XR format.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="options">The options for the JPEG XR image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SaveAsPng(System.String,GrapeCity.Documents.Imaging.Windows.PngOptions)">
+            <summary>
+            Saves the image to a file in PNG format.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="options">The options for the PNG image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SaveAsTiff(System.String,GrapeCity.Documents.Imaging.Windows.TiffOptions)">
+            <summary>
+            Saves the image to a file in TIFF format.
+            </summary>
+            <param name="fileName">The output file name.</param>
+            <param name="options">The options for the TIFF image encoder.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.ToGcBitmap(System.Boolean)">
+            <summary>
+            Stores the image buffer to a <see cref="T:GrapeCity.Documents.Imaging.GcBitmap"/>.
+            </summary>
+            <param name="updatePixelFormat">Indicates if all pixels should be converted from premultiplied alpha format or to opaque format with alpha = 255.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.ToGcBitmap(System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+            Stores a rectangular area of the image to a <see cref="T:GrapeCity.Documents.Imaging.GcBitmap"/>.
+            </summary>
+            <param name="srcRect">The source rectangle within the image.</param>
+            <param name="updatePixelFormat">Indicates if all pixels should be converted from premultiplied alpha format or to opaque format with alpha = 255.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.ExportFragment(GrapeCity.Documents.Imaging.GcBitmap,System.Int32,System.Int32,System.Drawing.Rectangle)">
+            <summary>
+            Copies a fragment of the image to the specified <see cref="T:GrapeCity.Documents.Imaging.GcBitmap"/> object.
+            </summary>
+            <param name="dstBitmap">The destination <see cref="T:GrapeCity.Documents.Imaging.GcBitmap"/> object.</param>
+            <param name="xDst">The x-coordinate, in pixels, of the upper-left corner of the destination rectangle.</param>
+            <param name="yDst">The y-coordinate, in pixels, of the upper-left corner of the destination rectangle.</param>
+            <param name="srcRect">The source rectangle within the image.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.ToByteArray">
+            <summary>
+            Stores the image buffer to a byte array (without the palette and metadata information).
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.ToByteArray(System.Int32@)">
+            <summary>
+            Stores the image buffer to a byte array with the same stride (bytes per row).
+            </summary>
+            <param name="stride">Returns the stride (bytes per row) of the image.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.ToByteArray(System.Drawing.Rectangle)">
+            <summary>
+            Stores a rectangular area of the image to a byte array.
+            </summary>
+            <param name="srcRect">The source rectangle within the image.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.ExportFragment(System.IntPtr,System.Drawing.Rectangle)">
+            <summary>
+            Copies a fragment of the image to the unmanaged block of memory.
+            </summary>
+            <param name="dstPtr">The pointer to the unmanaged block of memory or IntPtr.Zero.</param>
+            <param name="srcRect">The source rectangle within the image.</param>
+            <returns>Returns the number of bytes in the requested fragment of the image.</returns>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Import(GrapeCity.Documents.Imaging.Windows.GcWicBitmap)">
+            <summary>
+            Loads the image from another instance of <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/>.
+            </summary>
+            <param name="sourceWicBitmap">The source <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/>.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.ImportAsFragment(GrapeCity.Documents.Imaging.Windows.GcWicBitmap,System.Int32,System.Int32)">
+            <summary>
+            Loads another <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> at the given destination within the image.
+            </summary>
+            <param name="sourceWicBitmap">The source <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/>.</param>
+            <param name="xDst">The destination X pixel coordinate within the target bitmap.</param>
+            <param name="yDst">The destination Y pixel coordinate within the target bitmap.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Import(GrapeCity.Documents.Imaging.GcBitmap)">
+            <summary>
+            Loads the image from an instance of the <see cref="T:GrapeCity.Documents.Imaging.GcBitmap"/> class.
+            <para>If the source image is not opaque, the color channels must be premultiplied with the alpha channel.</para>
+            </summary>
+            <param name="sourceBitmap">The source <see cref="T:GrapeCity.Documents.Imaging.GcBitmap"/>.</param>
+            <seealso cref="M:GrapeCity.Documents.Imaging.GcBitmap.ConvertToPremultipliedAlpha"/>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.ImportAsFragment(GrapeCity.Documents.Imaging.GcBitmap,System.Int32,System.Int32)">
+            <summary>
+            Loads a <see cref="T:GrapeCity.Documents.Imaging.GcBitmap"/> at the given destination within the image.
+            <para>If the source image is not opaque, the color channels must be premultiplied with the alpha channel.</para>
+            </summary>
+            <param name="sourceBitmap">The source <see cref="T:GrapeCity.Documents.Imaging.GcBitmap"/>.</param>
+            <param name="xDst">The destination X pixel coordinate within the target bitmap.</param>
+            <param name="yDst">The destination Y pixel coordinate within the target bitmap.</param>
+            <seealso cref="M:GrapeCity.Documents.Imaging.GcBitmap.ConvertToPremultipliedAlpha"/>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Import(System.Byte[],System.Int32,System.Int32,GrapeCity.Documents.Imaging.Windows.WicPixelFormat)">
+            <summary>
+            Loads the image from a byte array containing the pixels buffer.
+            </summary>
+            <param name="bytes">The source byte array with pixel buffer.</param>
+            <param name="width">The width of the image, in pixels.</param>
+            <param name="height">The height of the image, in pixels.</param>
+            <param name="pixelFormat">The pixel format of the image.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Import(System.Byte[],System.Int32,System.Int32,System.Int32,GrapeCity.Documents.Imaging.Windows.WicPixelFormat)">
+            <summary>
+            Loads the image from a byte array containing the pixels buffer with specified stride (bytes per row of pixels).
+            </summary>
+            <param name="bytes">The source byte array with pixel buffer.</param>
+            <param name="stride">The stride (bytes per row) of the image data in the source byte array.</param>
+            <param name="width">The width of the image, in pixels.</param>
+            <param name="height">The height of the image, in pixels.</param>
+            <param name="pixelFormat">The pixel format of the image.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.ImportAsFragment(System.Byte[],System.Drawing.Rectangle)">
+            <summary>
+            Loads the pixel buffer from a byte array at the given destination within the image.
+            </summary>
+            <param name="bytes">The source byte array with pixel buffer.</param>
+            <param name="dstRect">The destination rectangle within the target bitmap.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Import(System.IntPtr,System.Int32,System.Int32,GrapeCity.Documents.Imaging.Windows.WicPixelFormat)">
+            <summary>
+            Loads the image from the unmanaged block of memory pointed by IntPtr.
+            </summary>
+            <param name="srcPtr">The pointer to the beginning of the unmanaged block of memory.</param>
+            <param name="width">The width of the image, in pixels.</param>
+            <param name="height">The height of the image, in pixels.</param>
+            <param name="pixelFormat">The pixel format of the image.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Import(System.IntPtr,System.Int32,System.Int32,System.Int32,GrapeCity.Documents.Imaging.Windows.WicPixelFormat)">
+            <summary>
+            Loads the image from a unmanaged block of memory pointed by IntPtr and having the specified stride (bytes per row of pixels).
+            </summary>
+            <param name="srcPtr">The pointer to the beginning of the unmanaged block of memory.</param>
+            <param name="stride">The stride (bytes per row) of the source image data.</param>
+            <param name="width">The width of the image, in pixels.</param>
+            <param name="height">The height of the image, in pixels.</param>
+            <param name="pixelFormat">The pixel format of the image.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.ImportAsFragment(System.IntPtr,System.Drawing.Rectangle)">
+            <summary>
+            Copies the unmanaged block of memory ato the given destination within the image.
+            </summary>
+            <param name="srcPtr">The pointer to the beginning of the unmanaged block of memory.</param>
+            <param name="dstRect">The destination rectangle within the target bitmap.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.CreatePredefinedPalette(GrapeCity.Documents.Imaging.Windows.WicPaletteType,System.Boolean)">
+            <summary>
+            Creates one of the pre-defined palettes specified by PaletteType and optionally adds a transparent color.
+            </summary>
+            <param name="paletteType">The desired pre-defined palette type.</param>
+            <param name="addTransparentColor">The optional transparent color to add to the palette. If no transparent color is needed, use false. When initializing to a grayscale or black and white palette, set this parameter to false.</param>
+            <remarks>
+            For palettes with less than 256 entries, the transparent entry is added to the end of the palette
+            (that is, a 16-color palette becomes a 17-color palette). For palettes with 256 colors, the transparent
+            palette entry will replace the last entry in the pre-defined palette.
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.CreatePaletteFromBitmap(System.Int32,System.Boolean)">
+            <summary>
+            Creates a palette using a computed optimized values based on the bitmap.
+            </summary>
+            <param name="colorCount">The number of colors to initialize the palette with.</param>
+            <param name="addTransparentColor">A value to indicate whether to add a transparent color.</param>
+            <remarks>
+            The resulting palette contains the specified number of colors which best represent the colors
+            present in the bitmap. The algorithm operates on the opaque RGB color value of each pixel
+            in the reference bitmap and hence ignores any alpha values. If a transparent color is required,
+            set the addTransparentColor parameter to true and one fewer optimized color will be computed,
+            reducing the colorCount, and a fully transparent color entry will be added.
+            </remarks>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.GetPalette">
+            <summary>
+            Retrieves the color table for indexed pixel formats, or null for other formats.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.SetPalette(GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Palette)">
+            <summary>
+            Sets the new color table for the bitmap.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Palette">
+            <summary>
+            Represents the bitmap palette for indexed pixel formats.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Palette.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Palette"/> class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Palette.PaletteType">
+            <summary>
+            Gets or sets the palette type of the associated bitmap.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Palette.HasAlpha">
+            <summary>
+            Gets or sets a value that describes whether the palette contains an alpha transparent color.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Palette.Colors">
+            <summary>
+            Gets the list of palette colors (allows modifications).
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.DrawTextLayout(GrapeCity.Documents.DX.Direct2D.Factory1,GrapeCity.Documents.Text.TextLayout,System.Single,System.Single)">
+            <summary>
+            Draws the prepared <see cref="T:GrapeCity.Documents.Text.TextLayout"/> to the specified <see cref="T:GrapeCity.Documents.DX.Direct2D.RenderTarget"/> at the given location.
+            </summary>
+            <param name="d2dFactory">The factory.</param>
+            <param name="layout">The <see cref="T:GrapeCity.Documents.Text.TextLayout"/> to draw.</param>
+            <param name="x">The origin x-coordinate, in device-independent pixels.</param>
+            <param name="y">The origin y-coordinate, in device-independent pixels.</param>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.IsSupported">
+            <summary>
+            Gets a value indicating if <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> is available on the current platform.
+            <para>
+            Make sure that "Thread.CurrentThread.SetApartmentState(ApartmentState.MTA)" is executed at the beginning of the Program.Main() method.
+            </para>
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.GraphicsSupported">
+            <summary>
+            Gets a value indicating if <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> supports the <see cref="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.CreateGraphics(System.Nullable{System.Drawing.Color})"/> method on the current platform.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.BitsPerPixel(GrapeCity.Documents.Imaging.Windows.WicPixelFormat)">
+            <summary>
+            Returns the number of bits-per-pixel (bpp) for the given value of the PixelFormat enumeration.
+            </summary>
+            <param name="pixelFormat">The PixelFormat enumeration value.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.PixelFormatToGuid(GrapeCity.Documents.Imaging.Windows.WicPixelFormat)">
+            <summary>
+            Returns a GUID of the corresponding WIC pixel format for the given value of the PixelFormat enumeration.
+            </summary>
+            <param name="pixelFormat">The PixelFormat enumeration value.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.PixelFormatFromGuid(System.Guid)">
+            <summary>
+            Converts a GUID of the WIC pixel format to the PixelFormat enumeration value. 
+            </summary>
+            <param name="pfGuid">The GUID of the WIC pixel format.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.CanConvertTo(GrapeCity.Documents.Imaging.Windows.WicPixelFormat)">
+            <summary>
+            Determines if the current pixel format can be converted to the destination pixel format.
+            </summary>
+            <param name="pixelFormat">The destionation pixel format.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmap.Transform(GrapeCity.Documents.Imaging.Windows.BaseTransform[])">
+            <summary>
+            Creates a new instance of <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> as a copy of the current bitmap passed through the set of transformations.
+            </summary>
+            <param name="transforms">The transformation chain, can be empty to just copy the image.</param>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics">
+            <summary>
+            Implements a Direct2D drawing surface.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.#ctor(GrapeCity.Documents.DX.Direct2D.RenderTarget,GrapeCity.Documents.DX.Direct2D.Factory1,System.Nullable{System.Drawing.Color})">
+            <summary>
+            For internal use.
+            </summary>
+            <param name="rt"></param>
+            <param name="d2dFactory"></param>
+            <param name="backColor"></param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.Dispose(System.Boolean)">
+            <summary>
+            Performs cleanup operations on managed and unmanaged resources.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.WicBitmap">
+            <summary>
+            Gets the source <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/>.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.RenderTarget">
+            <summary>
+            Gets an instance of the <see cref="T:GrapeCity.Documents.DX.Direct2D.RenderTarget"/> class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.NearestNeighborMode">
+            <summary>
+            Gets or sets a value indicating whether the exact color of the nearest bitmap pixel is used when images are scaled.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.Width">
+            <summary>
+            Gets the width of the image, in DIPs.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.Height">
+            <summary>
+            Gets the height of the image, in DIPs.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.Resolution">
+            <summary>
+            Gets the resolution of the current graphics (always 96 DPI for <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics"/>).
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.SurfaceResolution">
+            <summary>
+            Gets the resolution of the underlying drawing surface (pixels per inch).
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.Transform">
+            <summary>
+            Gets or sets the transformation matrix of the current graphics.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.GetGlyphPathCache">
+            <inheritdoc/>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalCreateClipRegion(System.Drawing.RectangleF)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalCreateClipRegion(GrapeCity.Documents.Drawing.IPath)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalCreatePath">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalDrawTextLayout(GrapeCity.Documents.Text.TextLayout,System.Drawing.PointF)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalDrawTextLayoutAsPath(GrapeCity.Documents.Text.TextLayout,System.Drawing.PointF)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalDrawLine(System.Drawing.PointF,System.Drawing.PointF,GrapeCity.Documents.Drawing.Pen)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalDrawLines(System.Drawing.PointF[],GrapeCity.Documents.Drawing.Pen)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalDrawPolygon(System.Drawing.PointF[],GrapeCity.Documents.Drawing.Pen)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalFillPolygon(System.Drawing.PointF[],GrapeCity.Documents.Drawing.Brush,GrapeCity.Documents.Drawing.FillMode,System.Nullable{System.Drawing.RectangleF},System.Nullable{System.Numerics.Matrix3x2})">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalFillPolygon(System.Drawing.PointF[],System.Drawing.Color,GrapeCity.Documents.Drawing.FillMode)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalDrawRectangle(System.Drawing.RectangleF,GrapeCity.Documents.Drawing.Pen)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalFillRectangle(System.Drawing.RectangleF,GrapeCity.Documents.Drawing.Brush,System.Nullable{System.Drawing.RectangleF},System.Nullable{System.Numerics.Matrix3x2})">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalFillRectangle(System.Drawing.RectangleF,System.Drawing.Color)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalDrawEllipse(System.Drawing.RectangleF,GrapeCity.Documents.Drawing.Pen)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalFillEllipse(System.Drawing.RectangleF,GrapeCity.Documents.Drawing.Brush,System.Nullable{System.Drawing.RectangleF},System.Nullable{System.Numerics.Matrix3x2})">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalFillEllipse(System.Drawing.RectangleF,System.Drawing.Color)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalDrawRoundRect(System.Drawing.RectangleF,System.Single,System.Single,GrapeCity.Documents.Drawing.Pen)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalFillRoundRect(System.Drawing.RectangleF,System.Single,System.Single,GrapeCity.Documents.Drawing.Brush,System.Nullable{System.Drawing.RectangleF},System.Nullable{System.Numerics.Matrix3x2})">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalFillRoundRect(System.Drawing.RectangleF,System.Single,System.Single,System.Drawing.Color)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalDrawPath(GrapeCity.Documents.Drawing.IPath,GrapeCity.Documents.Drawing.Pen)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalFillPath(GrapeCity.Documents.Drawing.IPath,GrapeCity.Documents.Drawing.Brush,System.Nullable{System.Drawing.RectangleF},System.Nullable{System.Numerics.Matrix3x2})">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalFillPath(GrapeCity.Documents.Drawing.IPath,System.Drawing.Color)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalSetClip(GrapeCity.Documents.Drawing.IClipRegion)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalRemoveClip(GrapeCity.Documents.Drawing.IClipRegion)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.InternalDrawImage(System.Drawing.RectangleF,GrapeCity.Documents.Drawing.IImage,System.Single)">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.DrawGlyphs(GrapeCity.Documents.Text.Font,System.UInt16[],System.Single[],System.String[],System.Int32,System.Drawing.Color,System.Numerics.Matrix3x2)">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicBitmapGraphics.DrawVertGlyphs(GrapeCity.Documents.Text.Font,System.UInt16[],System.Single[],System.Single[],System.Single[],System.String[],System.Int32,System.Drawing.Color,System.Numerics.Matrix3x2)">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader">
+            <summary>
+            Allows to read images from a multipage TIFF file/stream.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader.ApplyLicenseKey(System.String)">
+            <summary>
+            Applies a license key to an instance of <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader"/>.
+            </summary>
+            <param name="key">The license key to set.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader.#ctor(System.String,System.Int32,GrapeCity.Documents.DX.WIC.ImagingFactory)">
+            <summary>
+            Initializes a new instance of <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader"/> class and assigns the input file.
+            </summary>
+            <param name="filePath">Full path to the input .tiff file.</param>
+            <param name="frameIndex">Index of a frame to read. Pass -1 to get all frames.</param>
+            <param name="imagingFactory">The existing imaging factory, to avoid duplicating factories.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader.#ctor(System.IO.Stream,System.Boolean,System.Int32,GrapeCity.Documents.DX.WIC.ImagingFactory)">
+            <summary>
+            Initializes a new instance of <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader"/> class and assigns the input stream.
+            </summary>
+            <param name="stream">The input stream.</param>
+            <param name="ownStream">Indicates if the input stream should be closed when the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader"/> is disposed.</param>
+            <param name="frameIndex">Index of a frame to read. Pass -1 to get all frames.</param>
+            <param name="imagingFactory">The existing imaging factory, to avoid duplicating factories.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader.Dispose">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader.Finalize">
+            <summary>
+            Performs cleanup operations on unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader.Dispose(System.Boolean)">
+            <summary>
+            Performs cleanup operations on managed and unmanaged resources.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader.FilePath">
+            <summary>
+            If possible, gets the file name of the associated .tiff file.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader.Stream">
+            <summary>
+            Gets the Stream associated with <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader"/>.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader.StreamStartPosition">
+            <summary>
+            Gets the start position in the associated Stream.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader.OwnStream">
+            <summary>
+            Gets a value indicating if the associated stream should be closed when the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader"/> is disposed.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader.Frames">
+            <summary>
+            Gets the list of frames in the associated TIFF file/stream.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader.WicFactory">
+            <summary>
+            Gets an instance of the <see cref="T:GrapeCity.Documents.DX.WIC.ImagingFactory"/> class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader.OwnWicFactory">
+            <summary>
+            Gets or sets a value indicating if the WicFactory should be disposed together with the <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffReader"/> class.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter">
+            <summary>
+            Allows to create a multipage TIFF file.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.ApplyLicenseKey(System.String)">
+            <summary>
+            Applies a license key to an instance of <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter"/>.
+            </summary>
+            <param name="key">The license key to set.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.#ctor(System.String,GrapeCity.Documents.DX.WIC.ImagingFactory)">
+            <summary>
+            Initializes a new instance of <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter"/> class and sets the output file.
+            </summary>
+            <param name="filePath">Full path to the output file.</param>
+            <param name="imagingFactory">The existing imaging factory, to avoid duplicating factories.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.#ctor(System.IO.Stream,System.Boolean,GrapeCity.Documents.DX.WIC.ImagingFactory)">
+            <summary>
+            Initializes a new instance of <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter"/> class and sets the output stream.
+            </summary>
+            <param name="stream">The output stream.</param>
+            <param name="ownStream">Indicates whether the output stream should be disposed together with <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter"/>.</param>
+            <param name="imagingFactory">The existing imaging factory, to avoid duplicating factories.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.Dispose">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.Dispose(System.Boolean)">
+            <summary>
+            Performs cleanup operations on managed and unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.Finalize">
+            <summary>
+            Performs cleanup operations on unmanaged resources.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.CurrentFrame">
+            <summary>
+            Gets the current frame's <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/>.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.Opaque">
+            <summary>
+            Gets or sets a value indicating if the image is opaque.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.Resolution">
+            <summary>
+            Gets or sets the DPI resolution of the image.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.CompressionMethod">
+            <summary>
+            Gets or sets the TIFF compression method.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.CompressionLevel">
+            <summary>
+            Gets or sets the compression level (0.0, 1.0).
+            <para>
+            0.0 means the least efficient but fast compression.
+            1.0 means the most efficient scheme available, typically
+            taking more time to encode but producing smaller output.
+            </para>
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.FrameTransform">
+            <summary>
+            Gets or sets the transformation chain to be applied to the next saved frame.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.DefaultFrameWidth">
+            <summary>
+            Gets or sets the default width of a frame, in DIPs.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.DefaultFrameHeight">
+            <summary>
+            Gets or sets the default height of a frame, in DIPs.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.SetFontCache(GrapeCity.Documents.Imaging.Windows.FontCache)">
+            <summary>
+            Assigns a shared instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.FontCache"/> object.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.AppendFrame(GrapeCity.Documents.Imaging.Windows.GcWicBitmap)">
+            <summary>
+            Writes the specified bitmap to the output stream as the next frame.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.NewFrame">
+            <summary>
+            Saves the previous frame to the output stream and creates a new frame with default width and height.
+            </summary>
+            <returns>The new frame.</returns>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.GcWicTiffWriter.NewFrame(System.Single,System.Single)">
+            <summary>
+            Saves the previous frame to the output stream and creates a new frame with specified width and height.
+            </summary>
+            <param name="width">The width of the new frame, in DIPs.</param>
+            <param name="height">The height of the new frame, in DIPs.</param>
+            <returns>The new frame.</returns>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.ImageRect">
+            <summary>
+            Represents a rectangle for clipping images.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.ImageRect.X">
+            <summary>
+            The horizontal coordinate of the rectangle, in pixels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.ImageRect.Y">
+            <summary>
+            The vertical coordinate of the rectangle, in pixels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.ImageRect.Width">
+            <summary>
+            The width of the rectangle, in pixels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.ImageRect.Height">
+            <summary>
+            The height of the rectangle, in pixels.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.ImageRect.Empty">
+            <summary>
+            An empty rectangle.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.ImageRect"/> struct.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.ImageRect"/> struct.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.FromLTRB(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a <see cref="T:GrapeCity.Documents.Imaging.Windows.ImageRect"/> struct from (left, top, right, bottom) coordinates.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.#ctor(GrapeCity.Documents.DX.RectL)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.ImageRect"/> struct.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.ToRectL">
+            <summary>
+            Converts <see cref="T:GrapeCity.Documents.Imaging.Windows.ImageRect"/> to <see cref="T:GrapeCity.Documents.DX.RectL"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.#ctor(System.Drawing.Rectangle)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.ImageRect"/> struct.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.ToRectangle">
+            <summary>
+            Converts <see cref="T:GrapeCity.Documents.Imaging.Windows.ImageRect"/> to <see cref="T:System.Drawing.Rectangle"/>.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.ImageRect.Left">
+            <summary>
+            Gets or sets the x-coordinate of the left edge, in pixels.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.ImageRect.Top">
+            <summary>
+            Gets or sets the y-coordinate of the top edge, in pixels.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.ImageRect.Right">
+            <summary>
+            Gets or sets the x-coordinate of the right edge, in pixels.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.ImageRect.Bottom">
+            <summary>
+            Gets or sets the y-coordinate of the bottom edge, in pixels.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.Offset(System.Int32,System.Int32)">
+            <summary>
+            Offsets the rectangle by the specified amount.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.Inflate(System.Int32,System.Int32)">
+            <summary>
+            Inflates the rectangle by the specified amount.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.Contains(System.Int32,System.Int32)">
+            <summary>
+            Determines if the specified point is contained within this rectangle.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.Contains(GrapeCity.Documents.Imaging.Windows.ImageRect)">
+            <summary>
+            Determines if the specified rectangle is fully contained within this rectangle.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.IntersectsWith(GrapeCity.Documents.Imaging.Windows.ImageRect)">
+            <summary>
+            Determines if this rectangle intersects with rect.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.Intersect(GrapeCity.Documents.Imaging.Windows.ImageRect,GrapeCity.Documents.Imaging.Windows.ImageRect)">
+            <summary>
+            Returns a rectangle that represents the intersection of two rectangles.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.Union(GrapeCity.Documents.Imaging.Windows.ImageRect,GrapeCity.Documents.Imaging.Windows.ImageRect)">
+            <summary>
+            Creates the smallest possible third rectangle that can contain both of two rectangles that form a union.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.ImageRect.HasSpace">
+            <summary>
+            Determines if there is some space within the rectangle.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.Equals(System.Object)">
+            <summary>
+            Indicates whether this instance and a specified object are equal.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.Equals(GrapeCity.Documents.Imaging.Windows.ImageRect)">
+            <summary>
+            Indicates whether this instance and a specified object are equal.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.op_Equality(GrapeCity.Documents.Imaging.Windows.ImageRect,GrapeCity.Documents.Imaging.Windows.ImageRect)">
+            <summary>
+            Determines if the specified values are equal.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.op_Inequality(GrapeCity.Documents.Imaging.Windows.ImageRect,GrapeCity.Documents.Imaging.Windows.ImageRect)">
+            <summary>
+            Determines if the specified values are not equal.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.op_Explicit(GrapeCity.Documents.Imaging.Windows.ImageRect)~GrapeCity.Documents.DX.RectL">
+            <summary>
+            Performs an explicit conversion from <see cref="T:GrapeCity.Documents.Imaging.Windows.ImageRect"/> to <see cref="T:GrapeCity.Documents.DX.RectL"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.op_Explicit(GrapeCity.Documents.DX.RectL)~GrapeCity.Documents.Imaging.Windows.ImageRect">
+            <summary>
+            Performs an explicit conversion from <see cref="T:GrapeCity.Documents.DX.RectL"/> to <see cref="T:GrapeCity.Documents.Imaging.Windows.ImageRect"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.op_Explicit(GrapeCity.Documents.Imaging.Windows.ImageRect)~System.Drawing.Rectangle">
+            <summary>
+            Performs an explicit conversion from <see cref="T:GrapeCity.Documents.Imaging.Windows.ImageRect"/> to <see cref="T:System.Drawing.Rectangle"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.ImageRect.op_Explicit(System.Drawing.Rectangle)~GrapeCity.Documents.Imaging.Windows.ImageRect">
+            <summary>
+            Performs an explicit conversion from <see cref="T:System.Drawing.Rectangle"/> to <see cref="T:GrapeCity.Documents.Imaging.Windows.ImageRect"/>.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.BaseOptions">
+            <summary>
+            Base class for all encoder options.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.BaseOptions.SourceRect">
+            <summary>
+            Specifies the source rectangle for encoding.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.BmpOptions">
+            <summary>
+            Encoder options supported by the native BMP codec.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.BmpOptions.EnableV5Header32bppBGRA">
+            <summary>
+            Specifies whether the BMP should be written using the BITMAPV5HEADER with valid alpha channel content.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.GifOptions">
+            <summary>
+            Encoder options supported by the native GIF codec.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.JpegOptions">
+            <summary>
+            Encoder options supported by the native JPEG codec.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegOptions.ImageQuality">
+            <summary>
+            Specifies the desired image fidelity. 0.0 indicates the lowest possible fidelity and 1.0 specifies the highest fidelity.
+            </summary>
+            <remarks>
+            The default value is 0.9.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegOptions.TransformOptions">
+            <summary>
+            Specifies whether the image is rotated or flipped when decoded.
+            </summary>
+            <remarks>
+            The default value is Rotate0.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegOptions.SuppressApp0">
+            <summary>
+            Specifies whether to suppress the write of App0 metadata while encoding the image data.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.JpegXROptions">
+            <summary>
+            Encoder options supported by the native JPEG XR codec.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.AlphaDataDiscard">
+            <summary>
+            Sets the amount of alpha frequency data to discard during a compressed domain transcode.
+            </summary>
+            <remarks>
+            The default value is None.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.AlphaQuality">
+            <summary>
+            Sets the compression quality for the planar alpha channel image.
+            </summary>
+            <remarks>
+            The default value is 1.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.TransformOptions">
+            <summary>
+            Specifies whether the image is rotated or flipped when decoded.
+            </summary>
+            <remarks>
+            The default value is Rotate0.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.CompressedDomainTranscode">
+            <summary>
+            Enables or disables compressed domain transcoding.
+            </summary>
+            <remarks>
+            The default value is true.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.FrequencyOrder">
+            <summary>
+            Enables encoding in frequency order.
+            </summary>
+            <remarks>
+            The default value is true.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.HorizontalTileSlices">
+            <summary>
+            Sets the number of horizontal tiles.
+            </summary>
+            <remarks>
+            The default value is (image width – 1) >> 8.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.IgnoreOverlap">
+            <summary>
+            Specifies how the encoder handles tile boundaries during a compressed domain transcode.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.ImageDataDiscard">
+            <summary>
+            Sets the amount of image frequency data to discard during a compressed domain transcode.
+            </summary>
+            <remarks>
+            The default value is 0.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.ImageQuality">
+            <summary>
+            Sets the image quality.
+            </summary>
+            <remarks>
+            The default value is 0.9.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.InterleavedAlpha">
+            <summary>
+            Specifies whether to encode interleaved alpha or planar alpha.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.Lossless">
+            <summary>
+            Enables losses compression.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.Overlap">
+            <summary>
+            Sets the level of overlap filtering.
+            </summary>
+            <remarks>
+            The default value is 1.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.ProgressiveMode">
+            <summary>
+            Enables or disables progressive encoding.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.Quality">
+            <summary>
+            Sets the compression quality.
+            </summary>
+            <remarks>
+            The default value is 1.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.StreamOnly">
+            <summary>
+            Enables or disables stream-only mode.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.Subsampling">
+            <summary>
+            Sets the chroma subsampling. This property applies only to RGB images.
+            </summary>
+            <remarks>
+            The default value is 3 if ImageQuality > 0.8; otherwise 1.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.UseCodecOptions">
+            <summary>
+            Specifies whether to use the Quality, Overlap, and Subsampling properties instead of the generic ImageQuality property.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.JpegXROptions.VerticalTileSlices">
+            <summary>
+            Sets the number of vertical tiles.
+            </summary>
+            <remarks>
+            The default value is (image height – 1) >> 8.
+            </remarks>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.PngOptions">
+            <summary>
+            Encoder options supported by the native PNG codec.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.PngOptions.Interlace">
+            <summary>
+            Specifies whether to encode the image data as interlaced.
+            </summary>
+            <remarks>
+            The default value is false.
+            </remarks>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.PngOptions.Filter">
+            <summary>
+            Specifies the filter option to use for image compression.
+            </summary>
+            <remarks>
+            The default value is PngFilter.Unspecified.
+            </remarks>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.TiffOptions">
+            <summary>
+            Encoder options supported by the native TIFF codec.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.TiffOptions.CompressionQuality">
+            <summary>
+            CompressionQuality of 0.0 means the least efficient compression scheme available,
+            typically resulting in a fast encode but larger output. A value of 1.0 means
+            the most efficient scheme available, typically taking more time to encode but
+            producing smaller output.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.TiffOptions.TiffCompressionMethod">
+            <summary>
+            Specifies the TIFF compression method.
+            </summary>
+            <remarks>
+            The default value is DontCare.
+            </remarks>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.PaletteColor">
+            <summary>
+            Represents a color in 32bppBGRA format.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Value">
+            <summary>
+            The packed color value.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.PaletteColor"/> struct.
+            </summary>
+            <param name="argb">A packed unsigned integer containing all four color components in 32bppBGRA format.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.PaletteColor"/> struct.
+            </summary>
+            <param name="red">The red component of the color.</param>
+            <param name="green">The green component of the color.</param>
+            <param name="blue">The blue component of the color.</param>
+            <param name="alpha">The alpha component of the color.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.#ctor(GrapeCity.Documents.DX.ColorF)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.PaletteColor"/> struct.
+            </summary>
+            <param name="value">The source C1.Util.DX.ColorF.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.#ctor(System.Drawing.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.PaletteColor"/> struct.
+            </summary>
+            <param name="color">The System.Drawing.Color value.</param>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.PaletteColor.R">
+            <summary>
+            The red component of the color.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.PaletteColor.G">
+            <summary>
+            The green component of the color.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.PaletteColor.B">
+            <summary>
+            The blue component of the color.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.PaletteColor.A">
+            <summary>
+            The alpha component of the color.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.PaletteColor.IsEmpty">
+            <summary>
+            Gets whether this ColorF structure is uninitialized.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.PaletteColor.IsTransparent">
+            <summary>
+            Gets a value indicating if we can skip drawing with this color.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.ToColorF">
+            <summary>
+            Converts the color into a C1.Util.DX.ColorF.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.ToColor">
+            <summary>
+            Converts the color into a System.Drawing.Color.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.op_Equality(GrapeCity.Documents.Imaging.Windows.PaletteColor,GrapeCity.Documents.Imaging.Windows.PaletteColor)">
+            <summary>
+            Determines if the specified values are equal.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.op_Inequality(GrapeCity.Documents.Imaging.Windows.PaletteColor,GrapeCity.Documents.Imaging.Windows.PaletteColor)">
+            <summary>
+            Determines if the specified values are not equal.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.op_Explicit(GrapeCity.Documents.Imaging.Windows.PaletteColor)~GrapeCity.Documents.DX.ColorF">
+            <summary>
+            Performs an explicit conversion from <see cref="T:GrapeCity.Documents.Imaging.Windows.PaletteColor"/> to C1.Util.DX.ColorF.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.op_Explicit(GrapeCity.Documents.Imaging.Windows.PaletteColor)~System.Drawing.Color">
+            <summary>
+            Performs an explicit conversion from <see cref="T:GrapeCity.Documents.Imaging.Windows.PaletteColor"/> to <see cref="T:System.Drawing.Color"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.op_Explicit(GrapeCity.Documents.DX.ColorF)~GrapeCity.Documents.Imaging.Windows.PaletteColor">
+            <summary>
+            Performs an explicit conversion from <see cref="T:GrapeCity.Documents.DX.ColorF"/> to <see cref="T:GrapeCity.Documents.Imaging.Windows.PaletteColor"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.op_Explicit(System.Drawing.Color)~GrapeCity.Documents.Imaging.Windows.PaletteColor">
+            <summary>
+            Performs an explicit conversion from <see cref="T:System.Drawing.Color"/> to <see cref="T:GrapeCity.Documents.Imaging.Windows.PaletteColor"/>.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.ToString(System.String)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <param name="format">The format.</param>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.ToString(System.IFormatProvider)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <param name="formatProvider">The format provider.</param>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.ToString(System.String,System.IFormatProvider)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <param name="format">The format.</param>
+            <param name="formatProvider">The format provider.</param>
+            <returns>
+            A <see cref="T:System.String"/> that represents this instance.
+            </returns>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.Equals(GrapeCity.Documents.Imaging.Windows.PaletteColor)">
+            <summary>
+            Determines whether the specified <see cref="T:GrapeCity.Documents.Imaging.Windows.PaletteColor"/> is equal to this instance.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.PaletteColor.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Empty">
+            <summary>
+            Empty color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Transparent">
+            <summary>
+            Transparent color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.AliceBlue">
+            <summary>
+            AliceBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.AntiqueWhite">
+            <summary>
+            AntiqueWhite color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Aqua">
+            <summary>
+            Aqua color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Aquamarine">
+            <summary>
+            Aquamarine color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Azure">
+            <summary>
+            Azure color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Beige">
+            <summary>
+            Beige color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Bisque">
+            <summary>
+            Bisque color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Black">
+            <summary>
+            Black color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.BlanchedAlmond">
+            <summary>
+            BlanchedAlmond color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Blue">
+            <summary>
+            Blue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.BlueViolet">
+            <summary>
+            BlueViolet color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Brown">
+            <summary>
+            Brown color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.BurlyWood">
+            <summary>
+            BurlyWood color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.CadetBlue">
+            <summary>
+            CadetBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Chartreuse">
+            <summary>
+            Chartreuse color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Chocolate">
+            <summary>
+            Chocolate color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Coral">
+            <summary>
+            Coral color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.CornflowerBlue">
+            <summary>
+            CornflowerBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Cornsilk">
+            <summary>
+            Cornsilk color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Crimson">
+            <summary>
+            Crimson color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Cyan">
+            <summary>
+            Cyan color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkBlue">
+            <summary>
+            DarkBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkCyan">
+            <summary>
+            DarkCyan color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkGoldenrod">
+            <summary>
+            DarkGoldenrod color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkGray">
+            <summary>
+            DarkGray color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkGreen">
+            <summary>
+            DarkGreen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkKhaki">
+            <summary>
+            DarkKhaki color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkMagenta">
+            <summary>
+            DarkMagenta color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkOliveGreen">
+            <summary>
+            DarkOliveGreen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkOrange">
+            <summary>
+            DarkOrange color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkOrchid">
+            <summary>
+            DarkOrchid color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkRed">
+            <summary>
+            DarkRed color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkSalmon">
+            <summary>
+            DarkSalmon color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkSeaGreen">
+            <summary>
+            DarkSeaGreen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkSlateBlue">
+            <summary>
+            DarkSlateBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkSlateGray">
+            <summary>
+            DarkSlateGray color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkTurquoise">
+            <summary>
+            DarkTurquoise color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DarkViolet">
+            <summary>
+            DarkViolet color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DeepPink">
+            <summary>
+            DeepPink color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DeepSkyBlue">
+            <summary>
+            DeepSkyBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DimGray">
+            <summary>
+            DimGray color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.DodgerBlue">
+            <summary>
+            DodgerBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Firebrick">
+            <summary>
+            Firebrick color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.FloralWhite">
+            <summary>
+            FloralWhite color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.ForestGreen">
+            <summary>
+            ForestGreen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Fuchsia">
+            <summary>
+            Fuchsia color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Gainsboro">
+            <summary>
+            Gainsboro color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.GhostWhite">
+            <summary>
+            GhostWhite color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Gold">
+            <summary>
+            Gold color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Goldenrod">
+            <summary>
+            Goldenrod color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Gray">
+            <summary>
+            Gray color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Green">
+            <summary>
+            Green color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.GreenYellow">
+            <summary>
+            GreenYellow color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Honeydew">
+            <summary>
+            Honeydew color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.HotPink">
+            <summary>
+            HotPink color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.IndianRed">
+            <summary>
+            IndianRed color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Indigo">
+            <summary>
+            Indigo color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Ivory">
+            <summary>
+            Ivory color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Khaki">
+            <summary>
+            Khaki color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Lavender">
+            <summary>
+            Lavender color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LavenderBlush">
+            <summary>
+            LavenderBlush color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LawnGreen">
+            <summary>
+            LawnGreen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LemonChiffon">
+            <summary>
+            LemonChiffon color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LightBlue">
+            <summary>
+            LightBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LightCoral">
+            <summary>
+            LightCoral color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LightCyan">
+            <summary>
+            LightCyan color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LightGoldenrodYellow">
+            <summary>
+            LightGoldenrodYellow color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LightGray">
+            <summary>
+            LightGray color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LightGreen">
+            <summary>
+            LightGreen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LightPink">
+            <summary>
+            LightPink color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LightSalmon">
+            <summary>
+            LightSalmon color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LightSeaGreen">
+            <summary>
+            LightSeaGreen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LightSkyBlue">
+            <summary>
+            LightSkyBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LightSlateGray">
+            <summary>
+            LightSlateGray color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LightSteelBlue">
+            <summary>
+            LightSteelBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LightYellow">
+            <summary>
+            LightYellow color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Lime">
+            <summary>
+            Lime color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.LimeGreen">
+            <summary>
+            LimeGreen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Linen">
+            <summary>
+            Linen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Magenta">
+            <summary>
+            Magenta color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Maroon">
+            <summary>
+            Maroon color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.MediumAquamarine">
+            <summary>
+            MediumAquamarine color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.MediumBlue">
+            <summary>
+            MediumBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.MediumOrchid">
+            <summary>
+            MediumOrchid color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.MediumPurple">
+            <summary>
+            MediumPurple color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.MediumSeaGreen">
+            <summary>
+            MediumSeaGreen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.MediumSlateBlue">
+            <summary>
+            MediumSlateBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.MediumSpringGreen">
+            <summary>
+            MediumSpringGreen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.MediumTurquoise">
+            <summary>
+            MediumTurquoise color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.MediumVioletRed">
+            <summary>
+            MediumVioletRed color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.MidnightBlue">
+            <summary>
+            MidnightBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.MintCream">
+            <summary>
+            MintCream color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.MistyRose">
+            <summary>
+            MistyRose color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Moccasin">
+            <summary>
+            Moccasin color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.NavajoWhite">
+            <summary>
+            NavajoWhite color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Navy">
+            <summary>
+            Navy color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.OldLace">
+            <summary>
+            OldLace color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Olive">
+            <summary>
+            Olive color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.OliveDrab">
+            <summary>
+            OliveDrab color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Orange">
+            <summary>
+            Orange color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.OrangeRed">
+            <summary>
+            OrangeRed color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Orchid">
+            <summary>
+            Orchid color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.PaleGoldenrod">
+            <summary>
+            PaleGoldenrod color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.PaleGreen">
+            <summary>
+            PaleGreen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.PaleTurquoise">
+            <summary>
+            PaleTurquoise color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.PaleVioletRed">
+            <summary>
+            PaleVioletRed color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.PapayaWhip">
+            <summary>
+            PapayaWhip color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.PeachPuff">
+            <summary>
+            PeachPuff color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Peru">
+            <summary>
+            Peru color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Pink">
+            <summary>
+            Pink color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Plum">
+            <summary>
+            Plum color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.PowderBlue">
+            <summary>
+            PowderBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Purple">
+            <summary>
+            Purple color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Red">
+            <summary>
+            Red color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.RosyBrown">
+            <summary>
+            RosyBrown color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.RoyalBlue">
+            <summary>
+            RoyalBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.SaddleBrown">
+            <summary>
+            SaddleBrown color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Salmon">
+            <summary>
+            Salmon color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.SandyBrown">
+            <summary>
+            SandyBrown color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.SeaGreen">
+            <summary>
+            SeaGreen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.SeaShell">
+            <summary>
+            SeaShell color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Sienna">
+            <summary>
+            Sienna color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Silver">
+            <summary>
+            Silver color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.SkyBlue">
+            <summary>
+            SkyBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.SlateBlue">
+            <summary>
+            SlateBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.SlateGray">
+            <summary>
+            SlateGray color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Snow">
+            <summary>
+            Snow color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.SpringGreen">
+            <summary>
+            SpringGreen color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.SteelBlue">
+            <summary>
+            SteelBlue color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Tan">
+            <summary>
+            Tan color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Teal">
+            <summary>
+            Teal color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Thistle">
+            <summary>
+            Thistle color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Tomato">
+            <summary>
+            Tomato color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Turquoise">
+            <summary>
+            Turquoise color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Violet">
+            <summary>
+            Violet color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Wheat">
+            <summary>
+            Wheat color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.White">
+            <summary>
+            White color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.WhiteSmoke">
+            <summary>
+            WhiteSmoke color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.Yellow">
+            <summary>
+            Yellow color.
+            </summary>
+        </member>
+        <member name="F:GrapeCity.Documents.Imaging.Windows.PaletteColor.YellowGreen">
+            <summary>
+            YellowGreen color.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.BaseTransform">
+            <summary>
+            Base class for all bitmap transformations.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.Clipper">
+            <summary>
+            Produces a clipped version of the bitmap for a specified rectangular region of interest.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.Clipper.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.Clipper"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.Clipper.#ctor(System.Drawing.Rectangle)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.Clipper"/> class.
+            </summary>
+            <param name="imageRect">The rectangle of the bitmap to clip.</param>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.Clipper.ImageRect">
+            <summary>
+            Gets or sets the rectangle of the bitmap to clip.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.FlipRotator">
+            <summary>
+            Produces a flipped (horizontal or vertical) and/or rotated (by 90 degree increments) bitmap. Rotations are done before the flip.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.FlipRotator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.FlipRotator"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.FlipRotator.#ctor(GrapeCity.Documents.Imaging.Windows.WicTransformOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.FlipRotator"/> class.
+            </summary>
+            <param name="transformOptions">The transform options to flip or rotate the image.</param>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.FlipRotator.TransformOptions">
+            <summary>
+            Gets or sets the transform options to flip or rotate the image.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.FormatConverter">
+            <summary>
+            Converts the image data from one pixel format to another.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.FormatConverter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.FormatConverter"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.FormatConverter.#ctor(GrapeCity.Documents.Imaging.Windows.WicPixelFormat)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.FormatConverter"/> class.
+            </summary>
+            <param name="destinationFormat">The destination pixel format.</param>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.FormatConverter.DestinationFormat">
+            <summary>
+            Gets or sets the destination pixel format.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.FormatConverter.DitherType">
+            <summary>
+            Gets or sets the type of dither algorithm used for conversion.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.FormatConverter.Palette">
+            <summary>
+            Gets or sets the palette to use for conversion.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.FormatConverter.AlphaThresholdPercent">
+            <summary>
+            Gets or sets the alpha threshold to use for conversion.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.FormatConverter.PaletteTranslate">
+            <summary>
+            Gets or sets the palette translation type to use for conversion.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.Scaler">
+            <summary>
+            Represents a resized version of the input bitmap using a resampling or filtering algorithm.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.Scaler.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.Scaler"/> class.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.Scaler.#ctor(System.Int32,System.Int32,GrapeCity.Documents.Imaging.Windows.WicInterpolationMode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GrapeCity.Documents.Imaging.Windows.Scaler"/> class.
+            </summary>
+            <param name="destinationWidth">The destination width.</param>
+            <param name="destinationHeight">The desination height.</param>
+            <param name="interpolationMode">The interpolation mode to use when scaling.</param>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.Scaler.DestinationWidth">
+            <summary>
+            Gets or sets the destination width, in pixels.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.Scaler.DestinationHeight">
+            <summary>
+            Gets or sets the destination height, in pixels.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.Scaler.InterpolationMode">
+            <summary>
+            Gets or sets the interpolation mode to use when scaling.
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Imaging.Windows.WicTiffFrame">
+            <summary>
+            Represents a single frame in TIFF file.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.Dispose">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.Finalize">
+            <summary>
+            Performs cleanup operations on unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.Dispose(System.Boolean)">
+            <summary>
+            Performs cleanup operations on managed and unmanaged resources.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.FrameIndex">
+            <summary>
+            Gets the index of the frame in the associated TIFF file.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.PixelFormat">
+            <summary>
+            Gets the pixel format of the frame image.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.ImageLength">
+            <summary>
+            Gets the number of rows (sometimes described as scanlines) in the image.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.ImageWidth">
+            <summary>
+            Gets the number of columns in the image, i.e., the number of pixels per scanline.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.DpiX">
+            <summary>
+            Gets the horizontal dpi of the image.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.DpiY">
+            <summary>
+            Gets the vertical dpi of the image.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.Artist">
+            <summary>
+            Gets a string that describes a person who created the image.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.Copyright">
+            <summary>
+            Gets a string with image copyright notice.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.DateTime">
+            <summary>
+            Gets a string with date and time of image creation in “YYYY:MM:DD HH:MM:SS”, with hours
+            like those on a 24-hour clock, and one space character between the date and the time.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.HostComputer">
+            <summary>
+            Gets a string that describes the computer and/or operating system in use at the time of image creation.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.ImageDescription">
+            <summary>
+            Gets a string that describes the subject of the image.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.Make">
+            <summary>
+            Gets a string that describes the scanner manufacturer.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.Model">
+            <summary>
+            Gets a string with the scanner model name or number.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.Software">
+            <summary>
+            Gets a string with the name and version number of the software package(s) used to create the image.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.ToGcWicBitmap(System.Nullable{System.Drawing.Rectangle},GrapeCity.Documents.Imaging.Windows.BaseTransform[])">
+            <summary>
+            Creates a <see cref="T:GrapeCity.Documents.Imaging.Windows.GcWicBitmap"/> from the frame image.
+            </summary>
+            <param name="imageRect">Clipping rectangle for the image after all transformations.</param>
+            <param name="transforms">The transformation chain for the image that is being loaded.</param>
+        </member>
+        <member name="M:GrapeCity.Documents.Imaging.Windows.WicTiffFrame.ToImage(GrapeCity.Documents.Drawing.ImageBinding)">
+            <summary>
+            Creates an <see cref="T:GrapeCity.Documents.Drawing.Image"/> object for the frame.
+            </summary>
+            <param name="binding">Specifies how the image data is attached to the <see cref="T:GrapeCity.Documents.Drawing.Image"/> object.</param>
+            <returns>The newly created <see cref="T:GrapeCity.Documents.Drawing.Image"/> object.</returns>
+        </member>
+        <member name="T:GrapeCity.Documents.Common.Windows.Localization.Strings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.DestImageRequired">
+            <summary>
+              Looks up a localized string similar to "Image is not created in the destination GcBitmap.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.GraphicsExists">
+            <summary>
+              Looks up a localized string similar to "Dispose the GcWicBitmap.Graphics object before exporting the image.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.IncorrectDestRect">
+            <summary>
+              Looks up a localized string similar to "Incorrect position of the destination rectangle.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.IncorrectSourceArraySize">
+            <summary>
+              Looks up a localized string similar to "Incorrect size of the source byte array.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.IncorrectSourceRect">
+            <summary>
+              Looks up a localized string similar to "Incorrect position of the source rectangle.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.Jpeg2kNotSupported">
+            <summary>
+              Looks up a localized string similar to "JPEG 2000 format is not supported in GcWicBitmap.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.LostObject">
+            <summary>
+              Looks up a localized string similar to "Warning: Live {0} object, potential memory leak".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.NeedSeekForTiffReader">
+            <summary>
+              Looks up a localized string similar to "A stream passed to the constructor of GcWicTiffReader must support reading and seeking."
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.NoFilePathSpecified">
+            <summary>
+              Looks up a localized string similar to "File path was not specified for a GcWicTiffReader.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.NoEncoderForFormat">
+            <summary>
+              Looks up a localized string similar to "No encoder for {0} format.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.NoGuidForUnknown">
+            <summary>
+              Looks up a localized string similar to "No GUID for Unknown pixel format.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.NotSupportedOnClosedPath">
+            <summary>
+              Looks up a localized string similar to "Operation is not supported on a Path closed for modifications.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.PaletteColorToString">
+            <summary>
+              Looks up a localized string similar to "Red:{0} Green:{1} Blue:{2} Alpha:{3}".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.PixelFormatsDontMatch">
+            <summary>
+              Looks up a localized string similar to "Pixel format of the source bitmap does not match the format of the target bitmap.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.PremultipliedRequired">
+            <summary>
+              Looks up a localized string similar to "A semitransparent GcBitmap must be premultiplied before importing into GcWicBitmap.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.RenderTargetNotSupported">
+            <summary>
+              Looks up a localized string similar to "Render target cannot be created on the current platform.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.RenderTargetRequired">
+            <summary>
+              Looks up a localized string similar to "To draw text you need to create a RenderTarget at first.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.SourceBitmapDisposed">
+            <summary>
+              Looks up a localized string similar to "The source GcWicBitmap was disposed or not initialized properly.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.SourceImageRequired">
+            <summary>
+              Looks up a localized string similar to "The image is not created in the source GcBitmap.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.TooManyGraphics">
+            <summary>
+              Looks up a localized string similar to "Cannot create the second instance of GcWicBitmapGraphics for a GcWicBitmap.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.UnrecognizedBrush">
+            <summary>
+              Looks up a localized string similar to "Unrecognized type of the Brush: {0}.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.WicImageRequired">
+            <summary>
+              Looks up a localized string similar to "Image is not created or loaded into GcWicBitmap.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.WicNotAvailable">
+            <summary>
+              Looks up a localized string similar to "Windows Imaging Component subsystem is not currently available.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.WrongExportPixelFormat">
+            <summary>
+              Looks up a localized string similar to "Wrong pixel format for export ('32bppPBGRA' or '32bppBGR' formats are expected).".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.WrongExportXOffset">
+            <summary>
+              Looks up a localized string similar to "Unable to export the image fragment with given X offset.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.WrongImportXOffset">
+            <summary>
+              Looks up a localized string similar to "Unable to import the image fragment with given X offset.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.WrongJpegQuality">
+            <summary>
+              Looks up a localized string similar to "The Jpeg quality must belong to the range from 0 to 100.".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.WrongDrawingPixelFormat">
+            <summary>
+              Looks up a localized string similar to "Wrong pixel format for drawing ('32bppPBGRA' or '32bppBGR' formats are expected).".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.XYWHToString">
+            <summary>
+              Looks up a localized string similar to "X:{0} Y:{1} Width:{2} Height:{3}".
+            </summary>
+        </member>
+        <member name="P:GrapeCity.Documents.Common.Windows.Localization.Strings.ZeroImageSize">
+            <summary>
+              Looks up a localized string similar to "Unable to create an image of zero or negative size.".
+            </summary>
+        </member>
+        <member name="T:GrapeCity.Documents.Text.Windows.FontLinkHelper">
+            <summary>
+            Loads font links from the Windows Registry.
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Text.Windows.FontLinkHelper.UpdateFontLinks(GrapeCity.Documents.Text.FontCollection,System.Boolean)">
+            <summary>
+            Appends font links to existing fonts in a FontCollection and (optionally) loads the missing referenced fonts.
+            <para>
+            Pass null in the fontCollection parameter to update the SystemFonts collection.
+            </para>
+            </summary>
+        </member>
+        <member name="M:GrapeCity.Documents.Text.Windows.FontLinkHelper.UpdateEudcLinks(GrapeCity.Documents.Text.FontCollection)">
+            <summary>
+            Loads the linked EUDC fonts and registers the system default EUDC font as fallback font.
+            <para>
+            Pass null in the fontCollection parameter to update the SystemFonts collection.
+            </para>
+            </summary>
+        </member>
+    </members>
+</doc>
